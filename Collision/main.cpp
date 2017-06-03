@@ -197,7 +197,7 @@ LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	}
 }
 
-void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=14) {
+void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) {
 	if (!hInst) {
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
@@ -226,7 +226,10 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=14) 
 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 145, 70, hwndLS, 0, hInst, NULL);
+	hwndPB = CreateWindowEx(PBS_SMOOTH, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 145, 70, hwndLS, 0, hInst, NULL);
+	
+	
+	
 
 
 
