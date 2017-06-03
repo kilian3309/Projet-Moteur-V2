@@ -55,6 +55,9 @@
 #include "PrimitiveBatch.h"
 #include "VertexTypes.h"
 
+#include <Uxtheme.h>
+#pragma comment(lib, "UxTheme.lib")
+
 //"The formal parameter is not referenced in the body of the function. The unreferenced parameter is ignored."
 #pragma warning( disable : 4100 )
 
@@ -227,8 +230,8 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
 	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, CW_USEDEFAULT, CW_USEDEFAULT, 145, 70, hwndLS, 0, hInst, NULL);
-
-	
+	SetWindowTheme(hwndPB, L"", L"");
+	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 	
 	
 	
