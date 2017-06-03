@@ -1,0 +1,7 @@
+﻿  Collision.cpp
+e:\c++\collisions\directxtk\inc\vertextypes.h(273): warning C4458: la déclaration de 'color' masque le membre de classe
+  e:\c++\collisions\directxtk\inc\vertextypes.h(233): note: voir la déclaration de 'DirectX::VertexPositionNormalTangentColorTexture::color'
+e:\c++\collisions\directxtk\inc\vertextypes.h(325): warning C4458: la déclaration de 'weights' masque le membre de classe
+  e:\c++\collisions\directxtk\inc\vertextypes.h(289): note: voir la déclaration de 'DirectX::VertexPositionNormalTangentColorTextureSkinning::weights'
+  Collision_Desktop_2012.vcxproj -> E:\C++\Collisions\Debug\Collision.exe
+  Collision_Desktop_2012.vcxproj -> E:\C++\Collisions\Debug\Collision.pdb (Full PDB)
