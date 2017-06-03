@@ -219,7 +219,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 	
 	RECT rcClient;
 
-	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 150, 75, NULL, NULL, hInst, NULL);
+	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 150, 75, NULL, NULL, hInst, NULL);
 
 	GetClientRect(hwndPB, &rcClient);
 
