@@ -223,7 +223,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 
 	GetClientRect(hwndPB, &rcClient);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, rcClient.left, rcClient.bottom, rcClient.right, rcClient.top, hwndPB, 0, hInst, NULL);
+	//hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, rcClient.left, rcClient.bottom, rcClient.right, rcClient.top, hwndPB, 0, hInst, NULL);
 
 
 
