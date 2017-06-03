@@ -226,7 +226,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE |WS_OVERLAPPEDWINDOW, rcClient.left, rcClient.bottom-cyVScroll, rcClient.right, cyVScroll, hwndLS, 0, hInst, NULL);
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE |WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 145, 70, hwndLS, 0, hInst, NULL);
 
 
 
