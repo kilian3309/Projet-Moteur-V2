@@ -226,7 +226,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
-	hwndPB = CreateWindowEx(PBS_MARQUEE, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 145, 70, hwndLS, 0, hInst, NULL);
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_MARQUEE, CW_USEDEFAULT, CW_USEDEFAULT, 145, 70, hwndLS, 0, hInst, NULL);
 	
 	
 	
