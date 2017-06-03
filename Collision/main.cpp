@@ -140,7 +140,9 @@ CollisionAABox g_RayHitResultBox;
 XMVECTOR g_CameraOrigins[CAMERA_COUNT];
 
 //Variables de la fenêtre de chargement
-HWND hwnPB;
+HWND hwndPB; //Handle vers la progress bar
+HWND hwndLS; //Handle vers la fenêtre de chargement
+
 
 //Contrôles des bouttons à droite (UI control)
 #define IDC_STATIC              -1
@@ -186,6 +188,7 @@ LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	switch (msg) {
 	case WM_CREATE:
 		return 0;
+	case WM_CLOSE:
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		return 0;
@@ -198,7 +201,8 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 	if (!hInst) {
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
-	/*
+	
+	
 	WNDCLASS WCLoadScreen;
 	WCLoadScreen.style = 0;
 	WCLoadScreen.lpfnWndProc = MsgProcLS;
@@ -211,21 +215,32 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 	WCLoadScreen.lpszMenuName = NULL;
 	WCLoadScreen.lpszClassName = L"WCClass";
 
-	RegisterClass(&WCLoadScreen);*/
+	RegisterClass(&WCLoadScreen);
+	
+	RECT rcClient;
+
+	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 150, 75, NULL, NULL, hInst, NULL);
+
+	GetClientRect(hwndPB, &rcClient);
+
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, rcClient.left, rcClient.bottom, rcClient.right, rcClient.top, hwndPB, 0, hInst, NULL);
+
+
 
 	//hwnPB = CreateWindow(L"WCClass", L"Loading Engine...", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 200, 100, NULL, NULL, hInst, NULL);
-	hwnPB = CreateWindowEx(0, PROGRESS_CLASS, L"Loading Engine...", WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 300, 50, NULL, (HMENU)0, hInst, NULL);
-	SendMessage(hwnPB, PBM_SETRANGE, 0, MAKELPARAM(0, maxRange));
-	SendMessage(hwnPB, PBM_SETSTEP, (WPARAM)1, 0);
+	//hwndPB = CreateWindowEx(0, PROGRESS_CLASS, L"Loading Engine...", WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 300, 50, NULL, (HMENU)0, hInst, NULL);
+
+	SendMessage(hwndPB, PBM_SETRANGE, 0, MAKELPARAM(0, maxRange));
+	SendMessage(hwndPB, PBM_SETSTEP, (WPARAM)1, 0);
 
 }
 
 void IncrementLoading() {
-	SendMessage(hwnPB, PBM_STEPIT, 0, 0);
+	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
 }
 
 void DestroyLoading() {
-	DestroyWindow(hwnPB);
+	DestroyWindow(hwndPB);
 }
 
 /*
