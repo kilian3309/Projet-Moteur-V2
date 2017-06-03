@@ -280,12 +280,13 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	IncrementLoading();
 	DXUTSetCursorSettings(true, true); //Affiche le curseur et on l'attache au plein écran
 	IncrementLoading();
-	DestroyLoading();
 
 	DXUTCreateWindow(L"ISN  Motor V2");
-
+	IncrementLoading();
 
 	DXUTCreateDevice(D3D_FEATURE_LEVEL_10_0, true, 800, 600);
+	IncrementLoading();
+	DestroyLoading();
 
 	DXUTMainLoop(); //DXUT loop de render
 
