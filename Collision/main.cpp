@@ -220,7 +220,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 	RECT rcClient;
 	int cyVScroll;
 
-	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW | WS_VISIBLE | WS_CLIPCHILDREN | WS_CLIPSIBLINGS, CW_USEDEFAULT, CW_USEDEFAULT, 150, 75, NULL, NULL, hInst, NULL);
+	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW | WS_VISIBLE | WS_CLIPCHILDREN | WS_CLIPSIBLINGS, CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, hInst, NULL);
 
 	GetClientRect(hwndPB, &rcClient);
 
