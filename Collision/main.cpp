@@ -243,7 +243,7 @@ void IncrementLoading() {
 
 void DestroyLoading() {
 	DestroyWindow(hwndPB);
-	DestroyWindow(hwndLS);
+	//DestroyWindow(hwndLS);
 }
 
 /*
