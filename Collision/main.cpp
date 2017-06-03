@@ -198,7 +198,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 	if (!hInst) {
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
-
+	/*
 	WNDCLASS WCLoadScreen;
 	WCLoadScreen.style = 0;
 	WCLoadScreen.lpfnWndProc = MsgProcLS;
@@ -211,10 +211,10 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 	WCLoadScreen.lpszMenuName = NULL;
 	WCLoadScreen.lpszClassName = L"WCClass";
 
-	RegisterClass(&WCLoadScreen);
+	RegisterClass(&WCLoadScreen);*/
 
 	//hwnPB = CreateWindow(L"WCClass", L"Loading Engine...", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 200, 100, NULL, NULL, hInst, NULL);
-	hwnPB = CreateWindowEx(0, PROGRESS_CLASS, L"Loading Engine...", WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 200, 100, NULL, (HMENU)0, hInst, NULL);
+	hwnPB = CreateWindowEx(0, PROGRESS_CLASS, L"Loading Engine...", WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 300, 50, NULL, (HMENU)0, hInst, NULL);
 	SendMessage(hwnPB, PBM_SETRANGE, 0, MAKELPARAM(0, maxRange));
 	SendMessage(hwnPB, PBM_SETSTEP, (WPARAM)1, 0);
 
