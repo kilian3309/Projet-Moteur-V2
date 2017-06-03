@@ -218,12 +218,15 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 	RegisterClass(&WCLoadScreen);
 	
 	RECT rcClient;
+	int cyVScroll;
 
 	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 150, 75, NULL, NULL, hInst, NULL);
 
 	GetClientRect(hwndPB, &rcClient);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, rcClient.left, rcClient.bottom, rcClient.right, rcClient.top, hwndPB, 0, hInst, NULL);
+	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
+
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, rcClient.left, rcClient.bottom-cyVScroll, rcClient.right, cyVScroll, hwndPB, 0, hInst, NULL);
 
 
 
