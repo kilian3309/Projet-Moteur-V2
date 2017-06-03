@@ -172,8 +172,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	{
 		MessageBox(NULL, TEXT("This application requires the processor support SSE2 instructions."),
 			TEXT("Collision"), MB_OK | MB_ICONEXCLAMATION);
-		return -1
-			;
+		return -1;
 	}
 
 
