@@ -197,7 +197,7 @@ LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	}
 }
 
-void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) {
+void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=14) {
 	if (!hInst) {
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
