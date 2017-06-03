@@ -241,6 +241,7 @@ void IncrementLoading() {
 
 void DestroyLoading() {
 	DestroyWindow(hwndPB);
+	DestroyWindow(hwndLS);
 }
 
 /*
