@@ -220,13 +220,13 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 	RECT rcClient;
 	int cyVScroll;
 
-	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW | WS_VISIBLE | WS_CLIPCHILDREN, CW_USEDEFAULT, CW_USEDEFAULT, 150, 75, NULL, NULL, hInst, NULL);
+	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW | WS_VISIBLE | WS_CLIPCHILDREN | WS_CLIPSIBLINGS, CW_USEDEFAULT, CW_USEDEFAULT, 150, 75, NULL, NULL, hInst, NULL);
 
 	GetClientRect(hwndPB, &rcClient);
 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | WS_OVERLAPPEDWINDOW, rcClient.left, rcClient.bottom-cyVScroll, rcClient.right, cyVScroll, hwndLS, 0, hInst, NULL);
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE, rcClient.left, rcClient.bottom-cyVScroll, rcClient.right, cyVScroll, hwndLS, 0, hInst, NULL);
 
 
 
@@ -245,7 +245,7 @@ void IncrementLoading() {
 }
 
 void DestroyLoading() {
-	DestroyWindow(hwndPB);
+	//DestroyWindow(hwndPB);
 	//DestroyWindow(hwndLS);
 }
 
