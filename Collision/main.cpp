@@ -250,7 +250,11 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 			TEXT("Collision"), MB_OK | MB_ICONEXCLAMATION);
 		return -1;
 	}
+	CreateLoadingScreen();
 	MessageBox(NULL, TEXT("h"), TEXT("hj"), MB_OK);
+	IncrementLoading();
+	MessageBox(NULL, TEXT("h"), TEXT("hj"), MB_OK);
+	DestroyLoading();
 
 
 
