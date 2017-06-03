@@ -233,6 +233,8 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) 
 	SendMessage(hwndPB, PBM_SETRANGE, 0, MAKELPARAM(0, maxRange));
 	SendMessage(hwndPB, PBM_SETSTEP, (WPARAM)1, 0);
 
+	MessageBox(NULL, TEXT("s"), TEXT("s"), MB_OK | MB_ICONEXCLAMATION);
+
 }
 
 void IncrementLoading() {
