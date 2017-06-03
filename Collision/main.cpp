@@ -1,13 +1,40 @@
 /*
 	Choses à savoir:
+	Vertex : https://en.wikipedia.org/wiki/Vertex_(geometry)
+
 	HRESULT : C'est une valeur 32 bit qui est divisée en 3 parties : un code de sévérité, un code d'installation, un code d'erreur
 		- Le code de sévérité indique si la valeur représente une info, un warning ou une erreur
 		- Le code d'installation (facility) indique quelle partie du système est responsable de l'erreur (ne marche que si c'est une erreur)
 		- Le code d'erreur représente l'erreur, le warning ou l'info
 	HRESULT peut être converti en exception si le code où il est return ne propose pas de solution afin de traiter les erreurs
 
+	LRESULT : Valeur relativement chelou qui donne la taille de la variable et qui possède une sorte de base de donnée afin de l'interpréter...
+	Ce type peut prendre d'autres types (il peut être un int, un float...).
 
+	XMVECTOR : Type comprenant 4 valeur 32 bit de type float dont l'alignement et le mappage ont été optimisé au maximum pour des vecteur (hardware)
+	Ce type est plus fréquement utilisé pour des variables local ou global
+	Quand l'on veut faire un calcul depuis un XFLOAT(1 ou 2 ou 3 ou 4), il vaut mieu passer par un XMVECTOR (on peut convertir l'un vers l'autre facilement)
 
+	XMMATRIX : Une matrix de 4*4 aligné en 16bit qui enfait est une représentation de 4 XMVECTOR avec une interface afin de les utiliser comme une matrix
+	Représentation d'une matrix:
+										_11, _12, _13, _14,
+										_21, _22, _23, _24,
+										_31, _32, _33, _34,
+										_41, _42, _43, _44
+
+	XMFLOAT3 : Vecteur 3D : contient 3 coordonnées en float nommées x, y, z rien de plus
+	Ce type est plus utilisé pour les membres de class
+
+	XMVECTORF32 : Comme un XMVECTOR mais portable (entre les OS) et qui contient des syntax pour intialiser correctement les XMVECTOR
+
+	FXMVECTOR : Renvoi vers un XMVECTOR
+	Ce type est plus utilisé pour les arguments de fonction
+
+	CXMMATRIX : Renvoi vers XMMATRIX, sert sur certaines architectures à appeler des arguments de fonction dans le bon orde
+	Ce type est uniquement utilisé pour les arguments de fonction
+
+	FXMVECTOR : Renvoi vers XMVECTOR, jour le même rôle que CXMMATRIX
+	Ce type est uniquement utilisé pour les arguments de fonction 
 
 
 */
@@ -80,7 +107,7 @@ const float CAMERA_SPACING = 50.f;
 //Variables globales
 CModelViewerCamera          g_Camera;					//La camera
 /*
-	Ici dialog ne signifie que c'est lui qui gère les resources partargés
+	Ici dialog signifie que c'est lui qui gère les resources partargés
 */
 CDXUTDialogResourceManager  g_DialogResourceManager;	//Manager pour les resources partargés des différents dialogs
 CD3DSettingsDlg             g_SettingsDlg;				//Parametre du device principale
@@ -153,11 +180,11 @@ void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR c
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color);
 
 /*
-WINAPI : Entrée de l'API windows (fonction main() mais pour windows)
-hInstance : Instance principale du programme : genre de conteneur qui représente le programme et tout ce qu'il contien
-hPrevInstance : Argument anciennement utilisé (Windows 16bits) donc toujours == NULL
-lpCmdLine : Les arguments de la commande si le programme est démaré via cmd ( ex: Si le programme s'appelle 'pgrm' et que l'on éxécute cette ligne: "pgrm --help --version" alors lpCmdLine=L"--help --version"
-nCmdShow : Le mode d'affichage de
+	WINAPI : Entrée de l'API windows (fonction main() mais pour windows)
+	hInstance : Instance principale du programme : genre de conteneur qui représente le programme et tout ce qu'il contien
+	hPrevInstance : Argument anciennement utilisé (Windows 16bits) donc toujours == NULL
+	lpCmdLine : Les arguments de la commande si le programme est démaré via cmd ( ex: Si le programme s'appelle 'pgrm' et que l'on éxécute cette ligne: "pgrm --help --version" alors lpCmdLine=L"--help --version"
+	nCmdShow : Le mode d'affichage de
 
 */
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)
@@ -647,6 +674,7 @@ void DrawGrid(FXMVECTOR xAxis, FXMVECTOR yAxis, FXMVECTOR origin, size_t xdivs, 
 		XMVECTOR vScale = XMVectorScale(xAxis, fPercent);
 		vScale = XMVectorAdd(vScale, origin);
 
+		//Décris une couleur sur un Vertex
 		VertexPositionColor v1(XMVectorSubtract(vScale, yAxis), color);
 		VertexPositionColor v2(XMVectorAdd(vScale, yAxis), color);
 		g_Batch->DrawLine(v1, v2);
