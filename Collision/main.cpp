@@ -139,6 +139,9 @@ CollisionAABox g_RayHitResultBox;
 //Liste des emplacements de la caméra
 XMVECTOR g_CameraOrigins[CAMERA_COUNT];
 
+//Variables de la fenêtre de chargement
+HWND hwnPB;
+
 //Contrôles des bouttons à droite (UI control)
 #define IDC_STATIC              -1
 #define IDC_TOGGLEFULLSCREEN    1
@@ -179,6 +182,52 @@ void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color);
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color);
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color);
 
+LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
+	switch (msg) {
+	case WM_CREATE:
+		return 0;
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		return 0;
+	default:
+		return DefWindowProc(win, msg, wParam, lParam);
+	}
+}
+
+void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=10) {
+	if (!hInst) {
+		hInst = (HINSTANCE)GetModuleHandle(nullptr);
+	}
+
+	WNDCLASS WCLoadScreen;
+	WCLoadScreen.style = 0;
+	WCLoadScreen.lpfnWndProc = MsgProcLS;
+	WCLoadScreen.cbClsExtra = NULL;
+	WCLoadScreen.cbWndExtra = NULL;
+	WCLoadScreen.hInstance = hInst;
+	WCLoadScreen.hIcon = LoadIcon(NULL, IDI_APPLICATION);
+	WCLoadScreen.hCursor = LoadCursor(NULL, IDC_ARROW);
+	WCLoadScreen.hbrBackground = (HBRUSH)(1 + COLOR_BTNFACE);
+	WCLoadScreen.lpszMenuName = NULL;
+	WCLoadScreen.lpszClassName = L"WCClass";
+
+	RegisterClass(&WCLoadScreen);
+
+	//hwnPB = CreateWindow(L"WCClass", L"Loading Engine...", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 200, 100, NULL, NULL, hInst, NULL);
+	hwnPB = CreateWindowEx(0, PROGRESS_CLASS, L"Loading Engine...", WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 200, 100, NULL, (HMENU)0, hInst, NULL);
+	SendMessage(hwnPB, PBM_SETRANGE, 0, MAKELPARAM(0, maxRange));
+	SendMessage(hwnPB, PBM_SETSTEP, (WPARAM)1, 0);
+
+}
+
+void IncrementLoading() {
+	SendMessage(hwnPB, PBM_STEPIT, 0, 0);
+}
+
+void DestroyLoading() {
+	DestroyWindow(hwnPB);
+}
+
 /*
 	WINAPI : Entrée de l'API windows (fonction main() mais pour windows)
 	hInstance : Instance principale du programme : genre de conteneur qui représente le programme et tout ce qu'il contien
@@ -201,6 +250,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 			TEXT("Collision"), MB_OK | MB_ICONEXCLAMATION);
 		return -1;
 	}
+
 
 
 
