@@ -251,31 +251,37 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 		return -1;
 	}
 	CreateLoadingScreen();
-	MessageBox(NULL, TEXT("h"), TEXT("hj"), MB_OK);
-	IncrementLoading();
-	MessageBox(NULL, TEXT("h"), TEXT("hj"), MB_OK);
-	DestroyLoading();
-
-
-
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
 	//Note: On appelle sa des fonctions de rappel
 	DXUTSetCallbackMsgProc(MsgProc);
+	IncrementLoading();
 	DXUTSetCallbackKeyboard(OnKeyboard);
+	IncrementLoading();
 	DXUTSetCallbackFrameMove(OnFrameMove);
+	IncrementLoading();
 	DXUTSetCallbackDeviceChanging(ModifyDeviceSettings);
-
+	IncrementLoading();
 	DXUTSetCallbackD3D11DeviceAcceptable(IsD3D11DeviceAcceptable);
+	IncrementLoading();
 	DXUTSetCallbackD3D11DeviceCreated(OnD3D11CreateDevice);
+	IncrementLoading();
 	DXUTSetCallbackD3D11SwapChainResized(OnD3D11ResizedSwapChain);
+	IncrementLoading();
 	DXUTSetCallbackD3D11SwapChainReleasing(OnD3D11ReleasingSwapChain);
+	IncrementLoading();
 	DXUTSetCallbackD3D11DeviceDestroyed(OnD3D11DestroyDevice);
+	IncrementLoading();
 	DXUTSetCallbackD3D11FrameRender(OnD3D11FrameRender);
-
+	IncrementLoading();
 	InitApp();
+	IncrementLoading();
 	//Parse les parametres de la command line, affiche les msbox comme des erreurs, pas de paramètres en plus
 	DXUTInit(true, true, nullptr);
+	IncrementLoading();
 	DXUTSetCursorSettings(true, true); //Affiche le curseur et on l'attache au plein écran
+	IncrementLoading();
+	DestroyLoading();
+
 	DXUTCreateWindow(L"ISN  Motor V2");
 
 
