@@ -78,6 +78,17 @@ std::string wstrToStr(std::wstring wstr) {
 
 }
 
+void MessageBoxK(std::wstring title, std::wstring text) {
+	MessageBox(0, text.c_str(), title.c_str(), MB_OK);
+}
+
+void MessageBoxK(std::wstring title, int text) {
+	MessageBoxK(title, std::to_wstring(text));
+}
+
+
+//FIN UTILISATION DEBUG
+
 //Objets à hitbox
 struct CollisionSphere
 {
@@ -267,10 +278,11 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 void IncrementLoading() {
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
+	
 }
 
 void DestroyLoading() {
-	//DestroyWindow(hwndPB);
+	DestroyWindow(hwndPB);
 	DestroyWindow(hwndLS);
 
 }
