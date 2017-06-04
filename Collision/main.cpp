@@ -57,11 +57,26 @@
 
 #include <Uxtheme.h>
 #pragma comment(lib, "UxTheme.lib")
+#include <string>
 
 //"The formal parameter is not referenced in the body of the function. The unreferenced parameter is ignored."
 #pragma warning( disable : 4100 )
 
 using namespace DirectX;
+
+
+//A UTILISER QU'EN DEBUG !!!!
+#include <codecvt>
+std::wstring strToWstr(std::string str) {
+	std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> convertX;
+	return convertX.from_bytes(str);
+}
+
+std::string wstrToStr(std::wstring wstr) {
+	std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> convertX;
+	return convertX.to_bytes(wstr);
+
+}
 
 //Objets à hitbox
 struct CollisionSphere
@@ -229,8 +244,9 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, /*CW_USEDEFAULT, CW_USEDEFAULT*/rcClient.bottom/3, rcClient.right/5, 400, 200, hwndLS, 0, hInst, NULL);
-	SetWindowTheme(hwndPB, L"", L"");
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, /*CW_USEDEFAULT, CW_USEDEFAULT*/(int)rcClient.bottom/3, (int)rcClient.right/5, 400, 200, hwndLS, 0, hInst, NULL);
+	//MessageBox(hwndLS, ((std::to_wstring((int)rcClient.bottom / 3) + L"" + std::to_wstring((int)rcClient.right / 5))), L"", MB_OK);
+		SetWindowTheme(hwndPB, L"", L"");
 	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 	
 	
