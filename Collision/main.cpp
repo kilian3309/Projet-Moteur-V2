@@ -263,8 +263,6 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 	SendMessage(hwndPB, PBM_SETRANGE, 0, MAKELPARAM(0, maxRange));
 	SendMessage(hwndPB, PBM_SETSTEP, (WPARAM)1, 0);
 
-	MessageBox(NULL, TEXT("s"), TEXT("s"), MB_OK | MB_ICONEXCLAMATION);
-
 }
 
 void IncrementLoading() {
@@ -272,8 +270,8 @@ void IncrementLoading() {
 }
 
 void DestroyLoading() {
-	//DestroyWindow(hwndPB);
-	//DestroyWindow(hwndLS);
+	DestroyWindow(hwndPB);
+	DestroyWindow(hwndLS);
 }
 
 /*
@@ -302,23 +300,14 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
 	//Note: On appelle sa des fonctions de rappel
 	DXUTSetCallbackMsgProc(MsgProc);
-	IncrementLoading();
 	DXUTSetCallbackKeyboard(OnKeyboard);
-	IncrementLoading();
 	DXUTSetCallbackFrameMove(OnFrameMove);
-	IncrementLoading();
 	DXUTSetCallbackDeviceChanging(ModifyDeviceSettings);
-	IncrementLoading();
 	DXUTSetCallbackD3D11DeviceAcceptable(IsD3D11DeviceAcceptable);
-	IncrementLoading();
 	DXUTSetCallbackD3D11DeviceCreated(OnD3D11CreateDevice);
-	IncrementLoading();
 	DXUTSetCallbackD3D11SwapChainResized(OnD3D11ResizedSwapChain);
-	IncrementLoading();
 	DXUTSetCallbackD3D11SwapChainReleasing(OnD3D11ReleasingSwapChain);
-	IncrementLoading();
 	DXUTSetCallbackD3D11DeviceDestroyed(OnD3D11DestroyDevice);
-	IncrementLoading();
 	DXUTSetCallbackD3D11FrameRender(OnD3D11FrameRender);
 	IncrementLoading();
 	InitApp();
@@ -331,10 +320,10 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 
 	DXUTCreateWindow(L"ISN  Motor V2");
 	IncrementLoading();
+	DestroyLoading();
 
 	DXUTCreateDevice(D3D_FEATURE_LEVEL_10_0, true, 800, 600);
-	IncrementLoading();
-	DestroyLoading();
+
 
 	DXUTMainLoop(); //DXUT loop de render
 
