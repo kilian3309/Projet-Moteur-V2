@@ -225,11 +225,11 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW | WS_VISIBLE | WS_CLIPCHILDREN , CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, hInst, NULL);
 
-	GetClientRect(hwndPB, &rcClient);
+	GetWindowRect(hwndPB, &rcClient);
 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, CW_USEDEFAULT, CW_USEDEFAULT, 145, 70, hwndLS, 0, hInst, NULL);
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, CW_USEDEFAULT, CW_USEDEFAULT, 400, 200, hwndLS, 0, hInst, NULL);
 	SetWindowTheme(hwndPB, L"", L"");
 	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 	
