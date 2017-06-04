@@ -240,10 +240,12 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPED | WS_SYSMENU | WS_VISIBLE | WS_CLIPCHILDREN , CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, hInst, NULL);
 
-	GetClientRect(hwndPB, &rcClient);
+	GetWindowRect(hwndPB, &rcClient);
 
 	int width = rcClient.right - rcClient.left;
 	int height = rcClient.bottom - rcClient.top;
+
+	MessageBox(hwndLS, LPWSTR(width), L"", MB_OK);
 
 	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, (width/16), height/5, 700, 30, hwndLS, 0, hInst, NULL);
 	//MessageBox(hwndLS,  LPWSTR(std::to_wstring((int)rcClient.bottom / 3) + L"" + std::to_wstring((int)rcClient.right / 5)), L"", MB_OK);
