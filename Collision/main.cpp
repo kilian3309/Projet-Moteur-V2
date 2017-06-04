@@ -229,7 +229,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, CW_USEDEFAULT, CW_USEDEFAULT, 400, 200, hwndLS, 0, hInst, NULL);
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, /*CW_USEDEFAULT, CW_USEDEFAULT*/rcClient.bottom/3, rcClient.right/5, 400, 200, hwndLS, 0, hInst, NULL);
 	SetWindowTheme(hwndPB, L"", L"");
 	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 	
