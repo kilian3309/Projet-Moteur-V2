@@ -278,7 +278,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 void IncrementLoading() {
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
-	MessageBoxK(L"hg", SendMessage(hwndPB, PBM_GETSTEP, 0, 0));
+	MessageBoxK(L"hg", SendMessage(hwndPB, PBM_GETSTATE, 0, 0));
 }
 
 void DestroyLoading() {
