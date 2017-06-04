@@ -310,9 +310,9 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=6) {
 
 	//MessageBox(hwndLS, LPWSTR(width), L"", MB_OK);
 
-	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, 100, 10, 570, 30, hwndLS, 0, hInst, NULL);
+	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, 100, 570, 600, 30, hwndLS, 0, hInst, NULL);
 	//MessageBox(hwndLS,  LPWSTR(std::to_wstring((int)rcClient.bottom / 3) + L"" + std::to_wstring((int)rcClient.right / 5)), L"", MB_OK);
-		SetWindowTheme(hwndPB, L"", L"");
+	SetWindowTheme(hwndPB, L"", L"");
 	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 	
 	
@@ -331,9 +331,9 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=6) {
 void IncrementLoading() {
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
 	//MessageBoxK(L"hg", to_wstring(SendMessage(hwndPB, PBM_GETRANGE, 0, 0)));
-	MessageBoxK(L"", to_wstring(SendMessage(hwndPB, PBM_GETPOS, 0, 0)) + L"|"+ to_wstring(SendMessage(hwndPB, PBM_GETRANGE, 0, 0)));
+	//MessageBoxK(L"", to_wstring(SendMessage(hwndPB, PBM_GETPOS, 0, 0)) + L"|"+ to_wstring(SendMessage(hwndPB, PBM_GETRANGE, 0, 0)));
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0)==SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
-		MessageBoxK(L"f", L"ff");
+		//MessageBoxK(L"f", L"ff");
 		SendMessage(hwndLS, WM_DESTROY, 0, 0);
 	}
 		
