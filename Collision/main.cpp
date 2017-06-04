@@ -245,7 +245,14 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 	int width = rcClient.right - rcClient.left;
 	int height = rcClient.bottom - rcClient.top;
 
-	MessageBox(hwndLS, LPWSTR(width), L"", MB_OK);
+	//DEBUG
+	wchar_t buffer[256];
+	wsprintf(buffer, L"%d", width);
+	MessageBoxW(hwndLS, buffer, buffer, MB_OK);
+	//END
+
+
+	//MessageBox(hwndLS, LPWSTR(width), L"", MB_OK);
 
 	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, (width/16), height/5, 700, 30, hwndLS, 0, hInst, NULL);
 	//MessageBox(hwndLS,  LPWSTR(std::to_wstring((int)rcClient.bottom / 3) + L"" + std::to_wstring((int)rcClient.right / 5)), L"", MB_OK);
