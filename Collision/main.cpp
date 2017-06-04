@@ -320,10 +320,11 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 
 	DXUTCreateWindow(L"ISN  Motor V2");
 	IncrementLoading();
-	DestroyLoading();
+	
 
 	DXUTCreateDevice(D3D_FEATURE_LEVEL_10_0, true, 800, 600);
-
+	IncrementLoading();
+	DestroyLoading();
 
 	DXUTMainLoop(); //DXUT loop de render
 
