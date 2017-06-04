@@ -238,14 +238,14 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 	RECT rcClient;
 	int cyVScroll;
 
-	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPEDWINDOW | WS_VISIBLE | WS_CLIPCHILDREN , CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, hInst, NULL);
+	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPED | WS_SYSMENU | WS_VISIBLE | WS_CLIPCHILDREN , CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, hInst, NULL);
 
 	GetWindowRect(hwndPB, &rcClient);
 
 	cyVScroll = GetSystemMetrics(SM_CYVSCROLL);
 
 	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, /*CW_USEDEFAULT, CW_USEDEFAULT*/(int)rcClient.bottom/3, (int)rcClient.right/5, 400, 200, hwndLS, 0, hInst, NULL);
-	//MessageBox(hwndLS, ((std::to_wstring((int)rcClient.bottom / 3) + L"" + std::to_wstring((int)rcClient.right / 5))), L"", MB_OK);
+	//MessageBox(hwndLS,  LPWSTR(std::to_wstring((int)rcClient.bottom / 3) + L"" + std::to_wstring((int)rcClient.right / 5)), L"", MB_OK);
 		SetWindowTheme(hwndPB, L"", L"");
 	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 	
