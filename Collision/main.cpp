@@ -270,7 +270,8 @@ LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 		return 0;
 	case WM_CLOSE:
 	case WM_DESTROY:
-		PostQuitMessage(0);
+		//PostQuitMessage(0);
+		CloseWindow(win);
 		return 0;
 	default:
 		return DefWindowProc(win, msg, wParam, lParam);
