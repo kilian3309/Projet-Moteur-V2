@@ -235,15 +235,15 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 	RegisterClass(&WCLoadScreen);
 	
-	RECT rcClient;
+	LPRECT rcClient = 0;
 	
 
 	hwndLS = CreateWindow(L"WCCLass", L"Loading Engine...", WS_OVERLAPPED | WS_SYSMENU | WS_VISIBLE | WS_CLIPCHILDREN , CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, hInst, NULL);
 
-	GetWindowRect(hwndPB, &rcClient);
+	GetWindowRect(hwndPB, rcClient);
 
-	int width = rcClient.right - rcClient.left;
-	int height = rcClient.bottom - rcClient.top;
+	int width = rcClient->right - rcClient->left;
+	int height = rcClient->bottom - rcClient->top;
 
 	//DEBUG
 	wchar_t buffer[256];
