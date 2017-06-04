@@ -67,7 +67,57 @@ using namespace DirectX;
 
 //A UTILISER QU'EN DEBUG !!!!
 #include <codecvt>
-std::wstring strToWstr(std::string str) {
+template<typename T>std::wstring to_wstring(T what) {
+	std::wostringstream ss;
+	ss << chat;
+	return ss.str();
+}
+
+template<>std::wstring to_wstring(wchar_t what) {
+	return std::wstring(1, what);
+}
+
+template<>std::wstring to_wstring(int what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(float what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(double what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(long long what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(long what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(long double what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(unsigned long long what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(unsigned int what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(unsigned long what) {
+	return std::to_wstring(what);
+}
+
+template<>std::wstring to_wstring(std::wstring what) {
+	return what;
+}
+
+template<>std::wstring to_wstring(std::string str) {
 	std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> convertX;
 	return convertX.from_bytes(str);
 }
@@ -77,6 +127,7 @@ std::string wstrToStr(std::wstring wstr) {
 	return convertX.to_bytes(wstr);
 
 }
+
 
 void MessageBoxK(std::wstring title, std::wstring text) {
 	MessageBox(0, text.c_str(), title.c_str(), MB_OK);
@@ -278,7 +329,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=15) 
 
 void IncrementLoading() {
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
-	MessageBoxK(L"hg", SendMessage(hwndPB, PBM_GETSTATE, 0, 0));
+	MessageBoxK(L"hg", to_wstring(SendMessage(hwndPB, PBM_GETSTATE, 0, 0)));
 }
 
 void DestroyLoading() {
