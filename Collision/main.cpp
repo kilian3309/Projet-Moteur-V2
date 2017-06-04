@@ -272,6 +272,7 @@ void IncrementLoading() {
 void DestroyLoading() {
 	DestroyWindow(hwndPB);
 	DestroyWindow(hwndLS);
+
 }
 
 /*
@@ -289,14 +290,14 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
 
-	//DirectX utilise les instructions SSE2 sur Windows. On vérifi donc qu'elle sont bien supportées le plus tôt possible
+	//DirectX utilise les instructions SSE2 sur Windows. On vérifi donc qu'elles sont bien supportées le plus tôt possible
 	if (!XMVerifyCPUSupport())
 	{
 		MessageBox(NULL, TEXT("This application requires the processor support SSE2 instructions."),
 			TEXT("Collision"), MB_OK | MB_ICONEXCLAMATION);
 		return -1;
 	}
-	CreateLoadingScreen();
+	CreateLoadingScreen(hInstance);
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
 	//Note: On appelle sa des fonctions de rappel
 	DXUTSetCallbackMsgProc(MsgProc);
