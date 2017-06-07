@@ -372,7 +372,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 
 	//Ici on créé un autre thread pour éviter le "Ne répond pas"
 	std::thread createLW(CreateLoadingScreen, hInstance, 6);
-	createLW.join();
+	//createLW.join();
 
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
 	//Note: On appelle sa des fonctions de rappel
