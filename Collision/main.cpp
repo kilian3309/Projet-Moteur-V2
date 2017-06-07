@@ -271,7 +271,7 @@ LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	case WM_CLOSE:
 	case WM_DESTROY:
 		//PostQuitMessage(0);
-		CloseWindow(win);
+		DestroyWindow(win);
 		
 		return 0;
 	default:
