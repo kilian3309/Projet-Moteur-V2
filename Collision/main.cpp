@@ -59,6 +59,7 @@
 #pragma comment(lib, "UxTheme.lib")
 #include <string>
 #include <thread>
+#include <future>
 
 //"The formal parameter is not referenced in the body of the function. The unreferenced parameter is ignored."
 #pragma warning( disable : 4100 )
@@ -347,32 +348,7 @@ void DestroyLoading() {
 
 }
 
-/*
-	WINAPI : Entrée de l'API windows (fonction main() mais pour windows)
-	hInstance : Instance principale du programme : genre de conteneur qui représente le programme et tout ce qu'il contien
-	hPrevInstance : Argument anciennement utilisé (Windows 16bits) donc toujours == NULL
-	lpCmdLine : Les arguments de la commande si le programme est démaré via cmd ( ex: Si le programme s'appelle 'pgrm' et que l'on éxécute cette ligne: "pgrm --help --version" alors lpCmdLine=L"--help --version"
-	nCmdShow : Le mode d'affichage de
-
-*/
-int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)
-{
-	//Vérification de la mémoire lors du run
-#if defined(DEBUG) | defined(_DEBUG)
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-#endif
-
-	//DirectX utilise les instructions SSE2 sur Windows. On vérifi donc qu'elles sont bien supportées le plus tôt possible
-	if (!XMVerifyCPUSupport())
-	{
-		MessageBox(NULL, TEXT("This application requires the processor support SSE2 instructions."),
-			TEXT("Collision"), MB_OK | MB_ICONEXCLAMATION);
-		return -1;
-	}
-
-	//Ici on créé un autre thread pour éviter le "Ne répond pas"
-	std::thread createLW(CreateLoadingScreen, hInstance, 6);
-
+int wWinMainEnd() {
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
 	//Note: On appelle sa des fonctions de rappel
 	DXUTSetCallbackMsgProc(MsgProc);
@@ -396,17 +372,47 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 
 	DXUTCreateWindow(L"ISN  Motor V2");
 	IncrementLoading();
-	
+
 
 	DXUTCreateDevice(D3D_FEATURE_LEVEL_10_0, true, 800, 600);
 	IncrementLoading();
-	createLW.join();
 
 	DestroyLoading();
 
 	DXUTMainLoop(); //DXUT loop de render
 
 	return DXUTGetExitCode();
+}
+
+/*
+	WINAPI : Entrée de l'API windows (fonction main() mais pour windows)
+	hInstance : Instance principale du programme : genre de conteneur qui représente le programme et tout ce qu'il contien
+	hPrevInstance : Argument anciennement utilisé (Windows 16bits) donc toujours == NULL
+	lpCmdLine : Les arguments de la commande si le programme est démaré via cmd ( ex: Si le programme s'appelle 'pgrm' et que l'on éxécute cette ligne: "pgrm --help --version" alors lpCmdLine=L"--help --version"
+	nCmdShow : Le mode d'affichage de
+
+*/
+int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)
+{
+	//Vérification de la mémoire lors du run
+#if defined(DEBUG) | defined(_DEBUG)
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+#endif
+
+	//DirectX utilise les instructions SSE2 sur Windows. On vérifi donc qu'elles sont bien supportées le plus tôt possible
+	if (!XMVerifyCPUSupport())
+	{
+		MessageBox(NULL, TEXT("This application requires the processor support SSE2 instructions."),
+			TEXT("Collision"), MB_OK | MB_ICONEXCLAMATION);
+		return -1;
+	}
+	
+	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain
+	std::async(CreateLoadingScreen, hInstance, 6);
+	//WinMain Returned Status
+	auto WRS = std::async(wWinMainEnd);
+
+	return WRS.get();
 }
 
 
