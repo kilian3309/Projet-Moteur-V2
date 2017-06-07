@@ -407,7 +407,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 		return -1;
 	}
 	
-	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain
+	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain (sa évite le "ne répond pas")
 	std::async(CreateLoadingScreen, hInstance, 6);
 	//WinMain Returned Status
 	auto WRS = std::async(wWinMainEnd);
