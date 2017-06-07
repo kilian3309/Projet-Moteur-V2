@@ -1317,6 +1317,7 @@ void CALLBACK OnD3D11DestroyDevice(void* pUserContext)
 */
 bool CALLBACK ModifyDeviceSettings(DXUTDeviceSettings* pDeviceSettings, void* pUserContext)
 {
+	//Implementation MSAAx8
 	static bool s_bFirstTime = true;
 	if (s_bFirstTime) {
 		DXGI_SAMPLE_DESC MSAA4xSampleDesc = { 8, 0 };
