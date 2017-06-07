@@ -58,6 +58,7 @@
 #include <Uxtheme.h>
 #pragma comment(lib, "UxTheme.lib")
 #include <string>
+#include <thread>
 
 //"The formal parameter is not referenced in the body of the function. The unreferenced parameter is ignored."
 #pragma warning( disable : 4100 )
@@ -368,7 +369,10 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 			TEXT("Collision"), MB_OK | MB_ICONEXCLAMATION);
 		return -1;
 	}
-	CreateLoadingScreen(hInstance);
+
+	std::thread createLW(CreateLoadingScreen, hInstance, 6);
+	createLW.join();
+
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
 	//Note: On appelle sa des fonctions de rappel
 	DXUTSetCallbackMsgProc(MsgProc);
