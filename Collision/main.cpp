@@ -268,8 +268,6 @@ void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTO
 
 LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	switch (msg) {
-	case WM_CLOSE:
-		break;
 	case WM_CREATE:
 		return 0;
 	case WM_DESTROY:
@@ -332,7 +330,8 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange=6) {
 
 }
 
-void IncrementLoading() {
+
+void _IncrementLoading() {
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
 	//MessageBoxK(L"hg", to_wstring(SendMessage(hwndPB, PBM_GETRANGE, 0, 0)));
 	//MessageBoxK(L"", to_wstring(SendMessage(hwndPB, PBM_GETPOS, 0, 0)) + L"|"+ to_wstring(SendMessage(hwndPB, PBM_GETRANGE, 0, 0)));
@@ -343,11 +342,18 @@ void IncrementLoading() {
 		
 }
 
+#define __ILIN __COUNTER__
+#define IncrementLoading __ILIN; \
+						 _IncrementLoading()
+
+
 void DestroyLoading() {
 	//DestroyWindow(hwndPB);
 	//DestroyWindow(hwndLS);
 
 }
+
+
 
 int wWinMainEnd() {
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
@@ -362,21 +368,21 @@ int wWinMainEnd() {
 	DXUTSetCallbackD3D11SwapChainReleasing(OnD3D11ReleasingSwapChain);
 	DXUTSetCallbackD3D11DeviceDestroyed(OnD3D11DestroyDevice);
 	DXUTSetCallbackD3D11FrameRender(OnD3D11FrameRender);
-	IncrementLoading();
+	IncrementLoading;
 	InitApp();
-	IncrementLoading();
+	IncrementLoading;
 	//Parse les parametres de la command line, affiche les msbox comme des erreurs, pas de paramètres en plus
 	DXUTInit(true, true, nullptr);
-	IncrementLoading();
+	IncrementLoading;
 	DXUTSetCursorSettings(true, true); //Affiche le curseur et on l'attache au plein écran
-	IncrementLoading();
+	IncrementLoading;
 
 	DXUTCreateWindow(L"ISN  Motor V2");
-	IncrementLoading();
+	IncrementLoading;
 
 
 	DXUTCreateDevice(D3D_FEATURE_LEVEL_10_0, true, 800, 600);
-	IncrementLoading();
+	IncrementLoading;
 
 	DestroyLoading();
 
@@ -409,7 +415,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	}
 	
 	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain (sa évite le "ne répond pas", enfait non x) ...)
-	std::async(CreateLoadingScreen, hInstance, 6);
+	std::async(CreateLoadingScreen, hInstance, __ILIN);
 	//WinMain Returned Status
 	auto WRS = std::async(wWinMainEnd);
 
