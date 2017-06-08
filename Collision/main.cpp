@@ -1406,6 +1406,9 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 		SetViewForGroup(group);
 	}
 	break;
+	case VK_ESCAPE:
+		MessageBoxK(L"55", 1);
+		break;
 	}
 }
 
