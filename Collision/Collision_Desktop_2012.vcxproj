@@ -373,6 +373,7 @@
     <None Include="..\DXUT\Optional\directx.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LoadingScreen.h" />
     <CLInclude Include="resource.h" />
     <ResourceCompile Include="Collision.rc" />
   </ItemGroup>
