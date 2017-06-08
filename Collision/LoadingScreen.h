@@ -1,8 +1,9 @@
-#pragma once
+
 #include "DXUT.h"
 #include <Uxtheme.h>
 #pragma comment(lib, "UxTheme.lib")
 
+#pragma once
 //Variables de la fenêtre de chargement
 HWND hwndPB; //Handle vers la progress bar
 HWND hwndLS; //Handle vers la fenêtre de chargement
