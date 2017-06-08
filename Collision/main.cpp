@@ -268,9 +268,9 @@ void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTO
 
 LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	switch (msg) {
+	case WM_CLOSE:
 	case WM_CREATE:
 		return 0;
-	case WM_CLOSE:
 	case WM_DESTROY:
 		//PostQuitMessage(0);
 		DestroyWindow(win);
@@ -1407,7 +1407,7 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	}
 	break;
 	case VK_ESCAPE:
-		MessageBoxK(L"55", 1);
+		
 		break;
 	}
 }
