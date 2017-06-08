@@ -369,6 +369,11 @@ int wWinMainEnd() {
 	DXUTSetCallbackD3D11DeviceDestroyed(OnD3D11DestroyDevice);
 	DXUTSetCallbackD3D11FrameRender(OnD3D11FrameRender);
 	IncrementLoading;
+	IncrementLoading;
+	IncrementLoading;
+	IncrementLoading;
+	IncrementLoading;
+	IncrementLoading;
 	InitApp();
 	IncrementLoading;
 	//Parse les parametres de la command line, affiche les msbox comme des erreurs, pas de paramètres en plus
