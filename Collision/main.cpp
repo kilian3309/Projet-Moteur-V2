@@ -342,6 +342,10 @@ void _IncrementLoading() {
 		
 }
 
+/*
+	Ceci marche mais c'est pas ouf... Sa sert à faire en sorte que la barre de chargement ai comme maximum le même nombre de fois qu'on l'incrémente
+	Ex: Si on l'incrémente 5 fois dans tout le code, son maximum sera fixé à 5 pour qu'elle puisse atteindre 100%
+*/
 #define __ILIN __COUNTER__
 #define IncrementLoading __ILIN; \
 						 _IncrementLoading()
@@ -368,11 +372,6 @@ int wWinMainEnd() {
 	DXUTSetCallbackD3D11SwapChainReleasing(OnD3D11ReleasingSwapChain);
 	DXUTSetCallbackD3D11DeviceDestroyed(OnD3D11DestroyDevice);
 	DXUTSetCallbackD3D11FrameRender(OnD3D11FrameRender);
-	IncrementLoading;
-	IncrementLoading;
-	IncrementLoading;
-	IncrementLoading;
-	IncrementLoading;
 	IncrementLoading;
 	InitApp();
 	IncrementLoading;
@@ -420,7 +419,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	}
 	
 	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain (sa évite le "ne répond pas", enfait non x) ...)
-	std::async(CreateLoadingScreen, hInstance, __ILIN);
+	std::async(std::launch::async, CreateLoadingScreen, hInstance, __ILIN);
 	//WinMain Returned Status
 	auto WRS = std::async(wWinMainEnd);
 
