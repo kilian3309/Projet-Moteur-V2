@@ -34,6 +34,8 @@ void _IncrementLoading() {
 #define IncrementLoading __ILIN; \
 						 _IncrementLoading()
 
+int FILIN;
+
 LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	switch (msg) {
 	case WM_CREATE:
