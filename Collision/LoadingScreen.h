@@ -4,6 +4,10 @@
 #include <Uxtheme.h>
 #pragma comment(lib, "UxTheme.lib")
 
+//Variables de la fenêtre de chargement
+HWND hwndPB; //Handle vers la progress bar
+HWND hwndLS; //Handle vers la fenêtre de chargement
+
 void MessageBoxK(std::wstring title, std::wstring text) {
 	MessageBox(0, text.c_str(), title.c_str(), MB_OK);
 }
@@ -12,16 +16,26 @@ void MessageBoxK(std::wstring title, int text) {
 	MessageBoxK(title, std::to_wstring(text));
 }
 
-//Variables de la fenêtre de chargement
-HWND hwndPB; //Handle vers la progress bar
-HWND hwndLS; //Handle vers la fenêtre de chargement
+void _IncrementLoading() {
+	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
+	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
+		SendMessage(hwndLS, WM_DESTROY, 0, 0);
+	}
+}
+
+/*
+Ceci marche mais c'est pas ouf... Sa sert à faire en sorte que la barre de chargement ai comme maximum le même nombre de fois qu'on l'incrémente
+Ex: Si on l'incrémente 5 fois dans tout le code, son maximum sera fixé à 5 pour qu'elle puisse atteindre 100%
+*/
+#define __ILIN __COUNTER__
+#define IncrementLoading __ILIN; \
+						 _IncrementLoading()
 
 LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	switch (msg) {
 	case WM_CREATE:
 		return 0;
 	case WM_DESTROY:
-		//PostQuitMessage(0);
 		DestroyWindow(win);
 
 		return 0;
@@ -35,7 +49,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
 
-	MessageBoxK(L"ggggg", 1);
+	MessageBoxK(L"fd", __ILIN);
 
 	WNDCLASS WCLoadScreen;
 	WCLoadScreen.style = 0;
@@ -82,22 +96,5 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 }
 
 
-void _IncrementLoading() {
-	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
-	//MessageBoxK(L"hg", to_wstring(SendMessage(hwndPB, PBM_GETRANGE, 0, 0)));
-	//MessageBoxK(L"", to_wstring(SendMessage(hwndPB, PBM_GETPOS, 0, 0)) + L"|"+ to_wstring(SendMessage(hwndPB, PBM_GETRANGE, 0, 0)));
-	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
-		//MessageBoxK(L"f", L"ff");
-		SendMessage(hwndLS, WM_DESTROY, 0, 0);
-	}
 
-}
-
-/*
-Ceci marche mais c'est pas ouf... Sa sert à faire en sorte que la barre de chargement ai comme maximum le même nombre de fois qu'on l'incrémente
-Ex: Si on l'incrémente 5 fois dans tout le code, son maximum sera fixé à 5 pour qu'elle puisse atteindre 100%
-*/
-#define __ILIN __COUNTER__
-#define IncrementLoading __ILIN; \
-						 _IncrementLoading()
 
