@@ -16,6 +16,9 @@ void MessageBoxK(std::wstring title, int text) {
 	MessageBoxK(title, std::to_wstring(text));
 }
 
+/*
+	
+*/
 void _IncrementLoading() {
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
@@ -24,8 +27,8 @@ void _IncrementLoading() {
 }
 
 /*
-Ceci marche mais c'est pas ouf... Sa sert à faire en sorte que la barre de chargement ai comme maximum le même nombre de fois qu'on l'incrémente
-Ex: Si on l'incrémente 5 fois dans tout le code, son maximum sera fixé à 5 pour qu'elle puisse atteindre 100%
+	Ceci marche mais c'est pas ouf... Sa sert à faire en sorte que la barre de chargement ai comme maximum le même nombre de fois qu'on l'incrémente
+	Ex: Si on l'incrémente 5 fois dans tout le code, son maximum sera fixé à 5 pour qu'elle puisse atteindre 100%
 */
 #define __ILIN __COUNTER__
 #define IncrementLoading __ILIN; \
@@ -44,6 +47,9 @@ LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	}
 }
 
+/*
+	Creation de la loading screen
+*/
 void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6) {
 	if (!hInst) {
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
