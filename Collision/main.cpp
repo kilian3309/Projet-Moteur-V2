@@ -130,13 +130,7 @@ std::string wstrToStr(std::wstring wstr) {
 }
 
 
-void MessageBoxK(std::wstring title, std::wstring text) {
-	MessageBox(0, text.c_str(), title.c_str(), MB_OK);
-}
 
-void MessageBoxK(std::wstring title, int text) {
-	MessageBoxK(title, std::to_wstring(text));
-}
 
 
 //FIN UTILISATION DEBUG

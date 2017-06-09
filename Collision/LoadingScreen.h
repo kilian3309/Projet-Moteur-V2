@@ -1,9 +1,17 @@
-
+#pragma once
 #include "DXUT.h"
+#include <string>
 #include <Uxtheme.h>
 #pragma comment(lib, "UxTheme.lib")
 
-#pragma once
+void MessageBoxK(std::wstring title, std::wstring text) {
+	MessageBox(0, text.c_str(), title.c_str(), MB_OK);
+}
+
+void MessageBoxK(std::wstring title, int text) {
+	MessageBoxK(title, std::to_wstring(text));
+}
+
 //Variables de la fenêtre de chargement
 HWND hwndPB; //Handle vers la progress bar
 HWND hwndLS; //Handle vers la fenêtre de chargement
@@ -27,6 +35,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
 
+	MessageBoxK(L"ggggg", 1);
 
 	WNDCLASS WCLoadScreen;
 	WCLoadScreen.style = 0;
@@ -79,7 +88,7 @@ void _IncrementLoading() {
 	//MessageBoxK(L"", to_wstring(SendMessage(hwndPB, PBM_GETPOS, 0, 0)) + L"|"+ to_wstring(SendMessage(hwndPB, PBM_GETRANGE, 0, 0)));
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
 		//MessageBoxK(L"f", L"ff");
-		//SendMessage(hwndLS, WM_DESTROY, 0, 0);
+		SendMessage(hwndLS, WM_DESTROY, 0, 0);
 	}
 
 }
