@@ -16,7 +16,7 @@ void MessageBoxK(std::wstring title, int text) {
 	MessageBoxK(title, std::to_wstring(text));
 }
 
-static int _IncrCount;
+int _IncrCount;
 
 /*
 	
