@@ -41,10 +41,12 @@ void MessageBoxK(std::wstring title, int text) {
 
 int _IncrCount;
 
+#define IncrementLoading _IncrementLoading()
+
 /*
 	
 */
-void IncrementLoading() {
+void _IncrementLoading() {
 	static int _Count = 0;
 	++_Count;
 	_IncrCount = _Count;
