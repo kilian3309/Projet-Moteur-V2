@@ -316,7 +316,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	}
 	
 	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain (sa évite le "ne répond pas", enfait non x) ...)
-	std::async(std::launch::async, CreateLoadingScreen, hInstance, __ILIN);
+	std::async(std::launch::async, CreateLoadingScreen, hInstance, _IncrCount);
 	
 	//WinMain Returned Status
 	auto WRS = std::async(wWinMainEnd);

@@ -16,25 +16,21 @@ void MessageBoxK(std::wstring title, int text) {
 	MessageBoxK(title, std::to_wstring(text));
 }
 
+static int _IncrCount;
+
 /*
 	
 */
-void _IncrementLoading() {
+void IncrementLoading() {
+	static int _Count = 0;
+	++_Count;
+	_IncrCount = _Count;
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
 		SendMessage(hwndLS, WM_DESTROY, 0, 0);
 	}
 }
 
-/*
-	Ceci marche mais c'est pas ouf... Sa sert à faire en sorte que la barre de chargement ai comme maximum le même nombre de fois qu'on l'incrémente
-	Ex: Si on l'incrémente 5 fois dans tout le code, son maximum sera fixé à 5 pour qu'elle puisse atteindre 100%
-*/
-#define __ILIN __COUNTER__
-#define IncrementLoading __ILIN; \
-						 _IncrementLoading()
-
-int FILIN;
 
 LRESULT CALLBACK MsgProcLS(HWND win, UINT msg, WPARAM wParam, LPARAM lParam) {
 	switch (msg) {
@@ -57,7 +53,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
 
-	MessageBoxK(L"fd", FILIN);
+	MessageBoxK(L"fd", _IncrCount);
 
 	WNDCLASS WCLoadScreen;
 	WCLoadScreen.style = 0;
