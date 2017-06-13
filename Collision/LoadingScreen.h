@@ -7,24 +7,8 @@
 /*
 	Système de compteur compil-time
 */
-#define COUNTER_READ_CRUMB(TAG, RANK, ACC) counter_crumb(TAG(), constant_index<RANK>(), constant_index<ACC>())
-//Lecture du compteur
-#define COUNTER_READ( TAG ) COUNTER_READ_CRUMB(TAG, 1, COUNTER_READ_CRUMB(TAG, 2, COUNTER_READ_CRUMB(TAG, 4, COUNTER_READ_CRUMB(TAG, 8, \
-		COUNTER_READ_CRUMB( TAG, 16, COUNTER_READ_CRUMB(TAG, 32, COUNTER_READ_CRUMB(TAG, 64, COUNTER_READ_CRUMB( TAG, 128, 0))))))))
+int LoadingMax = 13;
 
-//Incrémentation du compteur
-#define COUNTER_INC(TAG) \
-constexpr \
-constant_index<COUNTER_READ(TAG)+1> \
-counter_crumb(TAG, constant_index<(COUNTER_READ(TAG)+1)&~COUNTER_READ(TAG)>, constant_index<(COUNTER_READ(TAG)+1)&COUNTER_READ(TAG)>) {return {};}
-#define COUNTER_LINK_NAMESPACE(NS) using NS::counter_crumb;
-
-
-template<std::size_t n>
-struct constant_index : std::integral_constant< std::size_t, n > {};
-
-template<typename id, std::size_t rank, std::size_t acc>
-constexpr constant_index<acc> counter_crumb(id, constant_index<rank>, constant_index<acc>) { return {}; } 
 
 
 //Variables de la fenêtre de chargement
@@ -39,17 +23,13 @@ void MessageBoxK(std::wstring title, int text) {
 	MessageBoxK(title, std::to_wstring(text));
 }
 
-int _IncrCount;
 
-#define IncrementLoading _IncrementLoading()
+#define IncrementLoading _IncrementLoading();
 
 /*
 	
 */
 void _IncrementLoading() {
-	static int _Count = 0;
-	++_Count;
-	_IncrCount = _Count;
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
 		SendMessage(hwndLS, WM_DESTROY, 0, 0);
@@ -78,7 +58,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
 
-	MessageBoxK(L"fd", _IncrCount);
+	MessageBoxK(L"fd", LoadingMax);
 
 	WNDCLASS WCLoadScreen;
 	WCLoadScreen.style = 0;
