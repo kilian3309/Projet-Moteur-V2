@@ -1317,7 +1317,7 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	}
 	break;
 	case VK_ESCAPE:
-		
+		MessageBoxK(L"f", L"f");
 		break;
 	}
 }

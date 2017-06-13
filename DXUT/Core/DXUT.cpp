@@ -976,6 +976,7 @@ bool DXUTGetCmdParam( WCHAR*& strCmdLine, WCHAR* strFlag, int cchDest )
 // Moteur V2:
 // Le support du Moteur V2 est assuré par IncrementLoading !!!
 #include "../../Collision/LoadingScreen.h"
+#include "../../Collision/kdefs.h"
 //
 //--------------------------------------------------------------------------------------
 _Use_decl_annotations_
@@ -1499,7 +1500,8 @@ LRESULT CALLBACK DXUTStaticWndProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
                 case VK_ESCAPE:
                 {
                     //if( GetDXUTState().GetHandleEscape() )
-                    //    SendMessage( hWnd, WM_CLOSE, 0, 0 );
+                    //SendMessage( hWnd, WM_CLOSE, 0, 0 );
+					SendMessage(hWnd, WM_K_ESCAPE, 0, 0);
                     break;
                 }
 
