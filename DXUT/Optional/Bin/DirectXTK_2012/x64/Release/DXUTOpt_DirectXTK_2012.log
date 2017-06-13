@@ -1,4 +1,4 @@
-﻿La génération a démarré 10/06/2017 10:15:44.
+﻿La génération a démarré 13/06/2017 20:33:33.
 Environnement au début de la génération :
 ADSK_3DSMAX_x64_2017 = I:\Programms\AutoDesk\3D MAX\3ds Max 2017\
 ALLUSERSPROFILE = C:\ProgramData
@@ -22,7 +22,7 @@ MSMPI_BIN = C:\Program Files\Microsoft MPI\Bin\
 NUMBER_OF_PROCESSORS = 8
 OneDrive = C:\Users\kikij\OneDrive
 OS = Windows_NT
-Path = C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin
+Path = C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 PkgDefApplicationConfigFile = C:\Users\kikij\AppData\Local\Microsoft\VisualStudio\15.0_35f159ae\devenv.exe.config
 PROCESSOR_ARCHITECTURE = x86
@@ -56,8 +56,8 @@ VSLANG = 1036
 VSSDK140Install = E:\Programs\VS15\VSSDK\
 windir = C:\WINDOWS
 
-10:15:44.344     1>Projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" sur le nœud 2 (Deploy cible(s)).
-10:15:44.344     1>Propriétés initiales :
+20:33:33.504     1>Projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" sur le nœud 2 (Deploy cible(s)).
+20:33:33.504     1>Propriétés initiales :
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -624,7 +624,7 @@ windir = C:\WINDOWS
                    EntityDeployDependsOn = 
                    EntityDeployIntermediateResourcePath = Bin\DirectXTK_2012\x64\Release\edmxResourcesToEmbed\
                    ExcludePath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\include;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\include;;E:\Programs\VS17\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;E:\Programs\VS17\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\lib\x64;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\lib\x64;;E:\Programs\VS17\VC\Auxiliary\VS\lib\x64;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\lib;
-                   ExecutablePath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;E:\Programs\VS17\Common7\tools;E:\Programs\VS17\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;E:\Programs\VS17\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin;
+                   ExecutablePath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;E:\Programs\VS17\Common7\tools;E:\Programs\VS17\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;E:\Programs\VS17\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin;
                    ExpandSDKAllowedReferenceExtensions = 
                          .winmd;
                          .dll
@@ -823,7 +823,7 @@ windir = C:\WINDOWS
                    OutputPath = Bin\DirectXTK_2012\x64\Release\
                    OutputType = staticlibrary
                    OverwriteReadOnlyFiles = false
-                   Path = C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin
+                   Path = C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin
                    PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
                    PkgDefApplicationConfigFile = C:\Users\kikij\AppData\Local\Microsoft\VisualStudio\15.0_35f159ae\devenv.exe.config
                    Platform = x64
@@ -1215,14 +1215,14 @@ windir = C:\WINDOWS
                    XamlTemporaryAssemblyName = DXUTOpt_DirectXTK_2012
                    YieldDuringToolExecution = true
 
-10:15:44.344     1>Génération à l'aide des outils version "15.0".
-10:15:44.345     1>E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj : error MSB4057: La cible "Deploy" n'existe pas dans le projet.
-10:15:44.345     1>Génération du projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" terminée (Deploy cible(s)) -- ÉCHEC.
+20:33:33.504     1>Génération à l'aide des outils version "15.0".
+20:33:33.504     1>E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj : error MSB4057: La cible "Deploy" n'existe pas dans le projet.
+20:33:33.504     1>Génération du projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" terminée (Deploy cible(s)) -- ÉCHEC.
 
 Résumé de performance des projets :
-        1 ms  E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj   1 appels
-                  1 ms  Deploy                                     1 appels
+        0 ms  E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj   1 appels
+                  0 ms  Deploy                                     1 appels
 
 ÉCHEC de la build.
 
-Temps écoulé 00:00:00.00
+Temps écoulé 00:00:00.01

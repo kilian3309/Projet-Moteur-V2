@@ -1498,8 +1498,8 @@ LRESULT CALLBACK DXUTStaticWndProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
             {
                 case VK_ESCAPE:
                 {
-                    if( GetDXUTState().GetHandleEscape() )
-                        SendMessage( hWnd, WM_CLOSE, 0, 0 );
+                    //if( GetDXUTState().GetHandleEscape() )
+                    //    SendMessage( hWnd, WM_CLOSE, 0, 0 );
                     break;
                 }
 
