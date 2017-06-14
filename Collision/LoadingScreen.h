@@ -90,10 +90,14 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 	SetWindowTheme(hwndPB, L"", L"");
 	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 
+	
+	GetWindowRect(hwndPB, loadingTextRect);
+
+	/*
 	loadingTextRect->top = 100;
 	loadingTextRect->bottom = 200;
 	loadingTextRect->right = 50;
-	loadingTextRect->left = 10;
+	loadingTextRect->left = 10;*/
 
 
 
