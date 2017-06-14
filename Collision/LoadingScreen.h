@@ -9,7 +9,7 @@
 */
 int LoadingMax = 13;
 
-LPRECT loadingTextRect;
+RECT loadingTextRect;
 
 //Variables de la fenêtre de chargement
 HWND hwndPB; //Handle vers la progress bar
@@ -31,7 +31,7 @@ void IncrementLoading(LPCWSTR txt=LPCWSTR(L"Loading...")) {
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
 		SendMessage(hwndLS, WM_DESTROY, 0, 0);
 	}
-	DrawText(NULL, txt, 11, loadingTextRect, DT_CENTER);
+	DrawText(NULL, txt, 11, &loadingTextRect, DT_CENTER);
 }
 
 
@@ -90,7 +90,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 
 	
-	GetWindowRect(hwndPB, loadingTextRect);
+	GetWindowRect(hwndPB, &loadingTextRect);
 
 	/*
 	loadingTextRect->top = 100;
