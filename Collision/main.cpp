@@ -214,7 +214,7 @@ CollisionAABox g_RayHitResultBox;
 //Liste des emplacements de la caméra
 XMVECTOR g_CameraOrigins[CAMERA_COUNT];
 
-
+bool isMenuOpen;
 
 
 //Contrôles des bouttons à droite (UI control)
@@ -257,6 +257,11 @@ void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color);
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color);
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color);
 
+void OpenMenu() {
+	isMenuOpen = true;
+
+
+}
 
 int wWinMainEnd() {
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
@@ -1317,7 +1322,7 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	}
 	break;
 	case VK_ESCAPE:
-		MessageBoxK(L"f", L"f");
+		OpenMenu();
 		break;
 	}
 }

@@ -23,13 +23,10 @@ void MessageBoxK(std::wstring title, int text) {
 	MessageBoxK(title, std::to_wstring(text));
 }
 
-
-#define IncrementLoading _IncrementLoading();
-
 /*
 	
 */
-void _IncrementLoading() {
+void IncrementLoading(LPSTR txt=LPSTR(L"Loading...")) {
 	SendMessage(hwndPB, PBM_STEPIT, 0, 0);
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
 		SendMessage(hwndLS, WM_DESTROY, 0, 0);
@@ -102,6 +99,8 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 	SendMessage(hwndPB, PBM_SETRANGE, 0, MAKELPARAM(0, maxRange));
 	SendMessage(hwndPB, PBM_SETSTEP, (WPARAM)1, 0);
 
+
+	
 }
 
 
