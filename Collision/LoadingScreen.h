@@ -34,9 +34,9 @@ void IncrementLoading(LPCWSTR txt=LPCWSTR(L"Loading...")) {
 	}
 	//DrawText(loadingDeviceContext, txt, 11, &loadingTextRect, DT_CENTER);
 	PAINTSTRUCT ps;
-	loadingDeviceContext = BeginPaint(hwndPB, &ps);
+	loadingDeviceContext = BeginPaint(hwndLS, &ps);
 	TextOut(loadingDeviceContext, 200, 200, txt, wcslen(txt));
-	EndPaint(hwndPB, &ps);
+	EndPaint(hwndLS, &ps);
 }
 
 
