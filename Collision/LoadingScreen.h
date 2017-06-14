@@ -32,7 +32,11 @@ void IncrementLoading(LPCWSTR txt=LPCWSTR(L"Loading...")) {
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
 		SendMessage(hwndLS, WM_DESTROY, 0, 0);
 	}
-	DrawText(loadingDeviceContext, txt, 11, &loadingTextRect, DT_CENTER);
+	//DrawText(loadingDeviceContext, txt, 11, &loadingTextRect, DT_CENTER);
+	PAINTSTRUCT ps;
+	loadingDeviceContext = BeginPaint(hwndPB, &ps);
+	TextOut(loadingDeviceContext, 200, 200, txt, wcslen(txt));
+	EndPaint(hwndPB, &ps);
 }
 
 

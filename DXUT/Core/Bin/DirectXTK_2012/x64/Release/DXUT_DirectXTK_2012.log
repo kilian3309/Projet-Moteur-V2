@@ -1,4 +1,4 @@
-﻿La génération a démarré 14/06/2017 10:23:30.
+﻿La génération a démarré 14/06/2017 10:28:21.
 Environnement au début de la génération :
 ADSK_3DSMAX_x64_2017 = I:\Programms\AutoDesk\3D MAX\3ds Max 2017\
 ALLUSERSPROFILE = C:\ProgramData
@@ -56,8 +56,8 @@ VSLANG = 1036
 VSSDK140Install = E:\Programs\VS15\VSSDK\
 windir = C:\WINDOWS
 
-10:23:30.075     1>Projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" sur le nœud 2 (Build cible(s)).
-10:23:30.075     1>Propriétés initiales :
+10:28:21.030     1>Projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" sur le nœud 2 (Build cible(s)).
+10:28:21.030     1>Propriétés initiales :
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -1215,8 +1215,8 @@ windir = C:\WINDOWS
                    XamlTemporaryAssemblyName = DXUT_DirectXTK_2012
                    YieldDuringToolExecution = true
 
-10:23:30.075     1>Génération à l'aide des outils version "15.0".
-10:23:30.075     1>Cible "_CheckForInvalidConfigurationAndPlatform : (IdCible:2)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_PrepareForBuild" en dépend) :
+10:28:21.030     1>Génération à l'aide des outils version "15.0".
+10:28:21.030     1>Cible "_CheckForInvalidConfigurationAndPlatform : (IdCible:2)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_PrepareForBuild" en dépend) :
                    Propriété définie : _InvalidConfigurationMessageText=The OutputPath property is not set for project 'DXUT_DirectXTK_2012.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Release'  Platform='x64'.
                    Propriété définie : _InvalidConfigurationMessageText=The OutputPath property is not set for project 'DXUT_DirectXTK_2012.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Release'  Platform='x64'.  This error may also appear if some other project is trying to follow a project-to-project reference to this project, this project has been unloaded or is not included in the solution, and the referencing project does not build using the same or an equivalent Configuration or Platform.
                    Tâche "Error" ignorée en raison d'une fausse condition ; ( '$(_InvalidConfigurationError)' == 'true' ) a été évaluée comme ( '' == 'true' ).
@@ -1235,8 +1235,8 @@ windir = C:\WINDOWS
                    Tâche "Error" ignorée en raison d'une fausse condition ; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) a été évaluée comme ('Bin\DirectXTK_2012\x64\Release\' != '' and !HasTrailingSlash('Bin\DirectXTK_2012\x64\Release\')).
                    Tâche "Error" ignorée en raison d'une fausse condition ; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) a été évaluée comme ('obj\' != '' and !HasTrailingSlash('obj\')).
                    Tâche "Error" ignorée en raison d'une fausse condition ; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) a été évaluée comme ('Bin\DirectXTK_2012\x64\Release\' != '' and !HasTrailingSlash('Bin\DirectXTK_2012\x64\Release\')).
-10:23:30.077     1>Génération de la cible "_CheckForInvalidConfigurationAndPlatform" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:2)
-10:23:30.077     1>Cible "_PrepareForBuild : (IdCible:3)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
+10:28:21.032     1>Génération de la cible "_CheckForInvalidConfigurationAndPlatform" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:2)
+10:28:21.032     1>Cible "_PrepareForBuild : (IdCible:3)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
                    Propriété définie : BuildType=Build
                    Propriété définie : _BuildActionType=Build
                    Tâche "CreateItem" ignorée en raison d'une fausse condition ; ('%(CustomBuild.IncludeFileToTool)'!='') a été évaluée comme (''!='').
@@ -1244,17 +1244,17 @@ windir = C:\WINDOWS
                        CustomBuildStep=
                            DXUT
                                    Message=Performing Custom Build Step
-10:23:30.077     1>Génération de la cible "_PrepareForBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:3)
-10:23:30.077     1>Cible "_PrepareForReferenceResolution : (IdCible:4)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
+10:28:21.032     1>Génération de la cible "_PrepareForBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:3)
+10:28:21.032     1>Cible "_PrepareForReferenceResolution : (IdCible:4)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
                    Propriété définie : TargetFrameworkMoniker=
                    Propriété définie : _FindDependencies=false
                    Propriété définie : AdditionalExplicitAssemblyReferences=
                    Tâche "Message" ignorée en raison d'une fausse condition ; ('$(_REFERENCE_DEBUG)'=='true') a été évaluée comme (''=='true').
-10:23:30.077     1>Génération de la cible "_PrepareForReferenceResolution" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:4)
+10:28:21.032     1>Génération de la cible "_PrepareForReferenceResolution" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:4)
                    Cible "ComputeCrtSDKReference" ignorée en raison d'une fausse condition ; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') a été évaluée comme ('DXUT.cpp;DXUTDevice11.cpp;DXUTmisc.cpp;DXErr.cpp'!='' and 'false'=='true' and '' != 'false').
-10:23:30.077     1>Cible "BeforeResolveReferences : (IdCible:5)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
-10:23:30.077     1>Génération de la cible "BeforeResolveReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:5)
-10:23:30.077     1>Cible "AssignProjectConfiguration : (IdCible:6)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
+10:28:21.032     1>Cible "BeforeResolveReferences : (IdCible:5)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
+10:28:21.032     1>Génération de la cible "BeforeResolveReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:5)
+10:28:21.032     1>Cible "AssignProjectConfiguration : (IdCible:6)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
                    Propriété définie : ShouldUnsetParentConfigurationAndPlatform=true
                    Utilisation de la tâche "AssignProjectConfiguration" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Tâche "AssignProjectConfiguration" (IDTâche:4)
@@ -1272,12 +1272,12 @@ windir = C:\WINDOWS
                      Paramètre de tâche :OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration=True (IDTâche:4)
                      Paramètre de tâche :ShouldUnsetParentConfigurationAndPlatform=True (IDTâche:4)
                    Exécution de la tâche "AssignProjectConfiguration" terminée. (IDTâche:4)
-10:23:30.077     1>Génération de la cible "AssignProjectConfiguration" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:6)
+10:28:21.033     1>Génération de la cible "AssignProjectConfiguration" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:6)
                    Cible "AssignProjectConfiguration" ignorée. Elle a été générée.
-10:23:30.077     1>Cible "_SplitProjectReferencesByFileExistence : (IdCible:7)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareProjectReferences" en dépend) :
+10:28:21.033     1>Cible "_SplitProjectReferencesByFileExistence : (IdCible:7)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareProjectReferences" en dépend) :
                    Tâche "ResolveNonMSBuildProjectOutput" ignorée en raison d'une fausse condition ; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') a été évaluée comme ('true'=='true' and ''!='').
-10:23:30.077     1>Génération de la cible "_SplitProjectReferencesByFileExistence" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:7)
-10:23:30.077     1>Cible "_GetProjectReferenceTargetFrameworkProperties : (IdCible:8)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareProjectReferences" en dépend) :
+10:28:21.033     1>Génération de la cible "_SplitProjectReferencesByFileExistence" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:7)
+10:28:21.033     1>Cible "_GetProjectReferenceTargetFrameworkProperties : (IdCible:8)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareProjectReferences" en dépend) :
                    Propriété définie : ReferringTargetFrameworkForProjectReferences=.NETFramework,Version=v4.0
                    Utilisation de la tâche "MSBuild" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Tâche "MSBuild" (IDTâche:5)
@@ -1288,21 +1288,21 @@ windir = C:\WINDOWS
                      Propriété en sortie : _ProjectReferenceTargetFrameworkProperties= (IDTâche:5)
                    Exécution de la tâche "MSBuild" terminée. (IDTâche:5)
                    Propriété définie : _ProjectReferenceTargetFrameworkProperties=
-10:23:30.078     1>Génération de la cible "_GetProjectReferenceTargetFrameworkProperties" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:8)
-10:23:30.078     1>Cible "PrepareProjectReferences : (IdCible:9)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveProjectReferences" en dépend) :
-10:23:30.078     1>Génération de la cible "PrepareProjectReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:9)
+10:28:21.034     1>Génération de la cible "_GetProjectReferenceTargetFrameworkProperties" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:8)
+10:28:21.034     1>Cible "PrepareProjectReferences : (IdCible:9)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveProjectReferences" en dépend) :
+10:28:21.034     1>Génération de la cible "PrepareProjectReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:9)
                    Cible "_RemoveNameMetadataFromProjectReferenceItems" ignorée en raison d'une fausse condition ; ('@(ProjectReference)'!='') a été évaluée comme (''!='').
-10:23:30.078     1>Cible "ResolveProjectReferences : (IdCible:10)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
+10:28:21.034     1>Cible "ResolveProjectReferences : (IdCible:10)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' != '10.0' and '' != '').
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' == '10.0' and '' != '').
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
                    Tâche "Warning" ignorée en raison d'une fausse condition ; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') a été évaluée comme ('' != '' and '' != '').
-10:23:30.078     1>Génération de la cible "ResolveProjectReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:10)
+10:28:21.034     1>Génération de la cible "ResolveProjectReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:10)
                    Cible "FindInvalidProjectReferences" ignorée en raison d'une fausse condition ; ('$(FindInvalidProjectReferences)' == 'true') a été évaluée comme ('' == 'true').
                    Cible "ResolveNativeReferences" ignorée en raison d'une fausse condition ; ('@(NativeReference)'!='') a été évaluée comme (''!='').
                    Cible "_PrepareForReferenceResolution" ignorée. Elle a été générée.
-10:23:30.078     1>Cible "GetFrameworkPaths : (IdCible:11)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.NETFramework.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+10:28:21.034     1>Cible "GetFrameworkPaths : (IdCible:11)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.NETFramework.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
                    Élément(s) ajouté(s) : _TargetFramework40DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
                    Élément(s) ajouté(s) : _TargetFramework35DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v3.5
                    Élément(s) ajouté(s) : _TargetFramework30DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v3.0
@@ -1312,16 +1312,16 @@ windir = C:\WINDOWS
                    Propriété définie : TargetFrameworkDirectory=C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
                    Propriété définie : TargetFrameworkSDKDirectory=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
                    Élément(s) ajouté(s) : _TargetFrameworkSDKDirectoryItem=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
-10:23:30.079     1>Génération de la cible "GetFrameworkPaths" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:11)
+10:28:21.034     1>Génération de la cible "GetFrameworkPaths" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:11)
                    Cible "GetWinFXPath" ignorée en raison d'une fausse condition ; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) a été évaluée comme (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
-10:23:30.079     1>Cible "GetReferenceAssemblyPaths : (IdCible:12)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+10:28:21.034     1>Cible "GetReferenceAssemblyPaths : (IdCible:12)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
                    Propriété définie : TargetFrameworkDirectory=
                    Tâche "GetReferenceAssemblyPaths" ignorée en raison d'une fausse condition ; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) a été évaluée comme ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
                    Propriété définie : TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;
                    Propriété définie : TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;;C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral
                    Propriété définie : RemoveAssemblyFoldersIfNoTargetFramework=true
-10:23:30.079     1>Génération de la cible "GetReferenceAssemblyPaths" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:12)
-10:23:30.079     1>Cible "SetBuildDefaultEnvironmentVariables : (IdCible:13)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
+10:28:21.034     1>Génération de la cible "GetReferenceAssemblyPaths" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:12)
+10:28:21.034     1>Cible "SetBuildDefaultEnvironmentVariables : (IdCible:13)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
                    Utilisation de la tâche "SetEnv" à partir de l'assembly "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
                    Tâche "SetEnv" (IDTâche:6)
                      Paramètre de tâche :Name=PATH (IDTâche:6)
@@ -1351,9 +1351,9 @@ windir = C:\WINDOWS
                      INCLUDE=E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\include;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\include;;E:\Programs\VS17\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;; (IDTâche:9)
                      Propriété en sortie : INCLUDE=E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\include%3b%3bE:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\include%3b%3bE:\Programs\VS17\VC\Auxiliary\VS\include%3b%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.10240.0\ucrt%3b%3b%3bE:\Programs\VS17\VC\Auxiliary\VS\UnitTest\include%3bC:\Program Files %28x86%29\Windows Kits\8.1\Include\um%3bC:\Program Files %28x86%29\Windows Kits\8.1\Include\shared%3bC:\Program Files %28x86%29\Windows Kits\8.1\Include\winrt%3b%3b (IDTâche:9)
                    Exécution de la tâche "SetEnv" terminée. (IDTâche:9)
-10:23:30.079     1>Génération de la cible "SetBuildDefaultEnvironmentVariables" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:13)
+10:28:21.035     1>Génération de la cible "SetBuildDefaultEnvironmentVariables" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:13)
                    Cible "SetUserMacroEnvironmentVariables" ignorée en raison d'une fausse condition ; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') a été évaluée comme ('' != '' and '' != 'true').
-10:23:30.079     1>Cible "GetResolvedWinMD : (IdCible:14)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
+10:28:21.035     1>Cible "GetResolvedWinMD : (IdCible:14)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
                    Élément(s) ajouté(s) : 
                        Link=
                            tmp
@@ -1448,8 +1448,8 @@ windir = C:\WINDOWS
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-10:23:30.080     1>Génération de la cible "GetResolvedWinMD" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:14)
-10:23:30.080     1>Cible "PlatformPrepareForBuild : (IdCible:15)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
+10:28:21.035     1>Génération de la cible "GetResolvedWinMD" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:14)
+10:28:21.036     1>Cible "PlatformPrepareForBuild : (IdCible:15)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
                    Propriété définie : ConfigurationPlatformExists=true
                    Propriété définie : _CurrentPlatformToolsetShortName=v141
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(_Error64bitToolsNotInstalled)' == 'true') a été évaluée comme ('' == 'true').
@@ -1457,22 +1457,22 @@ windir = C:\WINDOWS
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') a été évaluée comme (''!='true' and 'true' != 'true' and 'v141' == 'v100').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') a été évaluée comme (''!='true' and 'true' != 'true' and 'v141' == 'v90').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') a été évaluée comme (''!='true' and 'true' != 'true' and 'v141' != 'v90' and 'v141' != 'v100' and 'v141' != 'v110').
-10:23:30.080     1>Génération de la cible "PlatformPrepareForBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:15)
-10:23:30.080     1>Cible "Desktop_PlatformPrepareForBuild : (IdCible:16)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Platforms\x64\PlatformToolsets\v141\Toolset.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
+10:28:21.036     1>Génération de la cible "PlatformPrepareForBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:15)
+10:28:21.036     1>Cible "Desktop_PlatformPrepareForBuild : (IdCible:16)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Platforms\x64\PlatformToolsets\v141\Toolset.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ($(MissingSDKProps) == 'true') a été évaluée comme ( == 'true').
-10:23:30.080     1>Génération de la cible "Desktop_PlatformPrepareForBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:16)
+10:28:21.036     1>Génération de la cible "Desktop_PlatformPrepareForBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:16)
                    Cible "GetFrameworkPaths" ignorée. Elle a été générée.
                    Cible "GetReferenceAssemblyPaths" ignorée. Elle a été générée.
                    Cible "AssignLinkMetadata" ignorée en raison d'une fausse condition ; ( '$(SynthesizeLinkMetadata)' == 'true' ) a été évaluée comme ( '' == 'true' ).
-10:23:30.080     1>Cible "SetCABuildNativeEnvironmentVariables : (IdCible:17)" dans le fichier "E:\Programs\VS17\MSBuild\Microsoft\VisualStudio\v15.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
+10:28:21.036     1>Cible "SetCABuildNativeEnvironmentVariables : (IdCible:17)" dans le fichier "E:\Programs\VS17\MSBuild\Microsoft\VisualStudio\v15.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForBuild" en dépend) :
                    Initialisation de la fabrique de tâches "CodeTaskFactory" à partir de l'assembly "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Build.Tasks.Core.dll".
                    Utilisation de "SetEnvironmentVariable" à partir de la fabrique de tâches "Code Task Factory".
                    Tâche "SetEnvironmentVariable" (IDTâche:10)
                      Paramètre de tâche :EnvValue=E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\include;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;; (IDTâche:10)
                      Paramètre de tâche :EnvKey=CAExcludePath (IDTâche:10)
                    Exécution de la tâche "SetEnvironmentVariable" terminée. (IDTâche:10)
-10:23:30.084     1>Génération de la cible "SetCABuildNativeEnvironmentVariables" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:17)
-10:23:30.084     1>Cible "PrepareForBuild : (IdCible:18)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+10:28:21.039     1>Génération de la cible "SetCABuildNativeEnvironmentVariables" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:17)
+10:28:21.039     1>Cible "PrepareForBuild : (IdCible:18)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
                    Propriété définie : TargetDir=E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\
                    Propriété définie : LocalDebuggerCommand=E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.lib
                    Propriété définie : BuildProjectReferences=false
@@ -1501,23 +1501,23 @@ windir = C:\WINDOWS
                              Bin\DirectXTK_2012\x64\Release\
                              Bin\DirectXTK_2012\x64\Release\DXUT.tlog\ (IDTâche:12)
                    Exécution de la tâche "MakeDir" terminée. (IDTâche:12)
-10:23:30.086     1>Génération de la cible "PrepareForBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:18)
+10:28:21.040     1>Génération de la cible "PrepareForBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:18)
                    Cible "_PrepareForReferenceResolution" ignorée. Elle a été générée.
                    Cible "ComputeCrtSDKReference" ignorée en raison d'une fausse condition ; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') a été évaluée comme ('DXUT.cpp;DXUTDevice11.cpp;DXUTmisc.cpp;DXErr.cpp'!='' and 'false'=='true' and '' != 'false').
-10:23:30.086     1>Cible "GetInstalledSDKLocations : (IdCible:19)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveSDKReferences" en dépend) :
+10:28:21.040     1>Cible "GetInstalledSDKLocations : (IdCible:19)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveSDKReferences" en dépend) :
                    Tâche "GetInstalledSDKLocations" ignorée en raison d'une fausse condition ; ('@(SDKReference)' != '') a été évaluée comme ('' != '').
                    Tâche "GetInstalledSDKLocations" ignorée en raison d'une fausse condition ; ('@(SDKReference)' != '' and '$(SupportWindows81SDKs)' == 'true' and '$(TargetPlatformIdentifierWindows81)' != '' and '$(TargetPlatformVersionWindows81)' != '') a été évaluée comme ('' != '' and '' == 'true' and '' != '' and '' != '').
                    Tâche "GetInstalledSDKLocations" ignorée en raison d'une fausse condition ; ('@(SDKReference)' != '' and '$(SupportWindowsPhone81SDKs)' == 'true' and '$(TargetPlatformIdentifierWindowsPhone81)' != '' and '$(TargetPlatformVersionWindowsPhone81)' != '') a été évaluée comme ('' != '' and '' == 'true' and '' != '' and '' != '').
-10:23:30.086     1>Génération de la cible "GetInstalledSDKLocations" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:19)
-10:23:30.086     1>Cible "ResolveSDKReferences : (IdCible:20)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+10:28:21.040     1>Génération de la cible "GetInstalledSDKLocations" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:19)
+10:28:21.040     1>Cible "ResolveSDKReferences : (IdCible:20)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
                    Tâche "ResolveSDKReference" ignorée en raison d'une fausse condition ; ('@(SDKReference)'!='') a été évaluée comme (''!='').
-10:23:30.086     1>Génération de la cible "ResolveSDKReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:20)
+10:28:21.040     1>Génération de la cible "ResolveSDKReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:20)
                    Cible "ResolveSDKReferences" ignorée. Elle a été générée.
-10:23:30.086     1>Cible "ExpandSDKReferences : (IdCible:21)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+10:28:21.040     1>Cible "ExpandSDKReferences : (IdCible:21)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
                    Tâche "GetSDKReferenceFiles" ignorée en raison d'une fausse condition ; ('@(ResolvedSDKReference)'!='') a été évaluée comme (''!='').
-10:23:30.086     1>Génération de la cible "ExpandSDKReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:21)
+10:28:21.041     1>Génération de la cible "ExpandSDKReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:21)
                    Cible "ResolveNuGetPackageAssets" ignorée en raison d'une fausse condition ; ('$(ResolveNuGetPackages)' == 'true' and exists('$(ProjectLockFile)')) a été évaluée comme ('true' == 'true' and exists('obj\project.assets.json')).
-10:23:30.086     1>Cible "ResolveAssemblyReferences : (IdCible:22)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
+10:28:21.041     1>Cible "ResolveAssemblyReferences : (IdCible:22)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
                    Élément(s) ajouté(s) : 
                        _ReferenceInstalledAssemblyDirectory=
                            C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
@@ -1526,19 +1526,19 @@ windir = C:\WINDOWS
                    Propriété définie : ResolveAssemblyReferencesSilent=false
                    Propriété définie : ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch=Warning
                    Tâche "ResolveAssemblyReference" ignorée en raison d'une fausse condition ; ('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '') a été évaluée comme (''!='' or ''!='' or '' != '').
-10:23:30.087     1>Génération de la cible "ResolveAssemblyReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:22)
+10:28:21.041     1>Génération de la cible "ResolveAssemblyReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:22)
                    Cible "GenerateBindingRedirects" ignorée en raison d'une fausse condition ; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true') a été évaluée comme ('' == 'true' and '' == 'true').
                    Cible "GenerateBindingRedirectsUpdateAppConfig" ignorée en raison d'une fausse condition ; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)')) a été évaluée comme ('' == 'true' and '' == 'true' and Exists('Bin\DirectXTK_2012\x64\Release\DXUT_DirectXTK_2012.vcxproj.DXUT.lib.config')).
                    Cible "ResolveComReferences" ignorée en raison d'une fausse condition ; ('@(COMReference)'!='' or '@(COMFileReference)'!='') a été évaluée comme (''!='' or ''!='').
-10:23:30.087     1>Cible "AfterResolveReferences : (IdCible:23)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
-10:23:30.087     1>Génération de la cible "AfterResolveReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:23)
+10:28:21.041     1>Cible "AfterResolveReferences : (IdCible:23)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ResolveReferences" en dépend) :
+10:28:21.041     1>Génération de la cible "AfterResolveReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:23)
                    Cible "ImplicitlyExpandDesignTimeFacades" ignorée en raison d'une fausse condition ; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') a été évaluée comme ('' == 'true').
                    Cible "ResolveTestReferences" ignorée en raison d'une fausse condition ; ('@(Shadow)'!='') a été évaluée comme (''!='').
-10:23:30.087     1>Cible "ResolveReferences : (IdCible:24)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
-10:23:30.087     1>Génération de la cible "ResolveReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:24)
+10:28:21.041     1>Cible "ResolveReferences : (IdCible:24)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
+10:28:21.041     1>Génération de la cible "ResolveReferences" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:24)
                    Cible "PrepareForBuild" ignorée. Elle a été générée.
                    Cible "PrepareForBuild" ignorée. Elle a été générée.
-10:23:30.087     1>Cible "InitializeBuildStatus : (IdCible:25)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
+10:28:21.041     1>Cible "InitializeBuildStatus : (IdCible:25)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
                    Utilisation de la tâche "ReadLinesFromFile" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Tâche "ReadLinesFromFile" (IDTâche:13)
                      Paramètre de tâche :File=Bin\DirectXTK_2012\x64\Release\DXUT.tlog\DXUT.lastbuildstate (IDTâche:13)
@@ -1564,74 +1564,74 @@ windir = C:\WINDOWS
                      Paramètre de tâche :Files=Bin\DirectXTK_2012\x64\Release\DXUT.tlog\unsuccessfulbuild (IDTâche:15)
                      Création de "Bin\DirectXTK_2012\x64\Release\DXUT.tlog\unsuccessfulbuild", car "AlwaysCreate" a été spécifié. (IDTâche:15)
                    Exécution de la tâche "Touch" terminée. (IDTâche:15)
-10:23:30.089     1>Génération de la cible "InitializeBuildStatus" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:25)
+10:28:21.043     1>Génération de la cible "InitializeBuildStatus" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:25)
                    Cible "PrepareProjectReferences" ignorée. Elle a été générée.
-10:23:30.089     1>Cible "BuildGenerateSourcesTraverse : (IdCible:26)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildGenerateSources" en dépend) :
+10:28:21.043     1>Cible "BuildGenerateSourcesTraverse : (IdCible:26)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildGenerateSources" en dépend) :
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') a été évaluée comme ('' == 'true' and '' != '' and '' != '' and '' == 'true').
-10:23:30.089     1>Génération de la cible "BuildGenerateSourcesTraverse" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:26)
+10:28:21.043     1>Génération de la cible "BuildGenerateSourcesTraverse" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:26)
                    Cible "PrepareForBuild" ignorée. Elle a été générée.
                    Cible "ResolveReferences" ignorée. Elle a été générée.
-10:23:30.089     1>Cible "BeforeBuildGenerateSources : (IdCible:27)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
-10:23:30.089     1>Génération de la cible "BeforeBuildGenerateSources" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:27)
-10:23:30.089     1>Cible "PreBuildEvent : (IdCible:28)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+10:28:21.043     1>Cible "BeforeBuildGenerateSources : (IdCible:27)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+10:28:21.043     1>Génération de la cible "BeforeBuildGenerateSources" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:27)
+10:28:21.043     1>Cible "PreBuildEvent : (IdCible:28)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
                    Tâche "Message" ignorée en raison d'une fausse condition ; ('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '') a été évaluée comme ('' != '' and '' != '').
                    Tâche "Exec" ignorée en raison d'une fausse condition ; ('%(PreBuildEvent.Command)' != '') a été évaluée comme ('' != '').
-10:23:30.091     1>Génération de la cible "PreBuildEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:28)
+10:28:21.046     1>Génération de la cible "PreBuildEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:28)
                    Cible "CustomBuild" ignorée en raison d'une fausse condition ; ('@(CustomBuild)' != '') a été évaluée comme ('' != '').
                    Cible "FxExport" ignorée en raison d'une fausse condition ; ('@(FxCompile)' != '') a été évaluée comme ('' != '').
                    Cible "FxCompile" ignorée en raison d'une fausse condition ; ('@(FxCompile)' != '') a été évaluée comme ('' != '').
                    Cible "Xsd" ignorée en raison d'une fausse condition ; ('@(Xsd)' != '') a été évaluée comme ('' != '').
-10:23:30.092     1>Cible "_Xsd : (IdCible:29)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
-10:23:30.092     1>Génération de la cible "_Xsd" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:29)
-10:23:30.092     1>Cible "MakeDirsForMidl : (IdCible:30)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Midl" en dépend) :
+10:28:21.046     1>Cible "_Xsd : (IdCible:29)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+10:28:21.046     1>Génération de la cible "_Xsd" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:29)
+10:28:21.046     1>Cible "MakeDirsForMidl : (IdCible:30)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Midl" en dépend) :
                    Propriété définie : Midl_OutputDir=
                    Tâche "Makedir" (IDTâche:16)
                    Exécution de la tâche "Makedir" terminée. (IDTâche:16)
-10:23:30.092     1>Génération de la cible "MakeDirsForMidl" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:30)
+10:28:21.046     1>Génération de la cible "MakeDirsForMidl" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:30)
                    Cible "Midl" ignorée en raison d'une fausse condition ; ('@(Midl)' != '') a été évaluée comme ('' != '').
                    Cible "CustomBuild" ignorée en raison d'une fausse condition ; ('@(CustomBuild)' != '') a été évaluée comme ('' != '').
                    Cible "FxExport" ignorée en raison d'une fausse condition ; ('@(FxCompile)' != '') a été évaluée comme ('' != '').
                    Cible "FxCompile" ignorée en raison d'une fausse condition ; ('@(FxCompile)' != '') a été évaluée comme ('' != '').
-10:23:30.092     1>Cible "ComputeMIDLGeneratedCompileInputs : (IdCible:31)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Midl" en dépend) :
+10:28:21.046     1>Cible "ComputeMIDLGeneratedCompileInputs : (IdCible:31)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Midl" en dépend) :
                    Propriété définie : Midl_OutputDir=
-10:23:30.092     1>Génération de la cible "ComputeMIDLGeneratedCompileInputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:31)
-10:23:30.092     1>Cible "AfterMidl : (IdCible:32)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Midl" en dépend) :
-10:23:30.092     1>Génération de la cible "AfterMidl" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:32)
-10:23:30.092     1>Cible "_Midl : (IdCible:33)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
-10:23:30.092     1>Génération de la cible "_Midl" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:33)
-10:23:30.092     1>Cible "AfterBuildGenerateSources : (IdCible:34)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
-10:23:30.092     1>Génération de la cible "AfterBuildGenerateSources" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:34)
-10:23:30.092     1>Cible "AfterBuildGenerateSourcesEvent : (IdCible:35)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
-10:23:30.092     1>Génération de la cible "AfterBuildGenerateSourcesEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:35)
-10:23:30.092     1>Cible "_BuildGenerateSourcesAction : (IdCible:36)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildGenerateSources" en dépend) :
-10:23:30.092     1>Génération de la cible "_BuildGenerateSourcesAction" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:36)
-10:23:30.092     1>Cible "BuildGenerateSources : (IdCible:37)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
-10:23:30.092     1>Génération de la cible "BuildGenerateSources" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:37)
+10:28:21.046     1>Génération de la cible "ComputeMIDLGeneratedCompileInputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:31)
+10:28:21.046     1>Cible "AfterMidl : (IdCible:32)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Midl" en dépend) :
+10:28:21.046     1>Génération de la cible "AfterMidl" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:32)
+10:28:21.046     1>Cible "_Midl : (IdCible:33)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+10:28:21.046     1>Génération de la cible "_Midl" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:33)
+10:28:21.046     1>Cible "AfterBuildGenerateSources : (IdCible:34)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+10:28:21.046     1>Génération de la cible "AfterBuildGenerateSources" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:34)
+10:28:21.046     1>Cible "AfterBuildGenerateSourcesEvent : (IdCible:35)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+10:28:21.046     1>Génération de la cible "AfterBuildGenerateSourcesEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:35)
+10:28:21.046     1>Cible "_BuildGenerateSourcesAction : (IdCible:36)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildGenerateSources" en dépend) :
+10:28:21.046     1>Génération de la cible "_BuildGenerateSourcesAction" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:36)
+10:28:21.046     1>Cible "BuildGenerateSources : (IdCible:37)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
+10:28:21.046     1>Génération de la cible "BuildGenerateSources" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:37)
                    Cible "PrepareProjectReferences" ignorée. Elle a été générée.
-10:23:30.092     1>Cible "BuildCompileTraverse : (IdCible:38)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildCompile" en dépend) :
+10:28:21.046     1>Cible "BuildCompileTraverse : (IdCible:38)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildCompile" en dépend) :
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') a été évaluée comme ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
-10:23:30.092     1>Génération de la cible "BuildCompileTraverse" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:38)
+10:28:21.047     1>Génération de la cible "BuildCompileTraverse" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:38)
                    Cible "PrepareForBuild" ignorée. Elle a été générée.
                    Cible "ResolveReferences" ignorée. Elle a été générée.
-10:23:30.092     1>Cible "BeforeClCompile : (IdCible:39)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
-10:23:30.092     1>Génération de la cible "BeforeClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:39)
+10:28:21.047     1>Cible "BeforeClCompile : (IdCible:39)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
+10:28:21.047     1>Génération de la cible "BeforeClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:39)
                    Cible "ComputeMIDLGeneratedCompileInputs" ignorée. Elle a été générée.
-10:23:30.092     1>Cible "ComputeCLInputPDBName : (IdCible:40)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
-10:23:30.092     1>Génération de la cible "ComputeCLInputPDBName" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:40)
+10:28:21.047     1>Cible "ComputeCLInputPDBName : (IdCible:40)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
+10:28:21.047     1>Génération de la cible "ComputeCLInputPDBName" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:40)
                    Cible "ResolveReferences" ignorée. Elle a été générée.
-10:23:30.092     1>Cible "ComputeReferenceCLInput : (IdCible:41)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
+10:28:21.047     1>Cible "ComputeReferenceCLInput : (IdCible:41)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
                    Tâche "WriteLinesToFile" ignorée en raison d'une fausse condition ; (('@(_ReferenceCopyLocalPaths)'!='') and '$(DesignTimeBuild)' != 'true') a été évaluée comme ((''!='') and '' != 'true').
                    Tâche "Message" ignorée en raison d'une fausse condition ; ('$(_REFERENCE_DEBUG)'=='true') a été évaluée comme (''=='true').
-10:23:30.092     1>Génération de la cible "ComputeReferenceCLInput" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:41)
-10:23:30.092     1>Cible "WarnCompileDuplicatedFilename : (IdCible:42)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
+10:28:21.047     1>Génération de la cible "ComputeReferenceCLInput" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:41)
+10:28:21.047     1>Cible "WarnCompileDuplicatedFilename : (IdCible:42)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') a été évaluée comme ('' != 'true' and 'DXUT.cpp' != 'DXUT.cpp' and 'Bin\DirectXTK_2012\x64\Release\' == 'Bin\DirectXTK_2012\x64\Release\').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') a été évaluée comme ('' != 'true' and 'DXUTDevice11.cpp' != 'DXUTDevice11.cpp' and 'Bin\DirectXTK_2012\x64\Release\' == 'Bin\DirectXTK_2012\x64\Release\').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') a été évaluée comme ('' != 'true' and 'DXUTmisc.cpp' != 'DXUTmisc.cpp' and 'Bin\DirectXTK_2012\x64\Release\' == 'Bin\DirectXTK_2012\x64\Release\').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') a été évaluée comme ('' != 'true' and 'DXErr.cpp' != 'DXErr.cpp' and 'Bin\DirectXTK_2012\x64\Release\' == 'Bin\DirectXTK_2012\x64\Release\').
-10:23:30.093     1>Génération de la cible "WarnCompileDuplicatedFilename" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:42)
-10:23:30.093     1>Cible "FixupCLCompileOptions : (IdCible:43)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
-10:23:30.093     1>Génération de la cible "FixupCLCompileOptions" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:43)
-10:23:30.093     1>Cible "MakeDirsForCl : (IdCible:44)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
+10:28:21.048     1>Génération de la cible "WarnCompileDuplicatedFilename" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:42)
+10:28:21.048     1>Cible "FixupCLCompileOptions : (IdCible:43)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
+10:28:21.048     1>Génération de la cible "FixupCLCompileOptions" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:43)
+10:28:21.048     1>Cible "MakeDirsForCl : (IdCible:44)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
                    Élément(s) ajouté(s) : ClDirsToMake=E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release
                    Élément(s) ajouté(s) : ClDirsToMake=E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release
                    Élément(s) ajouté(s) : ClDirsToMake=E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release
@@ -1653,25 +1653,25 @@ windir = C:\WINDOWS
                            E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release
                            E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release
                            E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release
-10:23:30.094     1>Génération de la cible "MakeDirsForCl" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:44)
+10:28:21.048     1>Génération de la cible "MakeDirsForCl" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:44)
                    Cible "PrepareForBuild" ignorée. Elle a été générée.
                    Cible "SetBuildDefaultEnvironmentVariables" ignorée. Elle a été générée.
                    Cible "SetUserMacroEnvironmentVariables" ignorée en raison d'une fausse condition ; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') a été évaluée comme ('' != '' and '' != 'true').
-10:23:30.094     1>Cible "_SelectedFiles : (IdCible:45)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "SelectClCompile" en dépend) :
-10:23:30.094     1>Génération de la cible "_SelectedFiles" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:45)
+10:28:21.048     1>Cible "_SelectedFiles : (IdCible:45)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "SelectClCompile" en dépend) :
+10:28:21.048     1>Génération de la cible "_SelectedFiles" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:45)
                    Cible "ComputeMIDLGeneratedCompileInputs" ignorée. Elle a été générée.
                    Cible "ComputeCLInputPDBName" ignorée. Elle a été générée.
                    Cible "ComputeReferenceCLInput" ignorée. Elle a été générée.
                    Cible "WarnCompileDuplicatedFilename" ignorée. Elle a été générée.
                    Cible "FixupCLCompileOptions" ignorée. Elle a été générée.
                    Cible "_SelectedFiles" ignorée. Elle a été générée.
-10:23:30.094     1>Cible "SelectCustomBuild : (IdCible:46)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "SelectClCompile" en dépend) :
-10:23:30.094     1>Génération de la cible "SelectCustomBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:46)
-10:23:30.094     1>Cible "SelectClCompile : (IdCible:47)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ClCompile" en dépend) :
-10:23:30.094     1>Génération de la cible "SelectClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:47)
+10:28:21.048     1>Cible "SelectCustomBuild : (IdCible:46)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "SelectClCompile" en dépend) :
+10:28:21.048     1>Génération de la cible "SelectCustomBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:46)
+10:28:21.048     1>Cible "SelectClCompile : (IdCible:47)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ClCompile" en dépend) :
+10:28:21.048     1>Génération de la cible "SelectClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:47)
                    Cible "GenerateTargetFrameworkMonikerAttribute" ignorée en raison d'une fausse condition ; ('$(GenerateTargetFrameworkAttribute)' == 'true') a été évaluée comme ('false' == 'true').
                    Cible "ManagedIncrementalBuildPreProcessDependencyGraph" ignorée en raison d'une fausse condition ; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') a été évaluée comme ('DXUT.cpp;DXUTDevice11.cpp;DXUTmisc.cpp;DXErr.cpp' != '' and 'false' == 'True').
-10:23:30.094     1>Cible "ClCompile : (IdCible:48)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
+10:28:21.049     1>Cible "ClCompile : (IdCible:48)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
                    Propriété définie : CLToolArchitecture=Native32Bit
                    Propriété définie : CLDeleteOutputOnExecute=true
                    Tâche "Delete" ignorée en raison d'une fausse condition ; ('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'None' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName))) a été évaluée comme ('ProgramDatabase' != '' and 'ProgramDatabase' != 'None' and 'ProgramDatabase' != 'OldStyle' and 'Bin\DirectXTK_2012\x64\Release\DXUT.pdb' != '' and !Exists(Bin\DirectXTK_2012\x64\Release\DXUT.pdb)).
@@ -1832,22 +1832,23 @@ windir = C:\WINDOWS
                      Sorties pour E:\C++\COLLISIONS\DXUT\CORE\DXUT.CPP : (IDTâche:18)
                      	E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.OBJ (IDTâche:18)
                      	E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.PCH (IDTâche:18)
-                     DXUT.cpp sera compilé, car E:\C++\COLLISIONS\COLLISION\LOADINGSCREEN.H a été modifié à 14/06/2017 10:23:29. (IDTâche:18)
+                     DXUT.cpp sera compilé, car E:\C++\COLLISIONS\COLLISION\LOADINGSCREEN.H a été modifié à 14/06/2017 10:28:20. (IDTâche:18)
                      Sorties pour E:\C++\COLLISIONS\DXUT\CORE\DXUT.CPP : (IDTâche:18)
                      	E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.OBJ (IDTâche:18)
                      	E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.PCH (IDTâche:18)
                      Journaux de suivi d'écriture : (IDTâche:18)
                      	Bin\DirectXTK_2012\x64\Release\DXUT.tlog\CL.write.1.tlog (IDTâche:18)
                      Variables d'environnement passées à l'outil : (IDTâche:18)
-                       VS_UNICODE_OUTPUT=1928 (IDTâche:18)
+                       VS_UNICODE_OUTPUT=964 (IDTâche:18)
                      E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64\CL.exe /c /I..\..\DirectXTK\Inc /Zi /nologo /W4 /WX- /diagnostics:classic /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _LIB /D USE_DIRECTXTK /D _WIN32_WINNT=0x0600 /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /openmp- /Yc"DXUT.h" /Fp"Bin\DirectXTK_2012\x64\Release\DXUT.pch" /Fo"Bin\DirectXTK_2012\x64\Release\\" /Fd"Bin\DirectXTK_2012\x64\Release\DXUT.pdb" /Gd /TP /errorReport:prompt  DXUT.cpp (IDTâche:18)
                      Commande de suivi : (IDTâche:18)
-                     E:\Programs\VS17\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.tlog /r E:\C++\COLLISIONS\DXUT\CORE\DXUT.CPP /b MSBuildConsole_CancelEvent2d6707e229414b3087552e7e6df45151  /c E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64\CL.exe  /c /I..\..\DirectXTK\Inc /Zi /nologo /W4 /WX- /diagnostics:classic /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _LIB /D USE_DIRECTXTK /D _WIN32_WINNT=0x0600 /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /openmp- /Yc"DXUT.h" /Fp"Bin\DirectXTK_2012\x64\Release\DXUT.pch" /Fo"Bin\DirectXTK_2012\x64\Release\\" /Fd"Bin\DirectXTK_2012\x64\Release\DXUT.pdb" /Gd /TP /errorReport:prompt  DXUT.cpp (IDTâche:18)
+                     E:\Programs\VS17\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.tlog /r E:\C++\COLLISIONS\DXUT\CORE\DXUT.CPP /b MSBuildConsole_CancelEvent07a677be64ca480e951f8ecc3f5bdae2  /c E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64\CL.exe  /c /I..\..\DirectXTK\Inc /Zi /nologo /W4 /WX- /diagnostics:classic /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _LIB /D USE_DIRECTXTK /D _WIN32_WINNT=0x0600 /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /openmp- /Yc"DXUT.h" /Fp"Bin\DirectXTK_2012\x64\Release\DXUT.pch" /Fo"Bin\DirectXTK_2012\x64\Release\\" /Fd"Bin\DirectXTK_2012\x64\Release\DXUT.pdb" /Gd /TP /errorReport:prompt  DXUT.cpp (IDTâche:18)
                      DXUT.cpp (IDTâche:18)
-10:23:30.945     1>DXUT.cpp(580): warning C4838: la conversion de 'UINT' en 'LONG' requiert une conversion restrictive
-10:23:30.945     1>DXUT.cpp(581): warning C4838: la conversion de 'UINT' en 'LONG' requiert une conversion restrictive
-10:23:31.021     1>e:\c++\collisions\dxut\core\../../Collision/LoadingScreen.h(84): warning C4189: 'height' : variable locale initialisée mais non référencée
-10:23:31.021     1>e:\c++\collisions\dxut\core\../../Collision/LoadingScreen.h(83): warning C4189: 'width' : variable locale initialisée mais non référencée
+10:28:21.871     1>DXUT.cpp(580): warning C4838: la conversion de 'UINT' en 'LONG' requiert une conversion restrictive
+10:28:21.871     1>DXUT.cpp(581): warning C4838: la conversion de 'UINT' en 'LONG' requiert une conversion restrictive
+10:28:21.933     1>e:\c++\collisions\dxut\core\../../Collision/LoadingScreen.h(38): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+10:28:21.934     1>e:\c++\collisions\dxut\core\../../Collision/LoadingScreen.h(88): warning C4189: 'height' : variable locale initialisée mais non référencée
+10:28:21.934     1>e:\c++\collisions\dxut\core\../../Collision/LoadingScreen.h(87): warning C4189: 'width' : variable locale initialisée mais non référencée
                    Exécution de la tâche "CL" terminée. (IDTâche:18)
                    Tâche "CL" ignorée en raison d'une fausse condition ; ('%(ClCompile.PrecompiledHeader)' == 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and '%(ClCompile.CompilerIteration)' == '') a été évaluée comme ('Use' == 'Create' and ''!='true' and '' == '').
                    Tâche "CL" ignorée en raison d'une fausse condition ; ('%(ClCompile.PrecompiledHeader)' != 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and '%(ClCompile.CompilerIteration)' == '' and @(ClCompile) != '') a été évaluée comme ('Create' != 'Create' and ''!='true' and '' == '' and DXUT.cpp != '').
@@ -2134,43 +2135,43 @@ windir = C:\WINDOWS
                      	E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUTDEVICE11.OBJ (IDTâche:19)
                      	E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUTMISC.OBJ (IDTâche:19)
                      	E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXERR.OBJ (IDTâche:19)
-                     DXErr.cpp sera compilé, car E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.PCH a été modifié à 14/06/2017 10:23:30. (IDTâche:19)
-                     DXUTDevice11.cpp sera compilé, car E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.PCH a été modifié à 14/06/2017 10:23:30. (IDTâche:19)
-                     DXUTmisc.cpp sera compilé, car E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.PCH a été modifié à 14/06/2017 10:23:30. (IDTâche:19)
+                     DXErr.cpp sera compilé, car E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.PCH a été modifié à 14/06/2017 10:28:21. (IDTâche:19)
+                     DXUTDevice11.cpp sera compilé, car E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.PCH a été modifié à 14/06/2017 10:28:21. (IDTâche:19)
+                     DXUTmisc.cpp sera compilé, car E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.PCH a été modifié à 14/06/2017 10:28:21. (IDTâche:19)
                      Aucune sortie pour E:\C++\COLLISIONS\DXUT\CORE\DXERR.CPP|E:\C++\COLLISIONS\DXUT\CORE\DXUTDEVICE11.CPP|E:\C++\COLLISIONS\DXUT\CORE\DXUTMISC.CPP n'a été trouvée dans le journal de suivi ; compilation source requise. (IDTâche:19)
                      Journaux de suivi d'écriture : (IDTâche:19)
                      	Bin\DirectXTK_2012\x64\Release\DXUT.tlog\CL.write.1.tlog (IDTâche:19)
                      Variables d'environnement passées à l'outil : (IDTâche:19)
-                       VS_UNICODE_OUTPUT=1512 (IDTâche:19)
+                       VS_UNICODE_OUTPUT=1408 (IDTâche:19)
                      E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64\CL.exe /c /I..\..\DirectXTK\Inc /Zi /nologo /W4 /WX- /diagnostics:classic /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _LIB /D USE_DIRECTXTK /D _WIN32_WINNT=0x0600 /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /openmp- /Yu"DXUT.h" /Fp"Bin\DirectXTK_2012\x64\Release\DXUT.pch" /Fo"Bin\DirectXTK_2012\x64\Release\\" /Fd"Bin\DirectXTK_2012\x64\Release\DXUT.pdb" /Gd /TP /errorReport:prompt  DXErr.cpp DXUTDevice11.cpp DXUTmisc.cpp (IDTâche:19)
                      Commande de suivi : (IDTâche:19)
-                     E:\Programs\VS17\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.tlog /r "E:\C++\COLLISIONS\DXUT\CORE\DXERR.CPP|E:\C++\COLLISIONS\DXUT\CORE\DXUTDEVICE11.CPP|E:\C++\COLLISIONS\DXUT\CORE\DXUTMISC.CPP" /b MSBuildConsole_CancelEventb9e03a5ff04847e99d4ec598ef0736b4  /c E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64\CL.exe  /c /I..\..\DirectXTK\Inc /Zi /nologo /W4 /WX- /diagnostics:classic /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _LIB /D USE_DIRECTXTK /D _WIN32_WINNT=0x0600 /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /openmp- /Yu"DXUT.h" /Fp"Bin\DirectXTK_2012\x64\Release\DXUT.pch" /Fo"Bin\DirectXTK_2012\x64\Release\\" /Fd"Bin\DirectXTK_2012\x64\Release\DXUT.pdb" /Gd /TP /errorReport:prompt  DXErr.cpp DXUTDevice11.cpp DXUTmisc.cpp (IDTâche:19)
+                     E:\Programs\VS17\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.tlog /r "E:\C++\COLLISIONS\DXUT\CORE\DXERR.CPP|E:\C++\COLLISIONS\DXUT\CORE\DXUTDEVICE11.CPP|E:\C++\COLLISIONS\DXUT\CORE\DXUTMISC.CPP" /b MSBuildConsole_CancelEventd27427cc875143189fbf106b6dcba495  /c E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64\CL.exe  /c /I..\..\DirectXTK\Inc /Zi /nologo /W4 /WX- /diagnostics:classic /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _LIB /D USE_DIRECTXTK /D _WIN32_WINNT=0x0600 /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /openmp- /Yu"DXUT.h" /Fp"Bin\DirectXTK_2012\x64\Release\DXUT.pch" /Fo"Bin\DirectXTK_2012\x64\Release\\" /Fd"Bin\DirectXTK_2012\x64\Release\DXUT.pdb" /Gd /TP /errorReport:prompt  DXErr.cpp DXUTDevice11.cpp DXUTmisc.cpp (IDTâche:19)
                      DXErr.cpp (IDTâche:19)
                      DXUTDevice11.cpp (IDTâche:19)
                      DXUTmisc.cpp (IDTâche:19)
                    Exécution de la tâche "CL" terminée. (IDTâche:19)
-10:23:31.641     1>Génération de la cible "ClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:48)
+10:28:22.538     1>Génération de la cible "ClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:48)
                    Cible "ManagedIncrementalBuildPostProcessDependencyGraph" ignorée en raison d'une fausse condition ; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') a été évaluée comme ('DXUT.cpp;DXUTDevice11.cpp;DXUTmisc.cpp;DXErr.cpp' != '' and 'false' == 'True').
-10:23:31.641     1>Cible "AfterClCompile : (IdCible:49)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
-10:23:31.641     1>Génération de la cible "AfterClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:49)
-10:23:31.641     1>Cible "_ClCompile : (IdCible:50)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildCompileAction" en dépend) :
-10:23:31.641     1>Génération de la cible "_ClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:50)
+10:28:22.538     1>Cible "AfterClCompile : (IdCible:49)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ClCompile" en dépend) :
+10:28:22.538     1>Génération de la cible "AfterClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:49)
+10:28:22.538     1>Cible "_ClCompile : (IdCible:50)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildCompileAction" en dépend) :
+10:28:22.538     1>Génération de la cible "_ClCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:50)
                    Cible "_ResGen" ignorée en raison d'une fausse condition ; ('@(EmbeddedResource)'!='') a été évaluée comme (''!='').
-10:23:31.641     1>Cible "BeforeResourceCompile : (IdCible:51)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ResourceCompile" en dépend) :
-10:23:31.641     1>Génération de la cible "BeforeResourceCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:51)
-10:23:31.641     1>Cible "MakeDirsForResourceCompile : (IdCible:52)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ResourceCompile" en dépend) :
+10:28:22.538     1>Cible "BeforeResourceCompile : (IdCible:51)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ResourceCompile" en dépend) :
+10:28:22.538     1>Génération de la cible "BeforeResourceCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:51)
+10:28:22.538     1>Cible "MakeDirsForResourceCompile : (IdCible:52)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ResourceCompile" en dépend) :
                    Tâche "MakeDir" (IDTâche:20)
                    Exécution de la tâche "MakeDir" terminée. (IDTâche:20)
-10:23:31.641     1>Génération de la cible "MakeDirsForResourceCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:52)
+10:28:22.538     1>Génération de la cible "MakeDirsForResourceCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:52)
                    Cible "ResourceCompile" ignorée en raison d'une fausse condition ; ('@(ResourceCompile)' != '') a été évaluée comme ('' != '').
-10:23:31.641     1>Cible "AfterResourceCompile : (IdCible:53)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ResourceCompile" en dépend) :
-10:23:31.641     1>Génération de la cible "AfterResourceCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:53)
-10:23:31.641     1>Cible "_ResourceCompile : (IdCible:54)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildCompileAction" en dépend) :
-10:23:31.641     1>Génération de la cible "_ResourceCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:54)
+10:28:22.538     1>Cible "AfterResourceCompile : (IdCible:53)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_ResourceCompile" en dépend) :
+10:28:22.538     1>Génération de la cible "AfterResourceCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:53)
+10:28:22.538     1>Cible "_ResourceCompile : (IdCible:54)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildCompileAction" en dépend) :
+10:28:22.538     1>Génération de la cible "_ResourceCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:54)
                    Cible "_ImpLib" ignorée en raison d'une fausse condition ; ('$(ImpLibCompiled)' == 'true') a été évaluée comme ('' == 'true').
-10:23:31.641     1>Cible "BeforeLib : (IdCible:55)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
-10:23:31.641     1>Génération de la cible "BeforeLib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:55)
-10:23:31.641     1>Cible "ComputeLibAdditionalOptions : (IdCible:56)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.538     1>Cible "BeforeLib : (IdCible:55)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.538     1>Génération de la cible "BeforeLib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:55)
+10:28:22.538     1>Cible "ComputeLibAdditionalOptions : (IdCible:56)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
                    Élément(s) ajouté(s) : 
                        Lib=
                            captureLibAdditionalOptions
@@ -2192,22 +2193,22 @@ windir = C:\WINDOWS
                                    SuppressStartupBanner=true
                                    TargetMachine=MachineX64
                                    TrackerLogDirectory=Bin\DirectXTK_2012\x64\Release\DXUT.tlog\
-10:23:31.641     1>Génération de la cible "ComputeLibAdditionalOptions" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:56)
-10:23:31.641     1>Cible "ComputeRCOutputs : (IdCible:57)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ComputeRCGeneratedLibInputs" en dépend) :
-10:23:31.641     1>Génération de la cible "ComputeRCOutputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:57)
-10:23:31.641     1>Cible "ComputeRCGeneratedLibInputs : (IdCible:58)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
-10:23:31.641     1>Génération de la cible "ComputeRCGeneratedLibInputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:58)
-10:23:31.641     1>Cible "ComputeCustomBuildOutput : (IdCible:59)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.539     1>Génération de la cible "ComputeLibAdditionalOptions" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:56)
+10:28:22.539     1>Cible "ComputeRCOutputs : (IdCible:57)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ComputeRCGeneratedLibInputs" en dépend) :
+10:28:22.539     1>Génération de la cible "ComputeRCOutputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:57)
+10:28:22.539     1>Cible "ComputeRCGeneratedLibInputs : (IdCible:58)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.539     1>Génération de la cible "ComputeRCGeneratedLibInputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:58)
+10:28:22.539     1>Cible "ComputeCustomBuildOutput : (IdCible:59)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
                    Tâche "CreateItem" ignorée en raison d'une fausse condition ; ('%(CustomBuildDirsToMake.OutputFileToTool)'!='') a été évaluée comme (''!='').
                    Tâche "MakeDir" (IDTâche:21)
                    Exécution de la tâche "MakeDir" terminée. (IDTâche:21)
-10:23:31.641     1>Génération de la cible "ComputeCustomBuildOutput" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:59)
+10:28:22.539     1>Génération de la cible "ComputeCustomBuildOutput" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:59)
                    Cible "ComputeMIDLGeneratedCompileInputs" ignorée. Elle a été générée.
                    Cible "ComputeCLInputPDBName" ignorée. Elle a été générée.
                    Cible "ComputeReferenceCLInput" ignorée. Elle a été générée.
                    Cible "WarnCompileDuplicatedFilename" ignorée. Elle a été générée.
                    Cible "FixupCLCompileOptions" ignorée. Elle a été générée.
-10:23:31.641     1>Cible "ComputeCLOutputs : (IdCible:60)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ComputeCLGeneratedLibInputs" en dépend) :
+10:28:22.539     1>Cible "ComputeCLOutputs : (IdCible:60)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "ComputeCLGeneratedLibInputs" en dépend) :
                    Élément(s) ajouté(s) : 
                        Obj=
                            Bin\DirectXTK_2012\x64\Release\DXUT.obj
@@ -2462,8 +2463,8 @@ windir = C:\WINDOWS
                                    WholeProgramOptimization=true
                                    WinRTNoStdLib=false
                                    XMLDocumentationFileName=Bin\DirectXTK_2012\x64\Release\
-10:23:31.642     1>Génération de la cible "ComputeCLOutputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:60)
-10:23:31.642     1>Cible "ComputeCLGeneratedLibInputs : (IdCible:61)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.541     1>Génération de la cible "ComputeCLOutputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:60)
+10:28:22.541     1>Cible "ComputeCLGeneratedLibInputs : (IdCible:61)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
                    Élément(s) ajouté(s) : 
                        Lib=
                            Bin\DirectXTK_2012\x64\Release\DXUT.obj
@@ -2498,29 +2499,29 @@ windir = C:\WINDOWS
                                    SuppressStartupBanner=true
                                    TargetMachine=MachineX64
                                    TrackerLogDirectory=Bin\DirectXTK_2012\x64\Release\DXUT.tlog\
-10:23:31.642     1>Génération de la cible "ComputeCLGeneratedLibInputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:61)
-10:23:31.642     1>Cible "ComputeLibInputsFromProject : (IdCible:62)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
-10:23:31.642     1>Génération de la cible "ComputeLibInputsFromProject" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:62)
+10:28:22.542     1>Génération de la cible "ComputeCLGeneratedLibInputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:61)
+10:28:22.542     1>Cible "ComputeLibInputsFromProject : (IdCible:62)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.542     1>Génération de la cible "ComputeLibInputsFromProject" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:62)
                    Cible "ComputeReferenceLibInputs" ignorée en raison d'une fausse condition ; (@(ProjectReference) != '') a été évaluée comme ( != '').
-10:23:31.642     1>Cible "MakeDirsForLib : (IdCible:63)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.542     1>Cible "MakeDirsForLib : (IdCible:63)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
                    Élément(s) ajouté(s) : LibDirsToMake=E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release
                    Tâche "MakeDir" (IDTâche:22)
                      Paramètre de tâche :Directories=E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release (IDTâche:22)
                    Exécution de la tâche "MakeDir" terminée. (IDTâche:22)
                    Élément(s) supprimé(s) : LibDirsToMake=E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release
-10:23:31.642     1>Génération de la cible "MakeDirsForLib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:63)
-10:23:31.642     1>Cible "DoLibOutputFilesMatch : (IdCible:64)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.542     1>Génération de la cible "MakeDirsForLib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:63)
+10:28:22.542     1>Cible "DoLibOutputFilesMatch : (IdCible:64)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
                    Élément(s) ajouté(s) : _OutputFileFromLib=Bin\DirectXTK_2012\x64\Release\DXUT.lib
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('@(_OutputFileFromLib)' == '') a été évaluée comme ('Bin\DirectXTK_2012\x64\Release\DXUT.lib' == '').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('@(_OutputFileFromLib)' != '' and '%(_OutputFileFromLib.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') a été évaluée comme ('Bin\DirectXTK_2012\x64\Release\DXUT.lib' != '' and 'E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.lib' != 'E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.lib').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('@(_OutputFileFromLib)' != '' and '%(_OutputFileFromLib.Extension)' != '' and '%(_OutputFileFromLib.Extension)' != '$(TargetExt)') a été évaluée comme ('Bin\DirectXTK_2012\x64\Release\DXUT.lib' != '' and '.lib' != '' and '.lib' != '.lib').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('@(_OutputFileFromLib)' != '' and '%(_OutputFileFromLib.Filename)' !=  '' and '%(_OutputFileFromLib.Filename)' != '$(TargetName)') a été évaluée comme ('Bin\DirectXTK_2012\x64\Release\DXUT.lib' != '' and 'DXUT' !=  '' and 'DXUT' != 'DXUT').
-10:23:31.642     1>Génération de la cible "DoLibOutputFilesMatch" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:64)
-10:23:31.642     1>Cible "PreLinkEvent : (IdCible:65)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.543     1>Génération de la cible "DoLibOutputFilesMatch" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:64)
+10:28:22.543     1>Cible "PreLinkEvent : (IdCible:65)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
                    Tâche "Message" ignorée en raison d'une fausse condition ; ('%(PreLinkEvent.Message)' != '' and '%(PreLinkEvent.Command)' != '') a été évaluée comme ('' != '' and '' != '').
                    Tâche "Exec" ignorée en raison d'une fausse condition ; ('%(PreLinkEvent.Command)' != '') a été évaluée comme ('' != '').
-10:23:31.643     1>Génération de la cible "PreLinkEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:65)
-10:23:31.643     1>Cible "Lib : (IdCible:66)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.543     1>Génération de la cible "PreLinkEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:65)
+10:28:22.543     1>Cible "Lib : (IdCible:66)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
                    Propriété définie : LibToolArchitecture=Native32Bit
                    Utilisation de la tâche "LIB" à partir de l'assembly "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
                    Tâche "LIB" (IDTâche:23)
@@ -2585,7 +2586,7 @@ windir = C:\WINDOWS
                      Bin\DirectXTK_2012\x64\Release\DXUTmisc.obj
                      Bin\DirectXTK_2012\x64\Release\DXErr.obj (IDTâche:23)
                      Commande de suivi : (IDTâche:23)
-                     E:\Programs\VS17\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.tlog /r "E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXERR.OBJ|E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.OBJ|E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUTDEVICE11.OBJ|E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUTMISC.OBJ" /b MSBuildConsole_CancelEvent3de18c2a79ef452baf95e7422624792a  /c E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64\Lib.exe  /OUT:"Bin\DirectXTK_2012\x64\Release\DXUT.lib" /NOLOGO /MACHINE:X64 /LTCG Bin\DirectXTK_2012\x64\Release\DXUT.obj
+                     E:\Programs\VS17\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.tlog /r "E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXERR.OBJ|E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUT.OBJ|E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUTDEVICE11.OBJ|E:\C++\COLLISIONS\DXUT\CORE\BIN\DIRECTXTK_2012\X64\RELEASE\DXUTMISC.OBJ" /b MSBuildConsole_CancelEvent9d485e584c894fa5b90592522a94d274  /c E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64\Lib.exe  /OUT:"Bin\DirectXTK_2012\x64\Release\DXUT.lib" /NOLOGO /MACHINE:X64 /LTCG Bin\DirectXTK_2012\x64\Release\DXUT.obj
                      Bin\DirectXTK_2012\x64\Release\DXUTDevice11.obj
                      Bin\DirectXTK_2012\x64\Release\DXUTmisc.obj
                      Bin\DirectXTK_2012\x64\Release\DXErr.obj (IDTâche:23)
@@ -2595,24 +2596,24 @@ windir = C:\WINDOWS
                      Paramètre de tâche :Importance=High (IDTâche:24)
                      DXUT_DirectXTK_2012.vcxproj -> E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.lib (IDTâche:24)
                    Exécution de la tâche "Message" terminée. (IDTâche:24)
-10:23:31.809     1>Génération de la cible "Lib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:66)
-10:23:31.809     1>Cible "AfterLib : (IdCible:67)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
-10:23:31.809     1>Génération de la cible "AfterLib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:67)
-10:23:31.809     1>Cible "_Lib : (IdCible:68)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildCompileAction" en dépend) :
-10:23:31.809     1>Génération de la cible "_Lib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:68)
-10:23:31.809     1>Cible "AfterBuildCompileEvent : (IdCible:69)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildCompileAction" en dépend) :
-10:23:31.809     1>Génération de la cible "AfterBuildCompileEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:69)
-10:23:31.809     1>Cible "_BuildCompileAction : (IdCible:70)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildCompile" en dépend) :
-10:23:31.809     1>Génération de la cible "_BuildCompileAction" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:70)
-10:23:31.809     1>Cible "BuildCompile : (IdCible:71)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
-10:23:31.809     1>Génération de la cible "BuildCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:71)
+10:28:22.740     1>Génération de la cible "Lib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:66)
+10:28:22.740     1>Cible "AfterLib : (IdCible:67)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_Lib" en dépend) :
+10:28:22.740     1>Génération de la cible "AfterLib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:67)
+10:28:22.740     1>Cible "_Lib : (IdCible:68)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildCompileAction" en dépend) :
+10:28:22.740     1>Génération de la cible "_Lib" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:68)
+10:28:22.740     1>Cible "AfterBuildCompileEvent : (IdCible:69)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildCompileAction" en dépend) :
+10:28:22.740     1>Génération de la cible "AfterBuildCompileEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:69)
+10:28:22.740     1>Cible "_BuildCompileAction : (IdCible:70)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildCompile" en dépend) :
+10:28:22.740     1>Génération de la cible "_BuildCompileAction" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:70)
+10:28:22.740     1>Cible "BuildCompile : (IdCible:71)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
+10:28:22.740     1>Génération de la cible "BuildCompile" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:71)
                    Cible "PrepareProjectReferences" ignorée. Elle a été générée.
-10:23:31.809     1>Cible "BuildLinkTraverse : (IdCible:72)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildLink" en dépend) :
+10:28:22.740     1>Cible "BuildLinkTraverse : (IdCible:72)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildLink" en dépend) :
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') a été évaluée comme ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
-10:23:31.809     1>Génération de la cible "BuildLinkTraverse" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:72)
+10:28:22.740     1>Génération de la cible "BuildLinkTraverse" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:72)
                    Cible "PrepareForBuild" ignorée. Elle a été générée.
                    Cible "ResolveReferences" ignorée. Elle a été générée.
-10:23:31.809     1>Cible "ComputeLegacyManifestEmbedding : (IdCible:73)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.740     1>Cible "ComputeLegacyManifestEmbedding : (IdCible:73)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
                    Élément(s) ajouté(s) : 
                        Manifest=
                            temp
@@ -2640,27 +2641,27 @@ windir = C:\WINDOWS
                                    TrackerLogDirectory=Bin\DirectXTK_2012\x64\Release\DXUT.tlog\
                                    UpdateFileHashes=false
                                    VerboseOutput=true
-10:23:31.810     1>Génération de la cible "ComputeLegacyManifestEmbedding" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:73)
+10:28:22.740     1>Génération de la cible "ComputeLegacyManifestEmbedding" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:73)
                    Cible "_Link" ignorée en raison d'une fausse condition ; ('$(LinkCompiled)' == 'true') a été évaluée comme ('' == 'true').
-10:23:31.810     1>Cible "_ALink : (IdCible:74)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
-10:23:31.810     1>Génération de la cible "_ALink" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:74)
+10:28:22.740     1>Cible "_ALink : (IdCible:74)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.740     1>Génération de la cible "_ALink" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:74)
                    Cible "ComputeLegacyManifestEmbedding" ignorée. Elle a été générée.
-10:23:31.810     1>Cible "_Manifest : (IdCible:75)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.740     1>Cible "_Manifest : (IdCible:75)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
                    Tâche "CallTarget" ignorée en raison d'une fausse condition ; ('$(LegacyManifestEmbedding)' == 'true') a été évaluée comme ('' == 'true').
-10:23:31.810     1>Génération de la cible "_Manifest" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:75)
-10:23:31.810     1>Cible "RegisterOutput : (IdCible:76)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.740     1>Génération de la cible "_Manifest" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:75)
+10:28:22.740     1>Cible "RegisterOutput : (IdCible:76)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
                    Tâche "Exec" ignorée en raison d'une fausse condition ; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') a été évaluée comme ('StaticLibrary'=='DynamicLibrary' and ''=='true' and ''!='true').
                    Tâche "Exec" ignorée en raison d'une fausse condition ; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') a été évaluée comme ('StaticLibrary'=='DynamicLibrary' and ''=='true' and ''=='true').
                    Tâche "Exec" ignorée en raison d'une fausse condition ; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') a été évaluée comme ('StaticLibrary'=='Application' and ''=='true' and ''!='true').
                    Tâche "Exec" ignorée en raison d'une fausse condition ; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') a été évaluée comme ('StaticLibrary'=='Application' and ''=='true' and ''=='true').
                    Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(_RegisterOutputExitCode)' != '' and '$(_RegisterOutputExitCode)' != '0') a été évaluée comme ('' != '' and '' != '0').
-10:23:31.810     1>Génération de la cible "RegisterOutput" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:76)
+10:28:22.740     1>Génération de la cible "RegisterOutput" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:76)
                    Cible "PrepareForBuild" ignorée. Elle a été générée.
                    Cible "ResolveReferences" ignorée. Elle a été générée.
-10:23:31.810     1>Cible "ResolvedXDCMake : (IdCible:77)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_XdcMake" en dépend) :
+10:28:22.741     1>Cible "ResolvedXDCMake : (IdCible:77)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_XdcMake" en dépend) :
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '$(_ClCompileGenerateXMLDocumentationFiles)' == 'true') a été évaluée comme ('' == '.vcxproj' and '' != '' and '' != '' and '' == 'true').
-10:23:31.810     1>Génération de la cible "ResolvedXDCMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:77)
-10:23:31.810     1>Cible "ComputeCLCompileGeneratedXDCFiles : (IdCible:78)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_XdcMake" en dépend) :
+10:28:22.741     1>Génération de la cible "ResolvedXDCMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:77)
+10:28:22.741     1>Cible "ComputeCLCompileGeneratedXDCFiles : (IdCible:78)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_XdcMake" en dépend) :
                    Élément(s) ajouté(s) : 
                        XdcMake=
                            temp
@@ -2683,41 +2684,41 @@ windir = C:\WINDOWS
                                    OutputFile=Bin\DirectXTK_2012\x64\Release\DXUT.xml
                                    SuppressStartupBanner=true
                                    TrackerLogDirectory=Bin\DirectXTK_2012\x64\Release\DXUT.tlog\
-10:23:31.810     1>Génération de la cible "ComputeCLCompileGeneratedXDCFiles" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:78)
-10:23:31.810     1>Cible "MakeDirsForXdcMake : (IdCible:79)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_XdcMake" en dépend) :
+10:28:22.741     1>Génération de la cible "ComputeCLCompileGeneratedXDCFiles" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:78)
+10:28:22.741     1>Cible "MakeDirsForXdcMake : (IdCible:79)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_XdcMake" en dépend) :
                    Tâche "MakeDir" (IDTâche:25)
                    Exécution de la tâche "MakeDir" terminée. (IDTâche:25)
-10:23:31.810     1>Génération de la cible "MakeDirsForXdcMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:79)
+10:28:22.741     1>Génération de la cible "MakeDirsForXdcMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:79)
                    Cible "XdcMake" ignorée en raison d'une fausse condition ; ('@(XdcMake)' != '') a été évaluée comme ('' != '').
-10:23:31.810     1>Cible "_XdcMake : (IdCible:80)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
-10:23:31.810     1>Génération de la cible "_XdcMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:80)
-10:23:31.810     1>Cible "ComputeCLCompileGeneratedSbrFiles : (IdCible:81)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BscMake" en dépend) :
-10:23:31.811     1>Génération de la cible "ComputeCLCompileGeneratedSbrFiles" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:81)
-10:23:31.811     1>Cible "MakeDirsForBscMake : (IdCible:82)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BscMake" en dépend) :
+10:28:22.741     1>Cible "_XdcMake : (IdCible:80)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.741     1>Génération de la cible "_XdcMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:80)
+10:28:22.741     1>Cible "ComputeCLCompileGeneratedSbrFiles : (IdCible:81)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BscMake" en dépend) :
+10:28:22.741     1>Génération de la cible "ComputeCLCompileGeneratedSbrFiles" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:81)
+10:28:22.741     1>Cible "MakeDirsForBscMake : (IdCible:82)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BscMake" en dépend) :
                    Tâche "MakeDir" (IDTâche:26)
                    Exécution de la tâche "MakeDir" terminée. (IDTâche:26)
-10:23:31.811     1>Génération de la cible "MakeDirsForBscMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:82)
+10:28:22.741     1>Génération de la cible "MakeDirsForBscMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:82)
                    Cible "BscMake" ignorée en raison d'une fausse condition ; ('@(BscMake)' != '') a été évaluée comme ('' != '').
                    Cible "CustomBuildStep" ignorée en raison d'une fausse condition ; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') a été évaluée comme ('' != '' and ''=='').
-10:23:31.811     1>Cible "_BscMake : (IdCible:83)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
-10:23:31.811     1>Génération de la cible "_BscMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:83)
+10:28:22.741     1>Cible "_BscMake : (IdCible:83)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.741     1>Génération de la cible "_BscMake" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:83)
                    Cible "RunMergeNativeCodeAnalysis" ignorée en raison d'une fausse condition ; ('$(Language)'=='C++' and '$(RunCodeAnalysisOnThisProject)'=='true') a été évaluée comme ('C++'=='C++' and ''=='true').
                    Cible "RunNativeCodeAnalysis" ignorée en raison d'une fausse condition ; ('$(Language)'=='C++' and '$(RunCodeAnalysisOnThisProject)'=='true') a été évaluée comme ('C++'=='C++' and ''=='true').
-10:23:31.811     1>Cible "_GenerateSatelliteAssemblyInputs : (IdCible:84)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "CreateSatelliteAssemblies" en dépend) :
+10:28:22.741     1>Cible "_GenerateSatelliteAssemblyInputs : (IdCible:84)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "CreateSatelliteAssemblies" en dépend) :
                    Tâche "Warning" ignorée en raison d'une fausse condition ; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') a été évaluée comme (''!='' and ''=='').
                    Tâche "Warning" ignorée en raison d'une fausse condition ; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') a été évaluée comme (''!='' and ''=='').
-10:23:31.811     1>Génération de la cible "_GenerateSatelliteAssemblyInputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:84)
+10:28:22.741     1>Génération de la cible "_GenerateSatelliteAssemblyInputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:84)
                    Cible "ComputeIntermediateSatelliteAssemblies" ignorée en raison d'une fausse condition ; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') a été évaluée comme ( != '').
                    Cible "GenerateSatelliteAssemblies" ignorée en raison d'une fausse condition ; ('@(_SatelliteAssemblyResourceInputs)' != '') a été évaluée comme ('' != '').
-10:23:31.811     1>Cible "CreateSatelliteAssemblies : (IdCible:85)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
-10:23:31.811     1>Génération de la cible "CreateSatelliteAssemblies" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:85)
-10:23:31.811     1>Cible "_Appverifier : (IdCible:86)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
-10:23:31.811     1>Génération de la cible "_Appverifier" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:86)
-10:23:31.811     1>Cible "_Deploy : (IdCible:87)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
-10:23:31.811     1>Génération de la cible "_Deploy" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:87)
+10:28:22.742     1>Cible "CreateSatelliteAssemblies : (IdCible:85)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.742     1>Génération de la cible "CreateSatelliteAssemblies" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:85)
+10:28:22.742     1>Cible "_Appverifier : (IdCible:86)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.742     1>Génération de la cible "_Appverifier" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:86)
+10:28:22.742     1>Cible "_Deploy : (IdCible:87)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.742     1>Génération de la cible "_Deploy" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:87)
                    Cible "ComputeIntermediateSatelliteAssemblies" ignorée en raison d'une fausse condition ; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') a été évaluée comme ( != '').
                    Cible "_CopyFilesMarkedCopyLocal" ignorée en raison d'une fausse condition ; ('@(ReferenceCopyLocalPaths)' != '') a été évaluée comme ('' != '').
-10:23:31.811     1>Cible "AssignTargetPaths : (IdCible:88)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "GetCopyToOutputDirectoryItems" en dépend) :
+10:28:22.742     1>Cible "AssignTargetPaths : (IdCible:88)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "GetCopyToOutputDirectoryItems" en dépend) :
                    Utilisation de la tâche "AssignTargetPath" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Tâche "AssignTargetPath" (IDTâche:27)
                      Paramètre de tâche :RootFolder=E:\C++\Collisions\DXUT\Core (IDTâche:27)
@@ -2732,35 +2733,35 @@ windir = C:\WINDOWS
                      Paramètre de tâche :RootFolder=E:\C++\Collisions\DXUT\Core (IDTâche:30)
                    Exécution de la tâche "AssignTargetPath" terminée. (IDTâche:30)
                    Tâche "AssignTargetPath" ignorée en raison d'une fausse condition ; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') a été évaluée comme (''=='' and ''=='.manifest').
-10:23:31.811     1>Génération de la cible "AssignTargetPaths" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:88)
+10:28:22.742     1>Génération de la cible "AssignTargetPaths" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:88)
                    Cible "_SplitProjectReferencesByFileExistence" ignorée. Elle a été générée.
                    Cible "_GetProjectReferenceTargetFrameworkProperties" ignorée. Elle a été générée.
-10:23:31.811     1>Cible "GetCopyToOutputDirectoryXamlAppDefs : (IdCible:89)" dans le fichier "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "GetCopyToOutputDirectoryItems" en dépend) :
+10:28:22.742     1>Cible "GetCopyToOutputDirectoryXamlAppDefs : (IdCible:89)" dans le fichier "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "GetCopyToOutputDirectoryItems" en dépend) :
                    Tâche "AssignTargetPath" (IDTâche:31)
                      Paramètre de tâche :RootFolder=E:\C++\Collisions\DXUT\Core (IDTâche:31)
                    Exécution de la tâche "AssignTargetPath" terminée. (IDTâche:31)
-10:23:31.811     1>Génération de la cible "GetCopyToOutputDirectoryXamlAppDefs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:89)
-10:23:31.811     1>Cible "GetCopyToOutputDirectoryItems : (IdCible:90)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_CopySourceItemsToOutputDirectory" en dépend) :
+10:28:22.742     1>Génération de la cible "GetCopyToOutputDirectoryXamlAppDefs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:89)
+10:28:22.742     1>Cible "GetCopyToOutputDirectoryItems : (IdCible:90)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_CopySourceItemsToOutputDirectory" en dépend) :
                    Propriété définie : _GCTODIKeepDuplicates=false
                    Propriété définie : _GCTODIKeepMetadata=CopyToOutputDirectory;TargetPath
                    Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true') a été évaluée comme ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true').
                    Tâche "AssignTargetPath" (IDTâche:32)
                      Paramètre de tâche :RootFolder=E:\C++\Collisions\DXUT\Core (IDTâche:32)
                    Exécution de la tâche "AssignTargetPath" terminée. (IDTâche:32)
-10:23:31.812     1>Génération de la cible "GetCopyToOutputDirectoryItems" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:90)
+10:28:22.742     1>Génération de la cible "GetCopyToOutputDirectoryItems" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:90)
                    Cible "_CopyOutOfDateSourceItemsToOutputDirectory" ignorée en raison d'une fausse condition ; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) a été évaluée comme ( '' != '' ).
                    Cible "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" ignorée en raison d'une fausse condition ; ( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' ) a été évaluée comme ( '' != '' ).
-10:23:31.812     1>Cible "_CopySourceItemsToOutputDirectory : (IdCible:91)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "CopyFilesToOutputDirectory" en dépend) :
-10:23:31.812     1>Génération de la cible "_CopySourceItemsToOutputDirectory" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:91)
+10:28:22.742     1>Cible "_CopySourceItemsToOutputDirectory : (IdCible:91)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "CopyFilesToOutputDirectory" en dépend) :
+10:28:22.742     1>Génération de la cible "_CopySourceItemsToOutputDirectory" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:91)
                    Cible "_CopyAppConfigFile" ignorée en raison d'une fausse condition ; ( '@(AppConfigWithTargetPath)' != '' ) a été évaluée comme ( '' != '' ).
                    Cible "_CopyManifestFiles" ignorée en raison d'une fausse condition ; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) a été évaluée comme ( ''=='true' or ''=='true' ).
-10:23:31.812     1>Cible "_CheckForCompileOutputs : (IdCible:92)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "CopyFilesToOutputDirectory" en dépend) :
+10:28:22.743     1>Cible "_CheckForCompileOutputs : (IdCible:92)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "CopyFilesToOutputDirectory" en dépend) :
                    Élément(s) ajouté(s) : FileWrites=Bin\DirectXTK_2012\x64\Release\DXUT.lib
                    Propriété définie : _DocumentationFileProduced=false
                    Propriété définie : _DebugSymbolsProduced=false
-10:23:31.812     1>Génération de la cible "_CheckForCompileOutputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:92)
+10:28:22.743     1>Génération de la cible "_CheckForCompileOutputs" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:92)
                    Cible "_SGenCheckForOutputs" ignorée en raison d'une fausse condition ; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) a été évaluée comme ('Auto' == 'On' or (''!='' and 'Auto' == 'Auto')).
-10:23:31.812     1>Cible "CopyFilesToOutputDirectory : (IdCible:93)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForRun" en dépend) :
+10:28:22.743     1>Cible "CopyFilesToOutputDirectory : (IdCible:93)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "PrepareForRun" en dépend) :
                    Propriété définie : CreateHardLinksForCopyFilesToOutputDirectoryIfPossible=false
                    Propriété définie : CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible=false
                    Propriété définie : CopyBuildOutputToOutputDirectory=true
@@ -2775,21 +2776,21 @@ windir = C:\WINDOWS
                    Tâche "Copy" ignorée en raison d'une fausse condition ; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) a été évaluée comme ('' != '' or '' != '' or '' != '' or '' != '' ).
                    Tâche "Copy" ignorée en raison d'une fausse condition ; ('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '') a été évaluée comme ('' != 'true' and '' != '').
                    Tâche "Message" ignorée en raison d'une fausse condition ; ('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '') a été évaluée comme ('' != 'true' and '' != '').
-10:23:31.812     1>Génération de la cible "CopyFilesToOutputDirectory" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:93)
-10:23:31.812     1>Cible "PrepareForRun : (IdCible:94)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
-10:23:31.812     1>Génération de la cible "PrepareForRun" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:94)
+10:28:22.743     1>Génération de la cible "CopyFilesToOutputDirectory" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:93)
+10:28:22.743     1>Cible "PrepareForRun : (IdCible:94)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.743     1>Génération de la cible "PrepareForRun" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:94)
                    Cible "CustomBuildStep" ignorée en raison d'une fausse condition ; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') a été évaluée comme ('' != '' and ''=='').
-10:23:31.812     1>Cible "PostBuildEvent : (IdCible:95)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
+10:28:22.743     1>Cible "PostBuildEvent : (IdCible:95)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "_BuildLinkAction" en dépend) :
                    Tâche "Message" ignorée en raison d'une fausse condition ; ('%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != '') a été évaluée comme ('' != '' and '' != '').
                    Tâche "Exec" ignorée en raison d'une fausse condition ; ('%(PostBuildEvent.Command)' != '') a été évaluée comme ('' != '').
-10:23:31.812     1>Génération de la cible "PostBuildEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:95)
-10:23:31.812     1>Cible "_BuildLinkAction : (IdCible:96)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildLink" en dépend) :
-10:23:31.812     1>Génération de la cible "_BuildLinkAction" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:96)
-10:23:31.812     1>Cible "BuildLink : (IdCible:97)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
-10:23:31.812     1>Génération de la cible "BuildLink" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:97)
-10:23:31.812     1>Cible "AfterBuild : (IdCible:98)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
-10:23:31.812     1>Génération de la cible "AfterBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:98)
-10:23:31.812     1>Cible "FinalizeBuildStatus : (IdCible:99)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
+10:28:22.743     1>Génération de la cible "PostBuildEvent" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:95)
+10:28:22.743     1>Cible "_BuildLinkAction : (IdCible:96)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "BuildLink" en dépend) :
+10:28:22.743     1>Génération de la cible "_BuildLinkAction" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:96)
+10:28:22.743     1>Cible "BuildLink : (IdCible:97)" dans le fichier "E:\Programs\VS17\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
+10:28:22.743     1>Génération de la cible "BuildLink" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:97)
+10:28:22.743     1>Cible "AfterBuild : (IdCible:98)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
+10:28:22.743     1>Génération de la cible "AfterBuild" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:98)
+10:28:22.743     1>Cible "FinalizeBuildStatus : (IdCible:99)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (la cible "Build" en dépend) :
                    Utilisation de la tâche "Delete" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Tâche "Delete" (IDTâche:33)
                      Paramètre de tâche :Files=Bin\DirectXTK_2012\x64\Release\DXUT.tlog\unsuccessfulbuild (IDTâche:33)
@@ -2799,133 +2800,133 @@ windir = C:\WINDOWS
                      Paramètre de tâche :Files=Bin\DirectXTK_2012\x64\Release\DXUT.tlog\DXUT.lastbuildstate (IDTâche:34)
                      Mise à jour de l'horodatage "Bin\DirectXTK_2012\x64\Release\DXUT.tlog\DXUT.lastbuildstate". (IDTâche:34)
                    Exécution de la tâche "Touch" terminée. (IDTâche:34)
-10:23:31.813     1>Génération de la cible "FinalizeBuildStatus" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:99)
+10:28:22.744     1>Génération de la cible "FinalizeBuildStatus" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:99)
                    Cible "_CheckForInvalidConfigurationAndPlatform" ignorée. Elle a été générée.
                    Cible "_CheckForInvalidConfigurationAndPlatform" ignorée. Elle a été générée.
-10:23:31.813     1>Cible "Build : (IdCible:100)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (point d'entrée) :
-10:23:31.813     1>Génération de la cible "Build" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:100)
-10:23:31.813     1>Génération du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" terminée (Build cible(s)).
+10:28:22.744     1>Cible "Build : (IdCible:100)" dans le fichier "E:\Programs\VS17\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" (point d'entrée) :
+10:28:22.744     1>Génération de la cible "Build" terminée dans le projet "DXUT_DirectXTK_2012.vcxproj". : (IdCible:100)
+10:28:22.744     1>Génération du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" terminée (Build cible(s)).
 
 Résumé de performance des projets :
-     1739 ms  E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj   1 appels
-               1739 ms  Build                                      1 appels
+     1714 ms  E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj   1 appels
+               1714 ms  Build                                      1 appels
 
 Résumé de performance cible :
         0 ms  ComputeMIDLGeneratedCompileInputs          1 appels
         0 ms  _SelectedFiles                             1 appels
         0 ms  PrepareProjectReferences                   1 appels
-        0 ms  _PrepareForBuild                           1 appels
         0 ms  _Midl                                      1 appels
         0 ms  BuildCompile                               1 appels
         0 ms  SelectCustomBuild                          1 appels
         0 ms  _ClCompile                                 1 appels
+        0 ms  FixupCLCompileOptions                      1 appels
+        0 ms  _Lib                                       1 appels
         0 ms  GetReferenceAssemblyPaths                  1 appels
-        0 ms  ComputeCLCompileGeneratedXDCFiles          1 appels
         0 ms  ComputeCLInputPDBName                      1 appels
+        0 ms  ResolveAssemblyReferences                  1 appels
         0 ms  _Manifest                                  1 appels
         0 ms  AfterBuild                                 1 appels
         0 ms  AfterBuildCompileEvent                     1 appels
-        0 ms  MakeDirsForResourceCompile                 1 appels
+        0 ms  _BuildLinkAction                           1 appels
         0 ms  BeforeResourceCompile                      1 appels
-        0 ms  _Lib                                       1 appels
-        0 ms  ComputeCustomBuildOutput                   1 appels
-        0 ms  _CheckForCompileOutputs                    1 appels
+        0 ms  ComputeCLCompileGeneratedXDCFiles          1 appels
+        0 ms  AfterMidl                                  1 appels
+        0 ms  GetResolvedWinMD                           1 appels
         0 ms  SelectClCompile                            1 appels
+        0 ms  _GenerateSatelliteAssemblyInputs           1 appels
         0 ms  _ResourceCompile                           1 appels
         0 ms  AfterLib                                   1 appels
         0 ms  Build                                      1 appels
         0 ms  BuildLinkTraverse                          1 appels
         0 ms  ComputeRCOutputs                           1 appels
-        0 ms  PostBuildEvent                             1 appels
         0 ms  PrepareForRun                              1 appels
-        0 ms  AfterMidl                                  1 appels
+        0 ms  _CheckForCompileOutputs                    1 appels
         0 ms  _XdcMake                                   1 appels
-        0 ms  CreateSatelliteAssemblies                  1 appels
+        0 ms  CopyFilesToOutputDirectory                 1 appels
         0 ms  BeforeLib                                  1 appels
-        0 ms  _CopySourceItemsToOutputDirectory          1 appels
         0 ms  ComputeLibInputsFromProject                1 appels
-        0 ms  BuildCompileTraverse                       1 appels
+        0 ms  _CopySourceItemsToOutputDirectory          1 appels
         0 ms  AfterBuildGenerateSources                  1 appels
+        0 ms  ResolvedXDCMake                            1 appels
         0 ms  ResolveReferences                          1 appels
-        0 ms  DoLibOutputFilesMatch                      1 appels
-        0 ms  _Deploy                                    1 appels
-        0 ms  _BuildLinkAction                           1 appels
-        0 ms  _Xsd                                       1 appels
-        0 ms  AfterResourceCompile                       1 appels
-        0 ms  MakeDirsForMidl                            1 appels
+        0 ms  CreateSatelliteAssemblies                  1 appels
+        0 ms  PreLinkEvent                               1 appels
+        0 ms  GetCopyToOutputDirectoryItems              1 appels
         0 ms  _PrepareForReferenceResolution             1 appels
-        0 ms  _Appverifier                               1 appels
+        0 ms  _BscMake                                   1 appels
+        0 ms  _Deploy                                    1 appels
         0 ms  RegisterOutput                             1 appels
         0 ms  _BuildGenerateSourcesAction                1 appels
         0 ms  BuildLink                                  1 appels
+        0 ms  ComputeCLCompileGeneratedSbrFiles          1 appels
+        0 ms  MakeDirsForMidl                            1 appels
         0 ms  ResolveSDKReferences                       1 appels
-        0 ms  _ALink                                     1 appels
         0 ms  Desktop_PlatformPrepareForBuild            1 appels
-        0 ms  ComputeCLGeneratedLibInputs                1 appels
         0 ms  MakeDirsForBscMake                         1 appels
+        0 ms  ResolveProjectReferences                   1 appels
         0 ms  _SplitProjectReferencesByFileExistence     1 appels
         0 ms  BuildGenerateSourcesTraverse               1 appels
         0 ms  GetCopyToOutputDirectoryXamlAppDefs        1 appels
-        0 ms  ExpandSDKReferences                        1 appels
-        0 ms  ComputeReferenceCLInput                    1 appels
-        0 ms  _BscMake                                   1 appels
-        0 ms  AfterResolveReferences                     1 appels
+        0 ms  _ALink                                     1 appels
+        0 ms  AfterResourceCompile                       1 appels
+        0 ms  _Appverifier                               1 appels
+        0 ms  _BuildCompileAction                        1 appels
+        0 ms  _Xsd                                       1 appels
         0 ms  BeforeBuildGenerateSources                 1 appels
         0 ms  AfterClCompile                             1 appels
-        0 ms  MakeDirsForXdcMake                         1 appels
-        0 ms  GetInstalledSDKLocations                   1 appels
-        0 ms  _BuildCompileAction                        1 appels
-        0 ms  BeforeResolveReferences                    1 appels
-        0 ms  BuildGenerateSources                       1 appels
-        0 ms  _GenerateSatelliteAssemblyInputs           1 appels
-        0 ms  AfterBuildGenerateSourcesEvent             1 appels
-        0 ms  ComputeRCGeneratedLibInputs                1 appels
-        0 ms  ComputeLibAdditionalOptions                1 appels
-        0 ms  BeforeClCompile                            1 appels
-        0 ms  ComputeLegacyManifestEmbedding             1 appels
-        0 ms  FixupCLCompileOptions                      1 appels
         0 ms  PlatformPrepareForBuild                    1 appels
-        1 ms  PreLinkEvent                               1 appels
-        1 ms  ComputeCLCompileGeneratedSbrFiles          1 appels
-        1 ms  AssignTargetPaths                          1 appels
-        1 ms  ResolveProjectReferences                   1 appels
-        1 ms  ResolvedXDCMake                            1 appels
-        1 ms  MakeDirsForLib                             1 appels
-        1 ms  GetFrameworkPaths                          1 appels
-        1 ms  ResolveAssemblyReferences                  1 appels
+        0 ms  GetInstalledSDKLocations                   1 appels
+        0 ms  BuildGenerateSources                       1 appels
+        0 ms  ComputeRCGeneratedLibInputs                1 appels
+        0 ms  PostBuildEvent                             1 appels
+        0 ms  AfterBuildGenerateSourcesEvent             1 appels
+        0 ms  BeforeClCompile                            1 appels
+        0 ms  BeforeResolveReferences                    1 appels
+        0 ms  AfterResolveReferences                     1 appels
+        0 ms  MakeDirsForResourceCompile                 1 appels
+        0 ms  ComputeLibAdditionalOptions                1 appels
+        0 ms  ComputeLegacyManifestEmbedding             1 appels
+        1 ms  ExpandSDKReferences                        1 appels
+        1 ms  WarnCompileDuplicatedFilename              1 appels
+        1 ms  ComputeCLGeneratedLibInputs                1 appels
         1 ms  AssignProjectConfiguration                 1 appels
         1 ms  MakeDirsForCl                              1 appels
-        1 ms  GetCopyToOutputDirectoryItems              1 appels
-        1 ms  _GetProjectReferenceTargetFrameworkProperties   1 appels
-        1 ms  CopyFilesToOutputDirectory                 1 appels
-        1 ms  SetBuildDefaultEnvironmentVariables        1 appels
-        1 ms  GetResolvedWinMD                           1 appels
-        1 ms  WarnCompileDuplicatedFilename              1 appels
+        1 ms  ComputeReferenceCLInput                    1 appels
+        1 ms  MakeDirsForXdcMake                         1 appels
+        1 ms  GetFrameworkPaths                          1 appels
         1 ms  FinalizeBuildStatus                        1 appels
-        1 ms  ComputeCLOutputs                           1 appels
+        1 ms  _PrepareForBuild                           1 appels
+        1 ms  AssignTargetPaths                          1 appels
+        1 ms  ComputeCustomBuildOutput                   1 appels
+        1 ms  DoLibOutputFilesMatch                      1 appels
+        1 ms  MakeDirsForLib                             1 appels
+        1 ms  BuildCompileTraverse                       1 appels
+        1 ms  SetBuildDefaultEnvironmentVariables        1 appels
+        1 ms  _GetProjectReferenceTargetFrameworkProperties   1 appels
         2 ms  PrepareForBuild                            1 appels
+        2 ms  ComputeCLOutputs                           1 appels
         2 ms  _CheckForInvalidConfigurationAndPlatform   1 appels
         2 ms  InitializeBuildStatus                      1 appels
         3 ms  PreBuildEvent                              1 appels
-        4 ms  SetCABuildNativeEnvironmentVariables       1 appels
-      166 ms  Lib                                        1 appels
-     1547 ms  ClCompile                                  1 appels
+        3 ms  SetCABuildNativeEnvironmentVariables       1 appels
+      196 ms  Lib                                        1 appels
+     1489 ms  ClCompile                                  1 appels
 
 Résumé de performance des tâches :
         0 ms  AssignTargetPath                           6 appels
-        0 ms  SetEnvironmentVariable                     1 appels
+        0 ms  Delete                                     1 appels
+        0 ms  MSBuild                                    1 appels
         0 ms  Message                                    3 appels
-        0 ms  ReadLinesFromFile                          1 appels
-        1 ms  Delete                                     1 appels
-        1 ms  MakeDir                                    9 appels
-        1 ms  AssignProjectConfiguration                 1 appels
-        1 ms  MSBuild                                    1 appels
-        1 ms  SetEnv                                     4 appels
+        0 ms  SetEnv                                     4 appels
         1 ms  Touch                                      2 appels
+        1 ms  AssignProjectConfiguration                 1 appels
+        1 ms  ReadLinesFromFile                          1 appels
+        1 ms  MakeDir                                    9 appels
+        1 ms  SetEnvironmentVariable                     1 appels
         1 ms  WriteLinesToFile                           1 appels
-      166 ms  LIB                                        1 appels
-     1546 ms  CL                                         2 appels
+      195 ms  LIB                                        1 appels
+     1488 ms  CL                                         2 appels
 
 La génération a réussi.
 
-Temps écoulé 00:00:01.74
+Temps écoulé 00:00:01.71
