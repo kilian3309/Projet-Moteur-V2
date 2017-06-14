@@ -93,6 +93,11 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 	
 	GetWindowRect(hwndPB, &loadingTextRect);
 	loadingDeviceContext = GetDC(hwndPB);
+
+	if (loadingDeviceContext == NULL) {
+		MessageBoxK(L"ERROR", L"Impossible d'obtenir le DeviceContext !");
+	}
+
 	/*
 	loadingTextRect->top = 100;
 	loadingTextRect->bottom = 200;
