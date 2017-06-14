@@ -985,14 +985,14 @@ HRESULT WINAPI DXUTCreateWindow( const WCHAR* strWindowTitle, HINSTANCE hInstanc
 {
     HRESULT hr;
 
-	IncrementLoading;
+	IncrementLoading();
     // Not allowed to call this from inside the device callbacks
     if( GetDXUTState().GetInsideDeviceCallback() )
         return DXUT_ERR_MSGBOX( L"DXUTCreateWindow", E_FAIL );
 
     GetDXUTState().SetWindowCreateCalled( true );
 
-	IncrementLoading;
+	IncrementLoading();
     if( !GetDXUTState().GetDXUTInited() )
     {
         // If DXUTInit() was already called and failed, then fail.
@@ -1007,7 +1007,7 @@ HRESULT WINAPI DXUTCreateWindow( const WCHAR* strWindowTitle, HINSTANCE hInstanc
             return hr;
     }
 
-	IncrementLoading;
+	IncrementLoading();
     if( !DXUTGetHWNDFocus() )
     {
         if( !hInstance )
@@ -1032,7 +1032,7 @@ HRESULT WINAPI DXUTCreateWindow( const WCHAR* strWindowTitle, HINSTANCE hInstanc
         wndClass.lpszMenuName = nullptr;
         wndClass.lpszClassName = L"Direct3DWindowClass";
 
-		IncrementLoading;
+		IncrementLoading();
         if( !RegisterClass( &wndClass ) )
         {
             DWORD dwError = GetLastError();
@@ -1040,7 +1040,7 @@ HRESULT WINAPI DXUTCreateWindow( const WCHAR* strWindowTitle, HINSTANCE hInstanc
                 return DXUT_ERR_MSGBOX( L"RegisterClass", HRESULT_FROM_WIN32(dwError) );
         }
 
-		IncrementLoading;
+		IncrementLoading();
         // Override the window's initial & size position if there were cmd line args
         if( GetDXUTState().GetOverrideStartX() != -1 )
             x = GetDXUTState().GetOverrideStartX();
@@ -1063,7 +1063,7 @@ HRESULT WINAPI DXUTCreateWindow( const WCHAR* strWindowTitle, HINSTANCE hInstanc
         SetRect( &rc, 0, 0, nDefaultWidth, nDefaultHeight );
         AdjustWindowRect( &rc, WS_OVERLAPPEDWINDOW, ( hMenu ) ? true : false );
 
-		IncrementLoading;
+		IncrementLoading();
         WCHAR* strCachedWindowTitle = GetDXUTState().GetWindowTitle();
         wcscpy_s( strCachedWindowTitle, 256, strWindowTitle );
 
@@ -1076,7 +1076,7 @@ HRESULT WINAPI DXUTCreateWindow( const WCHAR* strWindowTitle, HINSTANCE hInstanc
             DWORD dwError = GetLastError();
             return DXUT_ERR_MSGBOX( L"CreateWindow", HRESULT_FROM_WIN32(dwError) );
         }
-		IncrementLoading;
+		IncrementLoading();
         GetDXUTState().SetWindowCreated( true );
         GetDXUTState().SetHWNDFocus( hWnd );
         GetDXUTState().SetHWNDDeviceFullScreen( hWnd );

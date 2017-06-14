@@ -276,21 +276,21 @@ int wWinMainEnd() {
 	DXUTSetCallbackD3D11SwapChainReleasing(OnD3D11ReleasingSwapChain);
 	DXUTSetCallbackD3D11DeviceDestroyed(OnD3D11DestroyDevice);
 	DXUTSetCallbackD3D11FrameRender(OnD3D11FrameRender);
-	IncrementLoading;
+	IncrementLoading();
 	InitApp();
-	IncrementLoading;
+	IncrementLoading();
 	//Parse les parametres de la command line, affiche les msbox comme des erreurs, pas de paramètres en plus
 	DXUTInit(true, true, nullptr);
-	IncrementLoading;
+	IncrementLoading();
 	DXUTSetCursorSettings(true, true); //Affiche le curseur et on l'attache au plein écran
-	IncrementLoading;
+	IncrementLoading();
 
 	DXUTCreateWindow(L"ISN  Motor V2");
-	IncrementLoading;
+	IncrementLoading();
 
 
 	DXUTCreateDevice(D3D_FEATURE_LEVEL_10_0, true, 800, 600);
-	IncrementLoading;
+	IncrementLoading();
 
 	DXUTMainLoop(); //DXUT loop de render
 
