@@ -61,8 +61,6 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 		hInst = (HINSTANCE)GetModuleHandle(nullptr);
 	}
 
-	MessageBoxK(L"fd", LoadingMax);
-
 	WNDCLASS WCLoadScreen;
 	WCLoadScreen.style = 0;
 	WCLoadScreen.lpfnWndProc = MsgProcLS;
