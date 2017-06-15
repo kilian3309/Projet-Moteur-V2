@@ -1,4 +1,4 @@
-﻿La génération a démarré 14/06/2017 10:04:28.
+﻿La génération a démarré 15/06/2017 09:42:18.
 Environnement au début de la génération :
 ADSK_3DSMAX_x64_2017 = I:\Programms\AutoDesk\3D MAX\3ds Max 2017\
 ALLUSERSPROFILE = C:\ProgramData
@@ -56,8 +56,8 @@ VSLANG = 1036
 VSSDK140Install = E:\Programs\VS15\VSSDK\
 windir = C:\WINDOWS
 
-10:04:28.743     1>Projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" sur le nœud 3 (Deploy cible(s)).
-10:04:28.743     1>Propriétés initiales :
+09:42:18.459     1>Projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" sur le nœud 3 (Deploy cible(s)).
+09:42:18.459     1>Propriétés initiales :
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -1239,14 +1239,14 @@ windir = C:\WINDOWS
                    XamlTemporaryAssemblyName = DXUTOpt_DirectXTK_2012
                    YieldDuringToolExecution = true
 
-10:04:28.743     1>Génération à l'aide des outils version "15.0".
-10:04:28.743     1>E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj : error MSB4057: La cible "Deploy" n'existe pas dans le projet.
-10:04:28.743     1>Génération du projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" terminée (Deploy cible(s)) -- ÉCHEC.
+09:42:18.459     1>Génération à l'aide des outils version "15.0".
+09:42:18.460     1>E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj : error MSB4057: La cible "Deploy" n'existe pas dans le projet.
+09:42:18.460     1>Génération du projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" terminée (Deploy cible(s)) -- ÉCHEC.
 
 Résumé de performance des projets :
-        0 ms  E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj   1 appels
-                  0 ms  Deploy                                     1 appels
+        1 ms  E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj   1 appels
+                  1 ms  Deploy                                     1 appels
 
 ÉCHEC de la build.
 
-Temps écoulé 00:00:00.01
+Temps écoulé 00:00:00.00
