@@ -102,8 +102,6 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 		MessageBoxK(L"ERROR", L"Impossible d'obtenir le DeviceContext !");
 	}
 
-	loadingTextRect.left += 50;
-	loadingTextRect.top += 130;
 
 
 
