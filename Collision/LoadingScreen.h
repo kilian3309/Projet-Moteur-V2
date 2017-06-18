@@ -102,6 +102,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 		MessageBoxK(L"ERROR", L"Impossible d'obtenir le DeviceContext !");
 	}
 
+	loadingTextRect.top = loadingTextRect.top - 300;
 
 	MessageBoxK(L"h", std::to_wstring(loadingTextRect.bottom) + L"|" + std::to_wstring(loadingTextRect.top) + L"|" + std::to_wstring(loadingTextRect.right) + L"|" + std::to_wstring(loadingTextRect.left));
 
