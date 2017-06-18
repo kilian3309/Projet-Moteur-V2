@@ -103,7 +103,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 	}
 
 	loadingTextRect.left -= 20;
-	loadingTextRect.top -= 80;
+	loadingTextRect.top += 80;
 
 
 
