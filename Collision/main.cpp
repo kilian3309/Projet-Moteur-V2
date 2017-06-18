@@ -294,6 +294,7 @@ int wWinMainEnd() {
 
 	DXUTMainLoop(); //DXUT loop de render
 
+	ReleaseLoadingScreen();
 	return DXUTGetExitCode();
 }
 

@@ -32,7 +32,7 @@ void IncrementLoading(LPCWSTR txt=LPCWSTR(L"Loading...")) {
 	if (SendMessage(hwndPB, PBM_GETPOS, 0, 0) == SendMessage(hwndPB, PBM_GETRANGE, 0, 0)) {
 		SendMessage(hwndLS, WM_DESTROY, 0, 0);
 	}
-	DrawText(loadingDeviceContext, txt, wcslen(txt), &loadingTextRect, NULL);
+	DrawText(loadingDeviceContext, txt, wcslen(txt), &loadingTextRect, DT_SINGLELINE | DT_NOCLIP);
 	//PAINTSTRUCT ps;
 	//loadingDeviceContext = BeginPaint(hwndLS, &ps);
 	//TextOut(loadingDeviceContext, 200, 200, txt, wcslen(txt));
@@ -94,7 +94,9 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 
 	
 	GetWindowRect(hwndPB, &loadingTextRect);
-	loadingDeviceContext = GetDC(hwndLS);
+	loadingDeviceContext = GetWindowDC(hwndLS);
+	SetTextColor(loadingDeviceContext, 0x00000000);
+	SetBkMode(loadingDeviceContext, TRANSPARENT);
 
 	if (loadingDeviceContext == NULL) {
 		MessageBoxK(L"ERROR", L"Impossible d'obtenir le DeviceContext !");
@@ -103,11 +105,6 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 
 	MessageBoxK(L"h", std::to_wstring(loadingTextRect.bottom) + L"|" + std::to_wstring(loadingTextRect.top) + L"|" + std::to_wstring(loadingTextRect.right) + L"|" + std::to_wstring(loadingTextRect.left));
 
-	
-	loadingTextRect.top -= 50;
-	loadingTextRect.bottom -= 50;
-	loadingTextRect.right -= 50;
-	loadingTextRect.left -= 50;
 
 
 
@@ -120,6 +117,10 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 
 
 	
+}
+
+void ReleaseLoadingScreen() {
+	DeleteDC(loadingDeviceContext);
 }
 
 
