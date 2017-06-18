@@ -93,7 +93,7 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 	SendMessage(hwndPB, (UINT)PBM_SETBARCOLOR, 0, RGB(0, 148, 255));
 
 	
-	GetWindowRect(hwndPB, &loadingTextRect);
+	GetWindowRect(hwndLS, &loadingTextRect);
 	loadingDeviceContext = GetWindowDC(hwndLS);
 	SetTextColor(loadingDeviceContext, 0x00000000);
 	SetBkMode(loadingDeviceContext, TRANSPARENT);
