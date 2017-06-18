@@ -104,6 +104,10 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 
 	loadingTextRect.left -= 20;
 	loadingTextRect.top -= 100;
+	loadingTextRect.bottom -= 50;
+	loadingTextRect.right -= 50;
+
+
 
 	MessageBoxK(L"h", std::to_wstring(loadingTextRect.bottom) + L"|" + std::to_wstring(loadingTextRect.top) + L"|" + std::to_wstring(loadingTextRect.right) + L"|" + std::to_wstring(loadingTextRect.left));
 
