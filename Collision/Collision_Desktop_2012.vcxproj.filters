@@ -31,6 +31,18 @@
     <ClInclude Include="DataManager.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="level.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="hitbox.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Collision.rc">

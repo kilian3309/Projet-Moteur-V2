@@ -376,8 +376,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataManager.h" />
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="hitbox.h" />
     <ClInclude Include="kdefs.h" />
+    <ClInclude Include="level.h" />
     <ClInclude Include="LoadingScreen.h" />
+    <ClInclude Include="player.h" />
     <CLInclude Include="resource.h" />
     <ResourceCompile Include="Collision.rc" />
   </ItemGroup>
