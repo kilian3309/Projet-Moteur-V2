@@ -82,9 +82,6 @@ void CreateLoadingScreen(HINSTANCE hInst = (HINSTANCE)nullptr, int maxRange = 6)
 
 	GetWindowRect(hwndLS, &rcClient);
 
-	int width = rcClient.right - rcClient.left;
-	int height = rcClient.bottom - rcClient.top;
-
 	//MessageBox(hwndLS, LPWSTR(width), L"", MB_OK);
 
 	hwndPB = CreateWindowEx(0, PROGRESS_CLASS, (LPCTSTR)NULL, WS_CHILD | WS_VISIBLE | PBS_SMOOTH, 100, 500, 600, 20, hwndLS, 0, hInst, NULL);
