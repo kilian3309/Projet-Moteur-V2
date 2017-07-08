@@ -48,7 +48,6 @@
 #include "resource.h"
 
 #include <DirectXColors.h>
-#include <DirectXCollision.h>
 
 #include "CommonStates.h"
 #include "Effects.h"
@@ -136,50 +135,10 @@ std::string wstrToStr(std::wstring wstr) {
 
 //FIN UTILISATION DEBUG
 
-//Objets à hitbox
-/*
-struct CollisionSphere
-{
-	BoundingSphere sphere;
-	ContainmentType collision;
-};
-
-struct CollisionBox
-{
-	BoundingOrientedBox obox;
-	ContainmentType collision;
-};
-
-struct CollisionAABox
-{
-	BoundingBox aabox;
-	ContainmentType collision;
-};
-
-struct CollisionFrustum
-{
-	BoundingFrustum frustum;
-	ContainmentType collision;
-};
-
-struct CollisionTriangle
-{
-	XMVECTOR pointa;
-	XMVECTOR pointb;
-	XMVECTOR pointc;
-	ContainmentType collision;
-};
-
-struct CollisionRay
-{
-	XMVECTOR origin;
-	XMVECTOR direction;
-};*/
-
 //Constantes
-const int GROUP_COUNT = 4;			//Nombre de groupes où il y a des objets
-const int CAMERA_COUNT = 4;			//Nombre d'endroits où peut aller la caméra
-const float CAMERA_SPACING = 50.f;	
+#define GROUP_COUNT 4 //Nombre de groupes où il y a des objets
+#define CAMERA_COUNT 4			//Nombre d'endroits où peut aller la caméra
+#define  CAMERA_SPACING 50.f
 
 //Variables globales
 CModelViewerCamera          g_Camera;					//La camera
