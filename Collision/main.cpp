@@ -54,6 +54,7 @@
 #include "Effects.h"
 #include "PrimitiveBatch.h"
 #include "VertexTypes.h"
+#include "hitbox.h"
 
 #include "LoadingScreen.h"
 #include <string>
@@ -136,6 +137,7 @@ std::string wstrToStr(std::wstring wstr) {
 //FIN UTILISATION DEBUG
 
 //Objets à hitbox
+/*
 struct CollisionSphere
 {
 	BoundingSphere sphere;
@@ -172,7 +174,7 @@ struct CollisionRay
 {
 	XMVECTOR origin;
 	XMVECTOR direction;
-};
+};*/
 
 //Constantes
 const int GROUP_COUNT = 4;			//Nombre de groupes où il y a des objets
