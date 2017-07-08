@@ -1,4 +1,4 @@
-﻿La génération a démarré 04/07/2017 19:34:44.
+﻿La génération a démarré 08/07/2017 18:23:33.
 Environnement au début de la génération :
 ADSK_3DSMAX_x64_2017 = I:\Programms\AutoDesk\3D MAX\3ds Max 2017\
 ALLUSERSPROFILE = C:\ProgramData
@@ -56,8 +56,8 @@ VSLANG = 1036
 VSSDK140Install = E:\Programs\VS15\VSSDK\
 windir = C:\WINDOWS
 
-19:34:44.268     1>Projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" sur le nœud 3 (Deploy cible(s)).
-19:34:44.268     1>Propriétés initiales :
+18:23:33.321     1>Projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" sur le nœud 3 (Deploy cible(s)).
+18:23:33.321     1>Propriétés initiales :
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -1239,9 +1239,9 @@ windir = C:\WINDOWS
                    XamlTemporaryAssemblyName = DXUTOpt_DirectXTK_2012
                    YieldDuringToolExecution = true
 
-19:34:44.268     1>Génération à l'aide des outils version "15.0".
-19:34:44.268     1>E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj : error MSB4057: La cible "Deploy" n'existe pas dans le projet.
-19:34:44.268     1>Génération du projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" terminée (Deploy cible(s)) -- ÉCHEC.
+18:23:33.321     1>Génération à l'aide des outils version "15.0".
+18:23:33.321     1>E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj : error MSB4057: La cible "Deploy" n'existe pas dans le projet.
+18:23:33.321     1>Génération du projet "E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj" terminée (Deploy cible(s)) -- ÉCHEC.
 
 Résumé de performance des projets :
         0 ms  E:\C++\Collisions\DXUT\Optional\DXUTOpt_DirectXTK_2012.vcxproj   1 appels
