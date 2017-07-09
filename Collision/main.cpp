@@ -1086,11 +1086,12 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	}
 
 	//Setup des paramètres de la camera
-	auto pComboBox = g_debugHUD.m_list.GetComboBox(IDC_GROUP);
-	SetViewForGroup((pComboBox) ? (int)PtrToInt(pComboBox->GetSelectedData()) : 0);
+	if (g_debugHUD.isInit) {
+		auto pComboBox = g_debugHUD.m_list.GetComboBox(IDC_GROUP);
+		SetViewForGroup((pComboBox) ? (int)PtrToInt(pComboBox->GetSelectedData()) : 0);
 
-	g_debugHUD.m_hud.GetButton(IDC_TOGGLEWARP)->SetEnabled(true);
-
+		g_debugHUD.m_hud.GetButton(IDC_TOGGLEWARP)->SetEnabled(true);
+	}
 	return S_OK;
 }
 
@@ -1111,7 +1112,6 @@ HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChai
 	g_Camera.SetProjParams(XM_PI / 4, fAspectRatio, 0.1f, 1000.0f);
 	g_Camera.SetWindow(pBackBufferSurfaceDesc->Width, pBackBufferSurfaceDesc->Height);
 	g_Camera.SetButtonMasks(MOUSE_LEFT_BUTTON, MOUSE_WHEEL, MOUSE_MIDDLE_BUTTON);
-
 	g_debugHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
 
 	return S_OK;
@@ -1254,12 +1254,14 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 	}
 
 	//Donne une change au dialogue de prendre le message en 1er
-	*pbNoFurtherProcessing = g_debugHUD.m_hud.MsgProc(hWnd, uMsg, wParam, lParam);
-	if (*pbNoFurtherProcessing)
-		return 0;
-	*pbNoFurtherProcessing = g_debugHUD.m_list.MsgProc(hWnd, uMsg, wParam, lParam);
-	if (*pbNoFurtherProcessing)
-		return 0;
+	if (g_debugHUD.isInit) {
+		*pbNoFurtherProcessing = g_debugHUD.m_hud.MsgProc(hWnd, uMsg, wParam, lParam);
+		if (*pbNoFurtherProcessing)
+			return 0;
+		*pbNoFurtherProcessing = g_debugHUD.m_list.MsgProc(hWnd, uMsg, wParam, lParam);
+		if (*pbNoFurtherProcessing)
+			return 0;
+	}
 
 
 	g_Camera.HandleMessages(hWnd, uMsg, wParam, lParam);
@@ -1283,6 +1285,7 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	case '3':
 	case '4':
 	{
+		
 		int group = (nChar - '1');
 		auto pComboBox = g_debugHUD.m_list.GetComboBox(IDC_GROUP);
 		assert(pComboBox != NULL);
