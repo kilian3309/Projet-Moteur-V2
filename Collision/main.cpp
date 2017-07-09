@@ -329,7 +329,8 @@ void InitApp()
 	pComboBox->AddItem(L"Oriented Box", IntToPtr(2));
 	pComboBox->AddItem(L"Ray", IntToPtr(3));*/
 
-	g_debugHUD.Init();
+	//g_debugHUD.Init();
+	g_SettingsDlg.Init(&g_DialogResourceManager);
 
 	InitializeObjects();
 }
@@ -1291,6 +1292,9 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	break;
 	case VK_ESCAPE:
 		OpenMenu();
+		break;
+	case VK_F10:
+		g_debugHUD.Init(false);
 		break;
 	}
 }
