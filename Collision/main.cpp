@@ -221,7 +221,8 @@ void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color);
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color);
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color);
 
-debugHUD g_debugHUD(&g_DialogResourceManager, &g_SettingsDlg, SetViewForGroup);
+debugHUD g_debugHUD(&g_DialogResourceManager, &g_SettingsDlg);
+groupHUD g_groupHUD(&g_DialogResourceManager, &g_SettingsDlg, SetViewForGroup);
 
 void OpenMenu() {
 	isMenuOpen = true;
@@ -331,6 +332,7 @@ void InitApp()
 
 	//g_debugHUD.Init();
 	g_SettingsDlg.Init(&g_DialogResourceManager);
+	g_groupHUD.Init(false);
 
 	InitializeObjects();
 }
@@ -1086,12 +1088,12 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	}
 
 	//Setup des paramètres de la camera
-	if (g_debugHUD.isInit) {
-		auto pComboBox = g_debugHUD.m_list.GetComboBox(IDC_GROUP);
+	
+		auto pComboBox = g_groupHUD.m_hud.GetComboBox(IDC_GROUP);
 		SetViewForGroup((pComboBox) ? (int)PtrToInt(pComboBox->GetSelectedData()) : 0);
-
+	if (g_debugHUD.isInit)
 		g_debugHUD.m_hud.GetButton(IDC_TOGGLEWARP)->SetEnabled(true);
-	}
+	
 	return S_OK;
 }
 
@@ -1258,10 +1260,11 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 		*pbNoFurtherProcessing = g_debugHUD.m_hud.MsgProc(hWnd, uMsg, wParam, lParam);
 		if (*pbNoFurtherProcessing)
 			return 0;
-		*pbNoFurtherProcessing = g_debugHUD.m_list.MsgProc(hWnd, uMsg, wParam, lParam);
-		if (*pbNoFurtherProcessing)
-			return 0;
 	}
+	*pbNoFurtherProcessing = g_groupHUD.m_hud.MsgProc(hWnd, uMsg, wParam, lParam);
+	if (*pbNoFurtherProcessing)
+		return 0;
+	
 
 
 	g_Camera.HandleMessages(hWnd, uMsg, wParam, lParam);
@@ -1287,7 +1290,7 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	{
 		
 		int group = (nChar - '1');
-		auto pComboBox = g_debugHUD.m_list.GetComboBox(IDC_GROUP);
+		auto pComboBox = g_groupHUD.m_hud.GetComboBox(IDC_GROUP);
 		assert(pComboBox != NULL);
 		pComboBox->SetSelectedByData(IntToPtr(group));
 		SetViewForGroup(group);
