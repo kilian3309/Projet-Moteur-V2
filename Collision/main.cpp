@@ -55,6 +55,7 @@ Ce type est uniquement utilisé pour les arguments de fonction
 #include "VertexTypes.h"
 
 #include "hitbox.h"
+#include "hud.h"
 
 #include "LoadingScreen.h"
 #include <string>
@@ -149,8 +150,8 @@ CModelViewerCamera          g_Camera;					//La camera
 CDXUTDialogResourceManager  g_DialogResourceManager;	//Manager pour les resources partargés des différents dialogs
 CD3DSettingsDlg             g_SettingsDlg;				//Parametre du device principale
 CDXUTTextHelper*            g_pTxtHelper = nullptr;		//Afficheur de text
-CDXUTDialog                 g_HUD;						//Dialog pour les controles standards
-CDXUTDialog                 g_SampleUI;					//Dialogue pour les controles spécifiques (controles au sens par exemple des touches cheloux)
+HUD			                g_HUD;						//Dialog pour les controles standards
+HUD							g_SampleUI;					//Dialogue pour les controles spécifiques (controles au sens par exemple des touches cheloux)
 
 ID3D11InputLayout*                  g_pBatchInputLayout = nullptr;
 
