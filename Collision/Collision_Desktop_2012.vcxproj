@@ -187,6 +187,7 @@
       <TargetMachine>MachineX64</TargetMachine>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
       <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ForceFileOutput>Enabled</ForceFileOutput>
     </Link>
     <Manifest>
       <EnableDPIAwareness>true</EnableDPIAwareness>

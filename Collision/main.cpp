@@ -1,45 +1,46 @@
 /*
-	Choses à savoir:
-	Vertex : https://en.wikipedia.org/wiki/Vertex_(geometry)
+Choses à savoir:
+Vertex : https://en.wikipedia.org/wiki/Vertex_(geometry)
 
-	HRESULT : C'est une valeur 32 bit qui est divisée en 3 parties : un code de sévérité, un code d'installation, un code d'erreur
-		- Le code de sévérité indique si la valeur représente une info, un warning ou une erreur
-		- Le code d'installation (facility) indique quelle partie du système est responsable de l'erreur (ne marche que si c'est une erreur)
-		- Le code d'erreur représente l'erreur, le warning ou l'info
-	HRESULT peut être converti en exception si le code où il est return ne propose pas de solution afin de traiter les erreurs
+HRESULT : C'est une valeur 32 bit qui est divisée en 3 parties : un code de sévérité, un code d'installation, un code d'erreur
+- Le code de sévérité indique si la valeur représente une info, un warning ou une erreur
+- Le code d'installation (facility) indique quelle partie du système est responsable de l'erreur (ne marche que si c'est une erreur)
+- Le code d'erreur représente l'erreur, le warning ou l'info
+HRESULT peut être converti en exception si le code où il est return ne propose pas de solution afin de traiter les erreurs
 
-	LRESULT : Valeur relativement chelou qui donne la taille de la variable et qui possède une sorte de base de donnée afin de l'interpréter...
-	Ce type peut prendre d'autres types (il peut être un int, un float...).
+LRESULT : Valeur relativement chelou qui donne la taille de la variable et qui possède une sorte de base de donnée afin de l'interpréter...
+Ce type peut prendre d'autres types (il peut être un int, un float...).
 
-	XMVECTOR : Type comprenant 4 valeur 32 bit de type float dont l'alignement et le mappage ont été optimisé au maximum pour des vecteur (hardware)
-	Ce type est plus fréquement utilisé pour des variables local ou global
-	Quand l'on veut faire un calcul depuis un XFLOAT(1 ou 2 ou 3 ou 4), il vaut mieu passer par un XMVECTOR (on peut convertir l'un vers l'autre facilement)
+XMVECTOR : Type comprenant 4 valeur 32 bit de type float dont l'alignement et le mappage ont été optimisé au maximum pour des vecteur (hardware)
+Ce type est plus fréquement utilisé pour des variables local ou global
+Quand l'on veut faire un calcul depuis un XFLOAT(1 ou 2 ou 3 ou 4), il vaut mieu passer par un XMVECTOR (on peut convertir l'un vers l'autre facilement)
 
-	XMMATRIX : Une matrix de 4*4 aligné en 16bit qui enfait est une représentation de 4 XMVECTOR avec une interface afin de les utiliser comme une matrix
-	Représentation d'une matrix:
-										_11, _12, _13, _14,
-										_21, _22, _23, _24,
-										_31, _32, _33, _34,
-										_41, _42, _43, _44
+XMMATRIX : Une matrix de 4*4 aligné en 16bit qui enfait est une représentation de 4 XMVECTOR avec une interface afin de les utiliser comme une matrix
+Représentation d'une matrix:
+_11, _12, _13, _14,
+_21, _22, _23, _24,
+_31, _32, _33, _34,
+_41, _42, _43, _44
 
-	XMFLOAT3 : Vecteur 3D : contient 3 coordonnées en float nommées x, y, z rien de plus
-	Ce type est plus utilisé pour les membres de class
+XMFLOAT3 : Vecteur 3D : contient 3 coordonnées en float nommées x, y, z rien de plus
+Ce type est plus utilisé pour les membres de class
 
-	XMVECTORF32 : Comme un XMVECTOR mais portable (entre les OS) et qui contient des syntax pour intialiser correctement les XMVECTOR
+XMVECTORF32 : Comme un XMVECTOR mais portable (entre les OS) et qui contient des syntax pour intialiser correctement les XMVECTOR
 
-	FXMVECTOR : Renvoi vers un XMVECTOR
-	Ce type est plus utilisé pour les arguments de fonction
+FXMVECTOR : Renvoi vers un XMVECTOR
+Ce type est plus utilisé pour les arguments de fonction
 
-	CXMMATRIX : Renvoi vers XMMATRIX, sert sur certaines architectures à appeler des arguments de fonction dans le bon orde
-	Ce type est uniquement utilisé pour les arguments de fonction
+CXMMATRIX : Renvoi vers XMMATRIX, sert sur certaines architectures à appeler des arguments de fonction dans le bon orde
+Ce type est uniquement utilisé pour les arguments de fonction
 
-	FXMVECTOR : Renvoi vers XMVECTOR, jour le même rôle que CXMMATRIX
-	Ce type est uniquement utilisé pour les arguments de fonction 
+FXMVECTOR : Renvoi vers XMVECTOR, jour le même rôle que CXMMATRIX
+Ce type est uniquement utilisé pour les arguments de fonction
 
 
 */
 
 #include "DXUT.h"
+#include "DXUTgui.h"
 #include "DXUTmisc.h"
 #include "DXUTCamera.h"
 #include "DXUTSettingsDlg.h"
@@ -47,14 +48,12 @@
 #include "resource.h"
 
 #include <DirectXColors.h>
+#include <DirectXCollision.h>
 
 #include "CommonStates.h"
 #include "Effects.h"
 #include "PrimitiveBatch.h"
 #include "VertexTypes.h"
-
-#include "hitbox.h"
-#include "hud.h"
 
 #include "LoadingScreen.h"
 #include <string>
@@ -136,20 +135,60 @@ std::string wstrToStr(std::wstring wstr) {
 
 //FIN UTILISATION DEBUG
 
+//Objets à hitbox
+struct CollisionSphere
+{
+	BoundingSphere sphere;
+	ContainmentType collision;
+};
+
+struct CollisionBox
+{
+	BoundingOrientedBox obox;
+	ContainmentType collision;
+};
+
+struct CollisionAABox
+{
+	BoundingBox aabox;
+	ContainmentType collision;
+};
+
+struct CollisionFrustum
+{
+	BoundingFrustum frustum;
+	ContainmentType collision;
+};
+
+struct CollisionTriangle
+{
+	XMVECTOR pointa;
+	XMVECTOR pointb;
+	XMVECTOR pointc;
+	ContainmentType collision;
+};
+
+struct CollisionRay
+{
+	XMVECTOR origin;
+	XMVECTOR direction;
+};
+
 //Constantes
-#define GROUP_COUNT 4 //Nombre de groupes où il y a des objets
-#define CAMERA_COUNT 4			//Nombre d'endroits où peut aller la caméra
-#define  CAMERA_SPACING 50.f
+const int GROUP_COUNT = 4;			//Nombre de groupes où il y a des objets
+const int CAMERA_COUNT = 4;			//Nombre d'endroits où peut aller la caméra
+const float CAMERA_SPACING = 50.f;
 
 //Variables globales
 CModelViewerCamera          g_Camera;					//La camera
-
+														/*
+														Ici dialog signifie que c'est lui qui gère les resources partargés
+														*/
 CDXUTDialogResourceManager  g_DialogResourceManager;	//Manager pour les resources partargés des différents dialogs
 CD3DSettingsDlg             g_SettingsDlg;				//Parametre du device principale
 CDXUTTextHelper*            g_pTxtHelper = nullptr;		//Afficheur de text
-/*HUD							g_HUD;						//HUD à droite avec les différents bouttons
-HUD							g_SampleUI;					//Liste des différentes positions*/
-
+CDXUTDialog                 g_HUD;						//Dialog pour les controles standards
+CDXUTDialog                 g_SampleUI;					//Dialogue pour les controles spécifiques (controles au sens par exemple des touches cheloux)
 
 ID3D11InputLayout*                  g_pBatchInputLayout = nullptr;
 
@@ -218,8 +257,6 @@ void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color);
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color);
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color);
 
-debugHUD debugginHUD(&g_DialogResourceManager, &g_SettingsDlg, SetViewForGroup);
-
 void OpenMenu() {
 	isMenuOpen = true;
 
@@ -262,11 +299,11 @@ int wWinMainEnd() {
 }
 
 /*
-	WINAPI : Entrée de l'API windows (fonction main() mais pour windows)
-	hInstance : Instance principale du programme : genre de conteneur qui représente le programme et tout ce qu'il contien
-	hPrevInstance : Argument anciennement utilisé (Windows 16bits) donc toujours == NULL
-	lpCmdLine : Les arguments de la commande si le programme est démaré via cmd ( ex: Si le programme s'appelle 'pgrm' et que l'on éxécute cette ligne: "pgrm --help --version" alors lpCmdLine=L"--help --version"
-	nCmdShow : Le mode d'affichage de
+WINAPI : Entrée de l'API windows (fonction main() mais pour windows)
+hInstance : Instance principale du programme : genre de conteneur qui représente le programme et tout ce qu'il contien
+hPrevInstance : Argument anciennement utilisé (Windows 16bits) donc toujours == NULL
+lpCmdLine : Les arguments de la commande si le programme est démaré via cmd ( ex: Si le programme s'appelle 'pgrm' et que l'on éxécute cette ligne: "pgrm --help --version" alors lpCmdLine=L"--help --version"
+nCmdShow : Le mode d'affichage de
 
 */
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)
@@ -283,27 +320,23 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 			TEXT("Collision"), MB_OK | MB_ICONEXCLAMATION);
 		return -1;
 	}
-	
+
 	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain (sa évite le "ne répond pas", enfait non x) ...)
 	std::async(std::launch::async, CreateLoadingScreen, hInstance, LoadingMax);
-	
+
 	//WinMain Returned Status
 	auto WRS = std::async(wWinMainEnd);
-	
+
 
 	return WRS.get();
 }
 
 
 /*
-	Initialisation de l'application
+Initialisation de l'application
 */
 void InitApp()
 {
-	
-	debugginHUD.Init();
-
-	/*
 	g_SettingsDlg.Init(&g_DialogResourceManager);
 	g_HUD.Init(&g_DialogResourceManager);
 	g_SampleUI.Init(&g_DialogResourceManager);
@@ -327,9 +360,7 @@ void InitApp()
 	pComboBox->AddItem(L"Frustum", IntToPtr(0));
 	pComboBox->AddItem(L"Axis-aligned Box", IntToPtr(1));
 	pComboBox->AddItem(L"Oriented Box", IntToPtr(2));
-	pComboBox->AddItem(L"Ray", IntToPtr(3));*/
-
-	//debugHUD()
+	pComboBox->AddItem(L"Ray", IntToPtr(3));
 
 	InitializeObjects();
 }
@@ -350,7 +381,7 @@ void RenderText()
 
 
 /*
-	Initialisation des différents objets sur la map
+Initialisation des différents objets sur la map
 */
 void InitializeObjects()
 {
@@ -408,8 +439,8 @@ void InitializeObjects()
 
 
 /*
-	Fait bouger tous les objets de la scène
-	fTime : Temps actuel (InGame)
+Fait bouger tous les objets de la scène
+fTime : Temps actuel (InGame)
 */
 void Animate(double fTime)
 {
@@ -540,7 +571,7 @@ void Animate(double fTime)
 
 
 /*
-	Cette fonction met à jour toutes les collisions pour les tester
+Cette fonction met à jour toutes les collisions pour les tester
 */
 void Collide()
 {
@@ -625,7 +656,7 @@ void Collide()
 
 
 /*
-	Retourne la couleur de l'objet en fonction de la collision
+Retourne la couleur de l'objet en fonction de la collision
 */
 inline XMVECTOR GetCollisionColor(ContainmentType collision, int groupnumber)
 {
@@ -643,7 +674,7 @@ inline XMVECTOR GetCollisionColor(ContainmentType collision, int groupnumber)
 
 
 /*
-	Rendre les objets à collision (c'est pas très francais je sait)
+Rendre les objets à collision (c'est pas très francais je sait)
 */
 void RenderObjects()
 {
@@ -721,7 +752,7 @@ void SetViewForGroup(int group)
 
 
 /*
-	Dessiner une grille
+Dessiner une grille
 */
 void DrawGrid(FXMVECTOR xAxis, FXMVECTOR yAxis, FXMVECTOR origin, size_t xdivs, size_t ydivs, GXMVECTOR color)
 {
@@ -765,7 +796,7 @@ void DrawGrid(FXMVECTOR xAxis, FXMVECTOR yAxis, FXMVECTOR origin, size_t xdivs, 
 
 
 /*
-	Dessiner un Frustum
+Dessiner un Frustum
 */
 void DrawFrustum(const BoundingFrustum& frustum, FXMVECTOR color)
 {
@@ -818,7 +849,7 @@ void DrawFrustum(const BoundingFrustum& frustum, FXMVECTOR color)
 }
 
 /*
-	Dessiner un cube depuis une matrix
+Dessiner un cube depuis une matrix
 */
 void DrawCube(CXMMATRIX mWorld, FXMVECTOR color)
 {
@@ -871,7 +902,7 @@ void DrawCube(CXMMATRIX mWorld, FXMVECTOR color)
 
 
 /*
-	Dessiner un AABox
+Dessiner un AABox
 */
 void DrawAabb(const BoundingBox& box, FXMVECTOR color)
 {
@@ -884,7 +915,7 @@ void DrawAabb(const BoundingBox& box, FXMVECTOR color)
 
 
 /*
-	Dessiner un OBox
+Dessiner un OBox
 */
 void DrawObb(const BoundingOrientedBox& obb, FXMVECTOR color)
 {
@@ -899,7 +930,7 @@ void DrawObb(const BoundingOrientedBox& obb, FXMVECTOR color)
 
 
 /*
-	Dessiner un anneau
+Dessiner un anneau
 */
 void DrawRing(FXMVECTOR Origin, FXMVECTOR MajorAxis, FXMVECTOR MinorAxis, CXMVECTOR color)
 {
@@ -947,7 +978,7 @@ void DrawRing(FXMVECTOR Origin, FXMVECTOR MajorAxis, FXMVECTOR MinorAxis, CXMVEC
 
 
 /*
-	Dessiner une sphere
+Dessiner une sphere
 */
 void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color)
 {
@@ -966,7 +997,7 @@ void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color)
 
 
 /*
-	Dessiner un rayon
+Dessiner un rayon
 */
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color)
 {
@@ -1009,7 +1040,7 @@ void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR c
 
 
 /*
-	Dessiner un triangle
+Dessiner un triangle
 */
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color)
 {
@@ -1038,8 +1069,8 @@ void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTO
 
 
 /*
-	Si l'on a besoin de fonctionnalité(s) avancé(s), certaines combinaison de réglage (résolution, plein écran, REFs...) peuvent être refusés
-	Nous n'utilisons pas de fonctionnalités avancés donc on accepte tout
+Si l'on a besoin de fonctionnalité(s) avancé(s), certaines combinaison de réglage (résolution, plein écran, REFs...) peuvent être refusés
+Nous n'utilisons pas de fonctionnalités avancés donc on accepte tout
 */
 bool CALLBACK IsD3D11DeviceAcceptable(const CD3D11EnumAdapterInfo *AdapterInfo, UINT Output, const CD3D11EnumDeviceInfo *DeviceInfo, DXGI_FORMAT BackBufferFormat, bool bWindowed, void* pUserContext)
 {
@@ -1048,10 +1079,10 @@ bool CALLBACK IsD3D11DeviceAcceptable(const CD3D11EnumAdapterInfo *AdapterInfo, 
 
 
 /*
-	Cette fonction est appelée après que le device soit créé. En générale dans cette fonction on:
-	 - Alloue la mémoire
-	 - Règle les buffers
-	 - Autre
+Cette fonction est appelée après que le device soit créé. En générale dans cette fonction on:
+- Alloue la mémoire
+- Règle les buffers
+- Autre
 
 */
 HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext)
@@ -1085,17 +1116,17 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	}
 
 	//Setup des paramètres de la camera
-	auto pComboBox = debugginHUD.listHUD()->GetComboBox(GUI_GROUP);
+	auto pComboBox = g_SampleUI.GetComboBox(IDC_GROUP);
 	SetViewForGroup((pComboBox) ? (int)PtrToInt(pComboBox->GetSelectedData()) : 0);
 
-	debugginHUD.listHUD()->GetButton(GUI_TOGGLEWARP)->SetEnabled(true);
+	g_HUD.GetButton(IDC_TOGGLEWARP)->SetEnabled(true);
 
 	return S_OK;
 }
 
 
 /*
-	Creation des resources D3D11 qui nécéssitent le back buffer
+Creation des resources D3D11 qui nécéssitent le back buffer
 */
 HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChain* pSwapChain,
 	const DXGI_SURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext)
@@ -1111,15 +1142,18 @@ HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChai
 	g_Camera.SetWindow(pBackBufferSurfaceDesc->Width, pBackBufferSurfaceDesc->Height);
 	g_Camera.SetButtonMasks(MOUSE_LEFT_BUTTON, MOUSE_WHEEL, MOUSE_MIDDLE_BUTTON);
 
-	debugginHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
+	g_HUD.SetLocation(pBackBufferSurfaceDesc->Width - 170, 0);
+	g_HUD.SetSize(170, 170);
+	g_SampleUI.SetLocation(pBackBufferSurfaceDesc->Width - 170, pBackBufferSurfaceDesc->Height - 300);
+	g_SampleUI.SetSize(170, 300);
 
 	return S_OK;
 }
 
 
 /*
-	Render en utilisant le D3D Device, cette fonction est appelée à chaque trame (si elle est redéssinée uniquement).
-	Ici on applique les effets, les resources et on déssine
+Render en utilisant le D3D Device, cette fonction est appelée à chaque trame (si elle est redéssinée uniquement).
+Ici on applique les effets, les resources et on déssine
 */
 void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* pd3dImmediateContext, double fTime,
 	float fElapsedTime, void* pUserContext)
@@ -1150,6 +1184,8 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 
 	//Render le HUD (faudra lui trouver un nom de spy)
 	DXUT_BeginPerfEvent(DXUT_PERFEVENTCOLOR, L"HUD / Stats");
+	g_HUD.OnRender(fElapsedTime);
+	g_SampleUI.OnRender(fElapsedTime);
 	RenderText();
 	DXUT_EndPerfEvent();
 
@@ -1165,7 +1201,7 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 
 
 /*
-	Libération de la mémoire allouée par la swap chain dans OnD3D11ResizedSwapChain
+Libération de la mémoire allouée par la swap chain dans OnD3D11ResizedSwapChain
 */
 void CALLBACK OnD3D11ReleasingSwapChain(void* pUserContext)
 {
@@ -1175,7 +1211,7 @@ void CALLBACK OnD3D11ReleasingSwapChain(void* pUserContext)
 
 
 /*
-	Libération de la mémoire des resources créées dans OnD3D11CreateDevice
+Libération de la mémoire des resources créées dans OnD3D11CreateDevice
 */
 void CALLBACK OnD3D11DestroyDevice(void* pUserContext)
 {
@@ -1193,7 +1229,7 @@ void CALLBACK OnD3D11DestroyDevice(void* pUserContext)
 
 
 /*
-	Modifications antérieurs à la création du device par DXUT (utile pour des fonctionnalités avancé mais vu qu'on en a pas...)
+Modifications antérieurs à la création du device par DXUT (utile pour des fonctionnalités avancé mais vu qu'on en a pas...)
 */
 bool CALLBACK ModifyDeviceSettings(DXUTDeviceSettings* pDeviceSettings, void* pUserContext)
 {
@@ -1208,9 +1244,9 @@ bool CALLBACK ModifyDeviceSettings(DXUTDeviceSettings* pDeviceSettings, void* pU
 
 
 /*
-	Cette fonction met à jour la scène. Son nom peut changer en fonction de l'API D3D utilisée
-	fTime : Temps actuel (InGame)
-	fEnlapsedTime : Temps depuis la dernière update
+Cette fonction met à jour la scène. Son nom peut changer en fonction de l'API D3D utilisée
+fTime : Temps actuel (InGame)
+fEnlapsedTime : Temps depuis la dernière update
 */
 void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext)
 {
@@ -1226,13 +1262,13 @@ void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext)
 
 
 /*
-	Cette fonction est la fonction où toutes les procedures liées à la fenêtre sont gérées
-	hWnd : Fenêtre principale
-	uMsg : Message envoyé par la boucle événementielle (boucle principale du programme)
-	wParam & lParam : Précisions sur l'origine du messageg
+Cette fonction est la fonction où toutes les procedures liées à la fenêtre sont gérées
+hWnd : Fenêtre principale
+uMsg : Message envoyé par la boucle événementielle (boucle principale du programme)
+wParam & lParam : Précisions sur l'origine du messageg
 
-	LRESULT : La valeur retournée dépend (son type aussi) du message à process
-	CALLBACK : Précise que la fonction doit être appelée de la manière la plus standard possible (__stdcall ici -> de droite à gauche et de haut en bas)
+LRESULT : La valeur retournée dépend (son type aussi) du message à process
+CALLBACK : Précise que la fonction doit être appelée de la manière la plus standard possible (__stdcall ici -> de droite à gauche et de haut en bas)
 */
 LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool* pbNoFurtherProcessing,
 	void* pUserContext)
@@ -1250,10 +1286,10 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 	}
 
 	//Donne une change au dialogue de prendre le message en 1er
-	*pbNoFurtherProcessing = debugginHUD.mainHUD()->MsgProc(hWnd, uMsg, wParam, lParam);
+	*pbNoFurtherProcessing = g_HUD.MsgProc(hWnd, uMsg, wParam, lParam);
 	if (*pbNoFurtherProcessing)
 		return 0;
-	*pbNoFurtherProcessing = debugginHUD.listHUD()->MsgProc(hWnd, uMsg, wParam, lParam);
+	*pbNoFurtherProcessing = g_SampleUI.MsgProc(hWnd, uMsg, wParam, lParam);
 	if (*pbNoFurtherProcessing)
 		return 0;
 
@@ -1265,10 +1301,10 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 
 
 /*
-	Cette fonction est la pour capter ce qui sort du clavier donc surtout les touches efoncées ou non
-	nChar : Numéro de la touche
-	bKeyDown : si la touche est appuyé
-	bAltDown : si la touche ALT est appuyé en même temps que la touche
+Cette fonction est la pour capter ce qui sort du clavier donc surtout les touches efoncées ou non
+nChar : Numéro de la touche
+bKeyDown : si la touche est appuyé
+bAltDown : si la touche ALT est appuyé en même temps que la touche
 */
 void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserContext)
 {
@@ -1280,7 +1316,7 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	case '4':
 	{
 		int group = (nChar - '1');
-		auto pComboBox = debugginHUD.listHUD()->GetComboBox(GUI_GROUP);
+		auto pComboBox = g_SampleUI.GetComboBox(IDC_GROUP);
 		assert(pComboBox != NULL);
 		pComboBox->SetSelectedByData(IntToPtr(group));
 		SetViewForGroup(group);
@@ -1294,11 +1330,11 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 
 
 /*
-	Cette fonction est appelée si on clique sur un des bouttons du GUI
-	nEvent : Numéro de l'event (Dans notre cas, on ne traite que les cliques donc on ignore ce paramètre)
-	nControlID : Numéro du boutton
-	pControl : Pointeur pour controller le device
-
+Cette fonction est appelée si on clique sur un des bouttons du GUI
+nEvent : Numéro de l'event (Dans notre cas, on ne traite que les cliques donc on ignore ce paramètre)
+nControlID : Numéro du boutton
+pControl : Pointeur pour controller le device
+*/
 void CALLBACK OnGUIEvent(UINT nEvent, int nControlID, CDXUTControl* pControl, void* pUserContext)
 {
 	switch (nControlID)
@@ -1322,4 +1358,4 @@ void CALLBACK OnGUIEvent(UINT nEvent, int nControlID, CDXUTControl* pControl, vo
 	}
 	break;
 	}
-}*/
+}
