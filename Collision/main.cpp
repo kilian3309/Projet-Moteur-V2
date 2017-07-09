@@ -1115,6 +1115,7 @@ HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChai
 	g_Camera.SetWindow(pBackBufferSurfaceDesc->Width, pBackBufferSurfaceDesc->Height);
 	g_Camera.SetButtonMasks(MOUSE_LEFT_BUTTON, MOUSE_WHEEL, MOUSE_MIDDLE_BUTTON);
 	g_debugHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
+	g_groupHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
 
 	return S_OK;
 }
@@ -1155,6 +1156,7 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	DXUT_BeginPerfEvent(DXUT_PERFEVENTCOLOR, L"HUD / Stats");
 
 	g_debugHUD.OnFrameRender(&fElapsedTime);
+	g_groupHUD.OnFrameRender(&fElapsedTime);
 
 	RenderText();
 	DXUT_EndPerfEvent();
