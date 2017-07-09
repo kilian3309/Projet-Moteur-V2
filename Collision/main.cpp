@@ -150,8 +150,9 @@ CModelViewerCamera          g_Camera;					//La camera
 CDXUTDialogResourceManager  g_DialogResourceManager;	//Manager pour les resources partargés des différents dialogs
 CD3DSettingsDlg             g_SettingsDlg;				//Parametre du device principale
 CDXUTTextHelper*            g_pTxtHelper = nullptr;		//Afficheur de text
-HUD			                g_HUD;						//Dialog pour les controles standards
-HUD							g_SampleUI;					//Dialogue pour les controles spécifiques (controles au sens par exemple des touches cheloux)
+//HUD			                g_HUD;						//Dialog pour les controles standards
+//HUD							g_SampleUI;					//Dialogue pour les controles spécifiques (controles au sens par exemple des touches cheloux)
+
 
 ID3D11InputLayout*                  g_pBatchInputLayout = nullptr;
 
@@ -219,6 +220,8 @@ void DrawObb(const BoundingOrientedBox& obb, FXMVECTOR color);
 void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color);
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color);
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color);
+
+debugHUD g_debugHUD(&g_DialogResourceManager, &g_SettingsDlg, SetViewForGroup);
 
 void OpenMenu() {
 	isMenuOpen = true;
@@ -300,6 +303,7 @@ Initialisation de l'application
 */
 void InitApp()
 {
+	/*
 	g_SettingsDlg.Init(&g_DialogResourceManager);
 	g_HUD.Init(&g_DialogResourceManager);
 	g_SampleUI.Init(&g_DialogResourceManager);
@@ -323,7 +327,9 @@ void InitApp()
 	pComboBox->AddItem(L"Frustum", IntToPtr(0));
 	pComboBox->AddItem(L"Axis-aligned Box", IntToPtr(1));
 	pComboBox->AddItem(L"Oriented Box", IntToPtr(2));
-	pComboBox->AddItem(L"Ray", IntToPtr(3));
+	pComboBox->AddItem(L"Ray", IntToPtr(3));*/
+
+	g_debugHUD.Init();
 
 	InitializeObjects();
 }
@@ -1079,10 +1085,10 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	}
 
 	//Setup des paramètres de la camera
-	auto pComboBox = g_SampleUI.GetComboBox(IDC_GROUP);
+	auto pComboBox = g_debugHUD.m_list.GetComboBox(IDC_GROUP);
 	SetViewForGroup((pComboBox) ? (int)PtrToInt(pComboBox->GetSelectedData()) : 0);
 
-	g_HUD.GetButton(IDC_TOGGLEWARP)->SetEnabled(true);
+	g_debugHUD.m_hud.GetButton(IDC_TOGGLEWARP)->SetEnabled(true);
 
 	return S_OK;
 }
@@ -1105,10 +1111,7 @@ HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChai
 	g_Camera.SetWindow(pBackBufferSurfaceDesc->Width, pBackBufferSurfaceDesc->Height);
 	g_Camera.SetButtonMasks(MOUSE_LEFT_BUTTON, MOUSE_WHEEL, MOUSE_MIDDLE_BUTTON);
 
-	g_HUD.SetLocation(pBackBufferSurfaceDesc->Width - 170, 0);
-	g_HUD.SetSize(170, 170);
-	g_SampleUI.SetLocation(pBackBufferSurfaceDesc->Width - 170, pBackBufferSurfaceDesc->Height - 300);
-	g_SampleUI.SetSize(170, 300);
+	g_debugHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
 
 	return S_OK;
 }
@@ -1147,8 +1150,9 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 
 	//Render le HUD (faudra lui trouver un nom de spy)
 	DXUT_BeginPerfEvent(DXUT_PERFEVENTCOLOR, L"HUD / Stats");
-	g_HUD.OnRender(fElapsedTime);
-	g_SampleUI.OnRender(fElapsedTime);
+
+	g_debugHUD.OnFrameRender(&fElapsedTime);
+
 	RenderText();
 	DXUT_EndPerfEvent();
 
@@ -1249,10 +1253,10 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 	}
 
 	//Donne une change au dialogue de prendre le message en 1er
-	*pbNoFurtherProcessing = g_HUD.MsgProc(hWnd, uMsg, wParam, lParam);
+	*pbNoFurtherProcessing = g_debugHUD.m_hud.MsgProc(hWnd, uMsg, wParam, lParam);
 	if (*pbNoFurtherProcessing)
 		return 0;
-	*pbNoFurtherProcessing = g_SampleUI.MsgProc(hWnd, uMsg, wParam, lParam);
+	*pbNoFurtherProcessing = g_debugHUD.m_list.MsgProc(hWnd, uMsg, wParam, lParam);
 	if (*pbNoFurtherProcessing)
 		return 0;
 
@@ -1279,7 +1283,7 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	case '4':
 	{
 		int group = (nChar - '1');
-		auto pComboBox = g_SampleUI.GetComboBox(IDC_GROUP);
+		auto pComboBox = g_debugHUD.m_list.GetComboBox(IDC_GROUP);
 		assert(pComboBox != NULL);
 		pComboBox->SetSelectedByData(IntToPtr(group));
 		SetViewForGroup(group);
@@ -1297,7 +1301,7 @@ Cette fonction est appelée si on clique sur un des bouttons du GUI
 nEvent : Numéro de l'event (Dans notre cas, on ne traite que les cliques donc on ignore ce paramètre)
 nControlID : Numéro du boutton
 pControl : Pointeur pour controller le device
-*/
+
 void CALLBACK OnGUIEvent(UINT nEvent, int nControlID, CDXUTControl* pControl, void* pUserContext)
 {
 	switch (nControlID)
@@ -1321,4 +1325,4 @@ void CALLBACK OnGUIEvent(UINT nEvent, int nControlID, CDXUTControl* pControl, vo
 	}
 	break;
 	}
-}
+}*/
