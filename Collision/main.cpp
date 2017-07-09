@@ -48,12 +48,13 @@ Ce type est uniquement utilisé pour les arguments de fonction
 #include "resource.h"
 
 #include <DirectXColors.h>
-#include <DirectXCollision.h>
 
 #include "CommonStates.h"
 #include "Effects.h"
 #include "PrimitiveBatch.h"
 #include "VertexTypes.h"
+
+#include "hitbox.h"
 
 #include "LoadingScreen.h"
 #include <string>
@@ -134,45 +135,6 @@ std::string wstrToStr(std::wstring wstr) {
 
 
 //FIN UTILISATION DEBUG
-
-//Objets à hitbox
-struct CollisionSphere
-{
-	BoundingSphere sphere;
-	ContainmentType collision;
-};
-
-struct CollisionBox
-{
-	BoundingOrientedBox obox;
-	ContainmentType collision;
-};
-
-struct CollisionAABox
-{
-	BoundingBox aabox;
-	ContainmentType collision;
-};
-
-struct CollisionFrustum
-{
-	BoundingFrustum frustum;
-	ContainmentType collision;
-};
-
-struct CollisionTriangle
-{
-	XMVECTOR pointa;
-	XMVECTOR pointb;
-	XMVECTOR pointc;
-	ContainmentType collision;
-};
-
-struct CollisionRay
-{
-	XMVECTOR origin;
-	XMVECTOR direction;
-};
 
 //Constantes
 const int GROUP_COUNT = 4;			//Nombre de groupes où il y a des objets
