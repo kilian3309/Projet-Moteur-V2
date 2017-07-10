@@ -125,12 +125,6 @@ template<>std::wstring to_wstring(std::string str) {
 	return convertX.from_bytes(str);
 }
 
-std::string wstrToStr(std::wstring wstr) {
-	std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> convertX;
-	return convertX.to_bytes(wstr);
-
-}
-
 
 
 
