@@ -1275,6 +1275,7 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 }
 
 
+
 /*
 Cette fonction est la pour capter ce qui sort du clavier donc surtout les touches efoncées ou non
 nChar : Numéro de la touche
@@ -1304,7 +1305,7 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	case VK_F10:
 		g_debugHUD.Init(false);
 		g_debugHUD.swapVisibility();
-		
+		Sleep(50);
 		break;
 	}
 }
