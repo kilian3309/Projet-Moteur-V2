@@ -1305,7 +1305,6 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 	case VK_F10:
 		g_debugHUD.Init(false);
 		g_debugHUD.swapVisibility();
-		Sleep(500);
 		break;
 	}
 }
