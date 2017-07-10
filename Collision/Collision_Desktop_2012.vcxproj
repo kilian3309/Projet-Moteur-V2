@@ -377,6 +377,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataManager.h" />
+    <ClInclude Include="debug.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="hitbox.h" />
     <ClInclude Include="hud.h" />
