@@ -132,15 +132,10 @@ template<>std::wstring to_wstring(std::string str) {
 //FIN UTILISATION DEBUG
 
 //Constantes
-enum {
-	GROUP_COUNT = 4, //Nombre de groupes où il y a des objets
-	CAMERA_COUNT = 4
-};
 
-#define CAMERA_SPACING 50.f
 
 //Variables globales
-CModelViewerCamera          g_Camera;					//La camera
+//CModelViewerCamera          g_Camera;					//La camera
 														/*
 														Ici dialog signifie que c'est lui qui gère les resources partargés
 														*/
@@ -163,17 +158,15 @@ BoundingOrientedBox g_PrimaryOrientedBox;
 BoundingBox g_PrimaryAABox;
 CollisionRay g_PrimaryRay;
 
-//Objets secondaires (les petits)
-CollisionSphere     g_SecondarySpheres[GROUP_COUNT];
-CollisionBox        g_SecondaryOrientedBoxes[GROUP_COUNT];
-CollisionAABox      g_SecondaryAABoxes[GROUP_COUNT];
-CollisionTriangle   g_SecondaryTriangles[GROUP_COUNT];
+
+
 
 //Box à l'endroit où le ray coupe un objet
 CollisionAABox g_RayHitResultBox;
 
+/*
 //Liste des emplacements de la caméra
-XMVECTOR g_CameraOrigins[CAMERA_COUNT];
+XMVECTOR g_CameraOrigins[CAMERA_COUNT];*/
 
 bool isMenuOpen;
 
@@ -350,6 +343,7 @@ Initialisation des différents objets sur la map
 */
 void InitializeObjects()
 {
+	/*
 	const XMVECTOR XMZero = XMVectorZero();
 
 	//construction du primary frustum depuis une matrix de projection de D3D
@@ -399,7 +393,7 @@ void InitializeObjects()
 
 	//Construction de l'AABox qui est le résultat de la collision avec le ray
 	g_RayHitResultBox.aabox.Center = XMFLOAT3(0, 0, 0);
-	g_RayHitResultBox.aabox.Extents = XMFLOAT3(0.05f, 0.05f, 0.05f);
+	g_RayHitResultBox.aabox.Extents = XMFLOAT3(0.05f, 0.05f, 0.05f); */
 }
 
 
@@ -409,6 +403,7 @@ fTime : Temps actuel (InGame)
 */
 void Animate(double fTime)
 {
+	/*
 	float t = (FLOAT)(fTime * 0.2);
 
 	const float camera0OriginX = XMVectorGetX(g_CameraOrigins[0]);
@@ -531,7 +526,7 @@ void Animate(double fTime)
 	TriangleCoords = XMMatrixMultiply(TriangleCoords, Translation);
 	g_SecondaryTriangles[3].pointa = XMVector3Transform(TrianglePointA, TriangleCoords);
 	g_SecondaryTriangles[3].pointb = XMVector3Transform(TrianglePointB, TriangleCoords);
-	g_SecondaryTriangles[3].pointc = XMVector3Transform(TrianglePointC, TriangleCoords);
+	g_SecondaryTriangles[3].pointc = XMVector3Transform(TrianglePointC, TriangleCoords); */
 }
 
 
@@ -540,6 +535,7 @@ Cette fonction met à jour toutes les collisions pour les tester
 */
 void Collide()
 {
+	/*
 	//Test les collisions entre les objets et le frustum
 	g_SecondarySpheres[0].collision = g_PrimaryFrustum.Contains(g_SecondarySpheres[0].sphere);
 	g_SecondaryOrientedBoxes[0].collision = g_PrimaryFrustum.Contains(g_SecondaryOrientedBoxes[0].obox);
@@ -616,7 +612,7 @@ void Collide()
 	else
 	{
 		g_RayHitResultBox.collision = DISJOINT;
-	}
+	}*/
 }
 
 
@@ -643,6 +639,7 @@ Rendre les objets à collision (c'est pas très francais je sait)
 */
 void RenderObjects()
 {
+	/*
 	//Draw les planes du sol (les grilles quoi)
 	for (int i = 0; i < CAMERA_COUNT; ++i)
 	{
@@ -690,7 +687,7 @@ void RenderObjects()
 
 	//Draw le resultat de la collision du ray (le petit carré)
 	if (g_RayHitResultBox.collision != DISJOINT)
-		DrawAabb(g_RayHitResultBox.aabox, Colors::Yellow);
+		DrawAabb(g_RayHitResultBox.aabox, Colors::Yellow);*/
 }
 
 
@@ -700,6 +697,7 @@ Cette fonction met la camera sur une vue particulière au groupe d'objet
 
 void SetViewForGroup(int group)
 {
+	/*
 	assert(group < GROUP_COUNT);
 
 	g_Camera.Reset();
@@ -712,7 +710,7 @@ void SetViewForGroup(int group)
 
 	XMFLOAT3 vecAt;
 	XMStoreFloat3(&vecAt, g_CameraOrigins[group]);
-	g_Camera.SetModelCenter(vecAt);
+	g_Camera.SetModelCenter(vecAt);*/
 }
 
 
@@ -1105,11 +1103,12 @@ HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChai
 	V_RETURN(g_DialogResourceManager.OnD3D11ResizedSwapChain(pd3dDevice, pBackBufferSurfaceDesc));
 	V_RETURN(g_SettingsDlg.OnD3D11ResizedSwapChain(pd3dDevice, pBackBufferSurfaceDesc));
 
+	/*
 	//Setup des paramètres de projection de la caméra
 	float fAspectRatio = pBackBufferSurfaceDesc->Width / (FLOAT)pBackBufferSurfaceDesc->Height;
 	g_Camera.SetProjParams(XM_PI / 4, fAspectRatio, 0.1f, 1000.0f);
 	g_Camera.SetWindow(pBackBufferSurfaceDesc->Width, pBackBufferSurfaceDesc->Height);
-	g_Camera.SetButtonMasks(MOUSE_LEFT_BUTTON, MOUSE_WHEEL, MOUSE_MIDDLE_BUTTON);
+	g_Camera.SetButtonMasks(MOUSE_LEFT_BUTTON, MOUSE_WHEEL, MOUSE_MIDDLE_BUTTON);*/
 	g_debugHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
 	g_groupHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
 
@@ -1138,13 +1137,14 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	pd3dImmediateContext->ClearDepthStencilView(pDSV, D3D11_CLEAR_DEPTH, 1.0, 0);
 
 	//Récupération de la projection et de la matrix de view depuis la class camera
+	/*
 	XMMATRIX mWorld = g_Camera.GetWorldMatrix();
 	XMMATRIX mView = g_Camera.GetViewMatrix();
 	XMMATRIX mProj = g_Camera.GetProjMatrix();
 
 	g_BatchEffect->SetWorld(mWorld);
 	g_BatchEffect->SetView(mView);
-	g_BatchEffect->SetProjection(mProj);
+	g_BatchEffect->SetProjection(mProj); */
 
 	RenderObjects();
 
@@ -1228,7 +1228,7 @@ void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext)
 	Collide();
 
 	//Mise à jour de la camera
-	g_Camera.FrameMove(fElapsedTime);
+	//g_Camera.FrameMove(fElapsedTime);
 }
 
 
@@ -1268,7 +1268,7 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 	
 
 
-	g_Camera.HandleMessages(hWnd, uMsg, wParam, lParam);
+	//g_Camera.HandleMessages(hWnd, uMsg, wParam, lParam);
 
 	return 0;
 }

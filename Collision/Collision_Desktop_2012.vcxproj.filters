@@ -49,6 +49,9 @@
     <ClInclude Include="debug.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Collision.rc">
