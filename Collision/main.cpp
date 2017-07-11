@@ -143,7 +143,7 @@ CModelViewerCamera          g_Camera;					//La camera
 														*/
 CDXUTDialogResourceManager  g_DialogResourceManager;	//Manager pour les resources partargés des différents dialogs
 CD3DSettingsDlg             g_SettingsDlg;				//Parametre du device principale
-CDXUTTextHelper*            g_pTxtHelper = nullptr;		//Afficheur de text
+//CDXUTTextHelper*            g_pTxtHelper = nullptr;		//Afficheur de text
 //HUD			                g_HUD;						//Dialog pour les controles standards
 //HUD							g_SampleUI;					//Dialogue pour les controles spécifiques (controles au sens par exemple des touches cheloux)
 
@@ -217,6 +217,7 @@ void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTO
 
 debugHUD g_debugHUD(&g_DialogResourceManager, &g_SettingsDlg);
 groupHUD g_groupHUD(&g_DialogResourceManager, &g_SettingsDlg, SetViewForGroup);
+infoHUD* g_infoHUD;
 
 void OpenMenu() {
 	isMenuOpen = true;
@@ -337,12 +338,7 @@ Faire le render des caracteristiques de tout ce qui touche au graphique (carte, 
 */
 void RenderText()
 {
-	g_pTxtHelper->Begin();
-	g_pTxtHelper->SetInsertionPos(5, 5);
-	g_pTxtHelper->SetForegroundColor(Colors::Yellow);
-	g_pTxtHelper->DrawTextLine(DXUTGetFrameStats(DXUTIsVsyncEnabled()));
-	g_pTxtHelper->DrawTextLine(DXUTGetDeviceStats());
-	g_pTxtHelper->End();
+	
 }
 
 
@@ -1058,7 +1054,8 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	auto pd3dImmediateContext = DXUTGetD3D11DeviceContext();
 	V_RETURN(g_DialogResourceManager.OnD3D11CreateDevice(pd3dDevice, pd3dImmediateContext));
 	V_RETURN(g_SettingsDlg.OnD3D11CreateDevice(pd3dDevice));
-	g_pTxtHelper = new CDXUTTextHelper(pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager, 15);
+	//g_pTxtHelper = new CDXUTTextHelper(pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager, 15);
+	g_infoHUD = new infoHUD(pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager);
 
 	//Creation d'autres resources de render
 	g_States.reset(new CommonStates(pd3dDevice));
@@ -1153,6 +1150,7 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	g_groupHUD.OnFrameRender(&fElapsedTime);
 
 	RenderText();
+
 	DXUT_EndPerfEvent();
 
 	static ULONGLONG timefirst = GetTickCount64();
@@ -1184,11 +1182,12 @@ void CALLBACK OnD3D11DestroyDevice(void* pUserContext)
 	g_DialogResourceManager.OnD3D11DestroyDevice();
 	g_SettingsDlg.OnD3D11DestroyDevice();
 	DXUTGetGlobalResourceCache().OnDestroyDevice();
-	SAFE_DELETE(g_pTxtHelper);
 
 	g_States.reset();
 	g_BatchEffect.reset();
 	g_Batch.reset();
+
+	SAFE_DELETE(g_infoHUD);
 
 	SAFE_RELEASE(g_pBatchInputLayout);
 }
