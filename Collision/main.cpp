@@ -328,6 +328,7 @@ void InitApp()
 	//g_debugHUD.Init();
 	g_SettingsDlg.Init(&g_DialogResourceManager);
 	g_groupHUD.Init(false);
+	g_infoHUD->Init();
 
 	InitializeObjects();
 }
@@ -1149,7 +1150,8 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	g_debugHUD.OnFrameRender(&fElapsedTime);
 	g_groupHUD.OnFrameRender(&fElapsedTime);
 
-	RenderText();
+	//RenderText();
+	g_infoHUD->Render();
 
 	DXUT_EndPerfEvent();
 
