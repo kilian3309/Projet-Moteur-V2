@@ -328,7 +328,6 @@ void InitApp()
 	//g_debugHUD.Init();
 	g_SettingsDlg.Init(&g_DialogResourceManager);
 	g_groupHUD.Init(false);
-	g_infoHUD->Init();
 
 	InitializeObjects();
 }
@@ -1056,7 +1055,9 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	V_RETURN(g_DialogResourceManager.OnD3D11CreateDevice(pd3dDevice, pd3dImmediateContext));
 	V_RETURN(g_SettingsDlg.OnD3D11CreateDevice(pd3dDevice));
 	//g_pTxtHelper = new CDXUTTextHelper(pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager, 15);
+
 	g_infoHUD = new infoHUD(pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager);
+	g_infoHUD->Init();
 
 	//Creation d'autres resources de render
 	g_States.reset(new CommonStates(pd3dDevice));
