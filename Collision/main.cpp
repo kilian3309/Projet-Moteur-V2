@@ -132,9 +132,12 @@ template<>std::wstring to_wstring(std::string str) {
 //FIN UTILISATION DEBUG
 
 //Constantes
-const int GROUP_COUNT = 4;			//Nombre de groupes où il y a des objets
-const int CAMERA_COUNT = 4;			//Nombre d'endroits où peut aller la caméra
-const float CAMERA_SPACING = 50.f;
+enum {
+	GROUP_COUNT = 4, //Nombre de groupes où il y a des objets
+	CAMERA_COUNT = 4
+};
+
+#define CAMERA_SPACING 50.f
 
 //Variables globales
 CModelViewerCamera          g_Camera;					//La camera
