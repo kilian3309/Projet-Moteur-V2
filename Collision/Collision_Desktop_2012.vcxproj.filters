@@ -52,6 +52,9 @@
     <ClInclude Include="camera.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="drawing.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Collision.rc">

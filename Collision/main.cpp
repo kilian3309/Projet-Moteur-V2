@@ -56,6 +56,7 @@ Ce type est uniquement utilisé pour les arguments de fonction
 
 #include "hitbox.h"
 #include "hud.h"
+#include "level.h"
 
 #include "LoadingScreen.h"
 #include <string>
@@ -146,23 +147,25 @@ CD3DSettingsDlg             g_SettingsDlg;				//Parametre du device principale
 //HUD							g_SampleUI;					//Dialogue pour les controles spécifiques (controles au sens par exemple des touches cheloux)
 
 
-ID3D11InputLayout*                  g_pBatchInputLayout = nullptr;
+//ID3D11InputLayout*                  g_pBatchInputLayout = nullptr;
 
 std::unique_ptr<CommonStates>                           g_States;
-std::unique_ptr<BasicEffect>                            g_BatchEffect;
-std::unique_ptr<PrimitiveBatch<VertexPositionColor>>    g_Batch;
+//std::unique_ptr<BasicEffect>                            g_BatchEffect;
+//std::unique_ptr<PrimitiveBatch<VertexPositionColor>>    g_Batch;
 
+
+/*
 //Objets primaires (les gros quoi)
 BoundingFrustum g_PrimaryFrustum;			//Frustrum : Cone (à base circulaire ou carée) sans pointe du coup le sommet est plat. Vu de coté : Trapèze
 BoundingOrientedBox g_PrimaryOrientedBox;
 BoundingBox g_PrimaryAABox;
 CollisionRay g_PrimaryRay;
 
-
-
-
 //Box à l'endroit où le ray coupe un objet
 CollisionAABox g_RayHitResultBox;
+*/
+
+
 
 /*
 //Liste des emplacements de la caméra
@@ -222,6 +225,10 @@ void OpenMenu() {
 }
 
 int wWinMainEnd() {
+
+	TestCollisionLevel l;
+
+
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
 	//Note: On appelle sa des fonctions de rappel
 	DXUTSetCallbackMsgProc(MsgProc);
@@ -618,7 +625,7 @@ void Collide()
 
 /*
 Retourne la couleur de l'objet en fonction de la collision
-*/
+
 inline XMVECTOR GetCollisionColor(ContainmentType collision, int groupnumber)
 {
 	if (groupnumber >= 3 && collision > 0)
@@ -632,7 +639,7 @@ inline XMVECTOR GetCollisionColor(ContainmentType collision, int groupnumber)
 	default:            return Colors::Red;
 	}
 }
-
+*/
 
 /*
 Rendre les objets à collision (c'est pas très francais je sait)
@@ -716,7 +723,7 @@ void SetViewForGroup(int group)
 
 /*
 Dessiner une grille
-*/
+
 void DrawGrid(FXMVECTOR xAxis, FXMVECTOR yAxis, FXMVECTOR origin, size_t xdivs, size_t ydivs, GXMVECTOR color)
 {
 	auto context = DXUTGetD3D11DeviceContext();
@@ -760,7 +767,7 @@ void DrawGrid(FXMVECTOR xAxis, FXMVECTOR yAxis, FXMVECTOR origin, size_t xdivs, 
 
 /*
 Dessiner un Frustum
-*/
+
 void DrawFrustum(const BoundingFrustum& frustum, FXMVECTOR color)
 {
 	XMFLOAT3 corners[BoundingFrustum::CORNER_COUNT];
@@ -813,7 +820,7 @@ void DrawFrustum(const BoundingFrustum& frustum, FXMVECTOR color)
 
 /*
 Dessiner un cube depuis une matrix
-*/
+
 void DrawCube(CXMMATRIX mWorld, FXMVECTOR color)
 {
 	static const XMVECTOR s_verts[8] =
@@ -866,7 +873,7 @@ void DrawCube(CXMMATRIX mWorld, FXMVECTOR color)
 
 /*
 Dessiner un AABox
-*/
+
 void DrawAabb(const BoundingBox& box, FXMVECTOR color)
 {
 	XMMATRIX matWorld = XMMatrixScaling(box.Extents.x, box.Extents.y, box.Extents.z);
@@ -879,7 +886,7 @@ void DrawAabb(const BoundingBox& box, FXMVECTOR color)
 
 /*
 Dessiner un OBox
-*/
+
 void DrawObb(const BoundingOrientedBox& obb, FXMVECTOR color)
 {
 	XMMATRIX matWorld = XMMatrixRotationQuaternion(XMLoadFloat4(&obb.Orientation));
@@ -894,7 +901,7 @@ void DrawObb(const BoundingOrientedBox& obb, FXMVECTOR color)
 
 /*
 Dessiner un anneau
-*/
+
 void DrawRing(FXMVECTOR Origin, FXMVECTOR MajorAxis, FXMVECTOR MinorAxis, CXMVECTOR color)
 {
 	static const DWORD dwRingSegments = 32;
@@ -942,7 +949,7 @@ void DrawRing(FXMVECTOR Origin, FXMVECTOR MajorAxis, FXMVECTOR MinorAxis, CXMVEC
 
 /*
 Dessiner une sphere
-*/
+
 void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color)
 {
 	XMVECTOR origin = XMLoadFloat3(&sphere.Center);
@@ -961,7 +968,7 @@ void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color)
 
 /*
 Dessiner un rayon
-*/
+
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color)
 {
 	VertexPositionColor verts[3];
@@ -1004,7 +1011,7 @@ void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR c
 
 /*
 Dessiner un triangle
-*/
+
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color)
 {
 	VertexPositionColor verts[4];
@@ -1028,7 +1035,7 @@ void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTO
 	g_Batch->Draw(D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP, verts, 4);
 
 	g_Batch->End();
-}
+} */
 
 
 /*
@@ -1062,6 +1069,7 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 
 	//Creation d'autres resources de render
 	g_States.reset(new CommonStates(pd3dDevice));
+	/*
 	g_Batch.reset(new PrimitiveBatch<VertexPositionColor>(pd3dImmediateContext));
 
 	g_BatchEffect.reset(new BasicEffect(pd3dDevice));
@@ -1080,7 +1088,7 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 		if (FAILED(hr))
 			return hr;
 	}
-
+	*/
 	//Setup des paramètres de la camera
 	
 		auto pComboBox = g_groupHUD.m_hud.GetComboBox(IDC_GROUP);
@@ -1190,12 +1198,12 @@ void CALLBACK OnD3D11DestroyDevice(void* pUserContext)
 	DXUTGetGlobalResourceCache().OnDestroyDevice();
 
 	g_States.reset();
-	g_BatchEffect.reset();
-	g_Batch.reset();
+	//g_BatchEffect.reset();
+	//g_Batch.reset();
 
 	SAFE_DELETE(g_infoHUD);
 
-	SAFE_RELEASE(g_pBatchInputLayout);
+	//SAFE_RELEASE(g_pBatchInputLayout);
 }
 
 
