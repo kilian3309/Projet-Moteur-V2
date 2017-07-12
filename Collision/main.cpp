@@ -186,8 +186,8 @@ void OpenMenu() {
 
 int wWinMainEnd() {
 
-	level1 l1;
-	l1.test();
+	level0 l1;
+	//l1.test();
 
 
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
