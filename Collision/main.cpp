@@ -140,8 +140,7 @@ template<>std::wstring to_wstring(std::string str) {
 														/*
 														Ici dialog signifie que c'est lui qui gère les resources partargés
 														*/
-CDXUTDialogResourceManager  g_DialogResourceManager;	//Manager pour les resources partargés des différents dialogs
-CD3DSettingsDlg             g_SettingsDlg;				//Parametre du device principale
+
 //CDXUTTextHelper*            g_pTxtHelper = nullptr;		//Afficheur de text
 //HUD			                g_HUD;						//Dialog pour les controles standards
 //HUD							g_SampleUI;					//Dialogue pour les controles spécifiques (controles au sens par exemple des touches cheloux)
@@ -204,7 +203,7 @@ void InitializeObjects();
 void Animate(double fTime);
 void Collide();
 void RenderObjects();
-void SetViewForGroup(int group);
+//void SetViewForGroup(int group);
 
 void DrawGrid(FXMVECTOR xAxis, FXMVECTOR yAxis, FXMVECTOR origin, size_t xdivs, size_t ydivs, GXMVECTOR color);
 void DrawFrustum(const BoundingFrustum& frustum, FXMVECTOR color);
@@ -214,9 +213,12 @@ void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color);
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color);
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color);
 
+TestCollisionLevel l;
+
 debugHUD g_debugHUD(&g_DialogResourceManager, &g_SettingsDlg);
-groupHUD g_groupHUD(&g_DialogResourceManager, &g_SettingsDlg, SetViewForGroup);
+
 infoHUD* g_infoHUD;
+
 
 void OpenMenu() {
 	isMenuOpen = true;
@@ -226,7 +228,7 @@ void OpenMenu() {
 
 int wWinMainEnd() {
 
-	TestCollisionLevel l;
+	
 
 
 	//Configure les fonctions que doit appeler directX pour ses différentes actions
@@ -330,7 +332,6 @@ void InitApp()
 
 	//g_debugHUD.Init();
 	g_SettingsDlg.Init(&g_DialogResourceManager);
-	g_groupHUD.Init(false);
 
 	InitializeObjects();
 }
@@ -702,9 +703,10 @@ void RenderObjects()
 Cette fonction met la camera sur une vue particulière au groupe d'objet
 */
 
+/*
 void SetViewForGroup(int group)
 {
-	/*
+	
 	assert(group < GROUP_COUNT);
 
 	g_Camera.Reset();
@@ -717,9 +719,9 @@ void SetViewForGroup(int group)
 
 	XMFLOAT3 vecAt;
 	XMStoreFloat3(&vecAt, g_CameraOrigins[group]);
-	g_Camera.SetModelCenter(vecAt);*/
+	g_Camera.SetModelCenter(vecAt);
 }
-
+*/
 
 /*
 Dessiner une grille
@@ -1069,6 +1071,8 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 
 	//Creation d'autres resources de render
 	g_States.reset(new CommonStates(pd3dDevice));
+	OnDrawingCreateDevice(pd3dDevice, pd3dImmediateContext);
+	l.OnCreateDevice();
 	/*
 	g_Batch.reset(new PrimitiveBatch<VertexPositionColor>(pd3dImmediateContext));
 
@@ -1091,8 +1095,8 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	*/
 	//Setup des paramètres de la camera
 	
-		auto pComboBox = g_groupHUD.m_hud.GetComboBox(IDC_GROUP);
-		SetViewForGroup((pComboBox) ? (int)PtrToInt(pComboBox->GetSelectedData()) : 0);
+	//ATTENTION ICI UN AUTRE LEVEL QUE CELUI DE TESTE DES COLLISIONS OCCASIONNERA DES ERREURS
+		
 	if (g_debugHUD.isInit)
 		g_debugHUD.m_hud.GetButton(IDC_TOGGLEWARP)->SetEnabled(true);
 	
@@ -1110,7 +1114,8 @@ HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChai
 
 	V_RETURN(g_DialogResourceManager.OnD3D11ResizedSwapChain(pd3dDevice, pBackBufferSurfaceDesc));
 	V_RETURN(g_SettingsDlg.OnD3D11ResizedSwapChain(pd3dDevice, pBackBufferSurfaceDesc));
-
+	
+	l.OnResizedSwapChain(pBackBufferSurfaceDesc);
 	/*
 	//Setup des paramètres de projection de la caméra
 	float fAspectRatio = pBackBufferSurfaceDesc->Width / (FLOAT)pBackBufferSurfaceDesc->Height;
@@ -1118,7 +1123,7 @@ HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChai
 	g_Camera.SetWindow(pBackBufferSurfaceDesc->Width, pBackBufferSurfaceDesc->Height);
 	g_Camera.SetButtonMasks(MOUSE_LEFT_BUTTON, MOUSE_WHEEL, MOUSE_MIDDLE_BUTTON);*/
 	g_debugHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
-	g_groupHUD.OnResizedSwapChain(pBackBufferSurfaceDesc);
+	
 
 	return S_OK;
 }
@@ -1160,7 +1165,7 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	DXUT_BeginPerfEvent(DXUT_PERFEVENTCOLOR, L"HUD / Stats");
 
 	g_debugHUD.OnFrameRender(&fElapsedTime);
-	g_groupHUD.OnFrameRender(&fElapsedTime);
+	//g_groupHUD.OnFrameRender(&fElapsedTime);
 
 	//RenderText();
 	g_infoHUD->Render();
@@ -1198,6 +1203,9 @@ void CALLBACK OnD3D11DestroyDevice(void* pUserContext)
 	DXUTGetGlobalResourceCache().OnDestroyDevice();
 
 	g_States.reset();
+
+	OnDrawingDestroyDevice();
+
 	//g_BatchEffect.reset();
 	//g_Batch.reset();
 
@@ -1237,6 +1245,7 @@ void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext)
 
 	//Mise à jour de la camera
 	//g_Camera.FrameMove(fElapsedTime);
+	l.GetCamera()->FrameMove(fElapsedTime);
 }
 
 
@@ -1270,7 +1279,8 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 		if (*pbNoFurtherProcessing)
 			return 0;
 	}
-	*pbNoFurtherProcessing = g_groupHUD.m_hud.MsgProc(hWnd, uMsg, wParam, lParam);
+	if(typeid(l)==typeid(TestCollisionLevel))
+		*pbNoFurtherProcessing = l.GetGroupHUD()->m_hud.MsgProc(hWnd, uMsg, wParam, lParam);
 	if (*pbNoFurtherProcessing)
 		return 0;
 	
@@ -1293,19 +1303,6 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 {
 	switch (nChar)
 	{
-	case '1':
-	case '2':
-	case '3':
-	case '4':
-	{
-		
-		int group = (nChar - '1');
-		auto pComboBox = g_groupHUD.m_hud.GetComboBox(IDC_GROUP);
-		assert(pComboBox != NULL);
-		pComboBox->SetSelectedByData(IntToPtr(group));
-		SetViewForGroup(group);
-	}
-	break;
 	case VK_ESCAPE:
 		OpenMenu();
 		break;
@@ -1314,6 +1311,9 @@ void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 		g_debugHUD.Init(false);
 		g_debugHUD.swapVisibility();
 	}
+		break;
+	default:
+		l.OnKeyboard(nChar, bKeyDown, bAltDown, pUserContext);
 		break;
 	}
 }
