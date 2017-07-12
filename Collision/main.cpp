@@ -187,8 +187,6 @@ void OpenMenu() {
 int wWinMainEnd() {
 
 	level1 l1;
-	LevelParent lp;
-	lp.test();
 	l1.test();
 
 
