@@ -1229,6 +1229,7 @@ bool CALLBACK ModifyDeviceSettings(DXUTDeviceSettings* pDeviceSettings, void* pU
 	if (s_bFirstTime) {
 		DXGI_SAMPLE_DESC MSAA4xSampleDesc = { 8, 0 };
 		pDeviceSettings->d3d11.sd.SampleDesc = MSAA4xSampleDesc;
+		s_bFirstTime = false;
 	}
 	return true;
 }
