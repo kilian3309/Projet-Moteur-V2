@@ -330,6 +330,7 @@ void InitApp()
 	pComboBox->AddItem(L"Oriented Box", IntToPtr(2));
 	pComboBox->AddItem(L"Ray", IntToPtr(3));*/
 
+	l.InitApp();
 	//g_debugHUD.Init();
 	g_SettingsDlg.Init(&g_DialogResourceManager);
 
