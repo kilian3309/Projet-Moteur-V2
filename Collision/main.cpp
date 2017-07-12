@@ -351,6 +351,7 @@ Initialisation des différents objets sur la map
 */
 void InitializeObjects()
 {
+	l.InitializeObjets();
 	/*
 	const XMVECTOR XMZero = XMVectorZero();
 
@@ -411,6 +412,7 @@ fTime : Temps actuel (InGame)
 */
 void Animate(double fTime)
 {
+	l.Animate(fTime);
 	/*
 	float t = (FLOAT)(fTime * 0.2);
 
@@ -543,6 +545,7 @@ Cette fonction met à jour toutes les collisions pour les tester
 */
 void Collide()
 {
+	l.Collide();
 	/*
 	//Test les collisions entre les objets et le frustum
 	g_SecondarySpheres[0].collision = g_PrimaryFrustum.Contains(g_SecondarySpheres[0].sphere);
@@ -647,6 +650,7 @@ Rendre les objets à collision (c'est pas très francais je sait)
 */
 void RenderObjects()
 {
+	l.RenderObjects();
 	/*
 	//Draw les planes du sol (les grilles quoi)
 	for (int i = 0; i < CAMERA_COUNT; ++i)
@@ -1093,9 +1097,7 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 			return hr;
 	}
 	*/
-	//Setup des paramètres de la camera
-	
-	//ATTENTION ICI UN AUTRE LEVEL QUE CELUI DE TESTE DES COLLISIONS OCCASIONNERA DES ERREURS
+	//Setup du debugHUD
 		
 	if (g_debugHUD.isInit)
 		g_debugHUD.m_hud.GetButton(IDC_TOGGLEWARP)->SetEnabled(true);
@@ -1150,14 +1152,14 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	pd3dImmediateContext->ClearDepthStencilView(pDSV, D3D11_CLEAR_DEPTH, 1.0, 0);
 
 	//Récupération de la projection et de la matrix de view depuis la class camera
-	/*
-	XMMATRIX mWorld = g_Camera.GetWorldMatrix();
-	XMMATRIX mView = g_Camera.GetViewMatrix();
-	XMMATRIX mProj = g_Camera.GetProjMatrix();
+	
+	XMMATRIX mWorld = l.GetCamera()->GetWorldMatrix();
+	XMMATRIX mView = l.GetCamera()->GetViewMatrix();
+	XMMATRIX mProj = l.GetCamera()->GetProjMatrix();
 
-	g_BatchEffect->SetWorld(mWorld);
-	g_BatchEffect->SetView(mView);
-	g_BatchEffect->SetProjection(mProj); */
+	_drg_BatchEffect->SetWorld(mWorld);
+	_drg_BatchEffect->SetView(mView);
+	_drg_BatchEffect->SetProjection(mProj); 
 
 	RenderObjects();
 
@@ -1166,6 +1168,7 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 
 	g_debugHUD.OnFrameRender(&fElapsedTime);
 	//g_groupHUD.OnFrameRender(&fElapsedTime);
+	l.OnFrameRender(fElapsedTime);
 
 	//RenderText();
 	g_infoHUD->Render();
