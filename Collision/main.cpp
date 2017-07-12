@@ -187,7 +187,7 @@ void OpenMenu() {
 int wWinMainEnd() {
 
 	level0 l1;
-	l1.OnResizedSwapChain(5);
+	//l1.InitApp();
 	//l1.test();
 
 
