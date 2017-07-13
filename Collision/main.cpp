@@ -523,10 +523,11 @@ LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 		if (*pbNoFurtherProcessing)
 			return 0;
 	}
-	if(typeid(l)==typeid(TestCollisionLevel))
+	if (typeid(l) == typeid(TestCollisionLevel)) {
 		*pbNoFurtherProcessing = l.GetGroupHUD()->m_hud.MsgProc(hWnd, uMsg, wParam, lParam);
-	if (*pbNoFurtherProcessing)
-		return 0;
+		if (*pbNoFurtherProcessing)
+			return 0;
+	}
 	
 
 
