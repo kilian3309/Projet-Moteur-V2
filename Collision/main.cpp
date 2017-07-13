@@ -489,6 +489,7 @@ void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext)
 
 	//Mise à jour de la camera
 	//g_Camera.FrameMove(fElapsedTime);
+	l.OnFrameMove(fElapsedTime);
 	l.GetCamera()->FrameMove(fElapsedTime);
 }
 
