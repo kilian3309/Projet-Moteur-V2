@@ -249,7 +249,8 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 		return -1;
 	}
 
-	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain (sa évite le "ne répond pas", enfait non x) ...)
+	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain (sa évite le "ne répond pas", enfait non x) -> à faire : le processus de l'interface doit avoir une priorité
+	//supérieur à celle du work thread pour répondre h24)
 	std::async(std::launch::async, CreateLoadingScreen, hInstance, LoadingMax);
 
 	//WinMain Returned Status
