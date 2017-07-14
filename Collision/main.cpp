@@ -346,6 +346,7 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 
 
 	g_infoHUD = new infoHUD(pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager, reinterpret_cast<const WCHAR*>(std::to_wstring(XMVectorGetIntX(LookAtCamera)).c_str()));
+	MessageBoxK(L"", std::to_wstring(XMVectorGetIntX(LookAtCamera)));
 	g_infoHUD->Init();
 
 	//Creation d'autres resources de render
