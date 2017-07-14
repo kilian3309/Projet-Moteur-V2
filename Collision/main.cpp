@@ -420,7 +420,7 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	//RenderText();
 	XMVECTOR LookAtCamera(l.GetCamera()->GetLookAtPt());
 
-	g_infoHUD->addAdditionalInfos(std::to_wstring(XMVectorGetIntX(LookAtCamera)).c_str());
+	g_infoHUD->addAdditionalInfos((std::to_wstring(XMVectorGetIntX(LookAtCamera))+strToWstr(" ")+std::to_wstring(XMVectorGetIntY(LookAtCamera))).c_str());
 	g_infoHUD->Render();
 
 	DXUT_EndPerfEvent();
