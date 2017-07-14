@@ -342,7 +342,10 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	V_RETURN(g_DialogResourceManager.OnD3D11CreateDevice(pd3dDevice, pd3dImmediateContext));
 	V_RETURN(g_SettingsDlg.OnD3D11CreateDevice(pd3dDevice));
 
-	g_infoHUD = new infoHUD(pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager);
+	XMVECTOR LookAtCamera(l.GetCamera()->GetLookAtPt());
+
+
+	g_infoHUD = new infoHUD(pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager, reinterpret_cast<const WCHAR*>(std::to_wstring(XMVectorGetIntX(LookAtCamera)).c_str()));
 	g_infoHUD->Init();
 
 	//Creation d'autres resources de render
