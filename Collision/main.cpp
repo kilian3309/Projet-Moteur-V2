@@ -264,7 +264,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 /*
 Initialisation de l'application
 */
-void InitApp()
+inline void InitApp()
 {
 	l.InitApp();
 	g_SettingsDlg.Init(&g_DialogResourceManager);
@@ -275,7 +275,7 @@ void InitApp()
 /*
 Faire le render des caracteristiques de tout ce qui touche au graphique (carte, fps ...)
 */
-void RenderText()
+inline void RenderText()
 {
 	
 }
@@ -284,7 +284,7 @@ void RenderText()
 /*
 Initialisation des différents objets sur la map
 */
-void InitializeObjects()
+inline void InitializeObjects()
 {
 	l.InitializeObjets();
 }
@@ -294,7 +294,7 @@ void InitializeObjects()
 Fait bouger tous les objets de la scène
 fTime : Temps actuel (InGame)
 */
-void Animate(double fTime)
+inline void Animate(double fTime)
 {
 	l.Animate(fTime);
 }
@@ -303,7 +303,7 @@ void Animate(double fTime)
 /*
 Cette fonction met à jour toutes les collisions pour les tester
 */
-void Collide()
+inline void Collide()
 {
 	l.Collide();
 }
@@ -311,7 +311,7 @@ void Collide()
 /*
 Rendre les objets à collision (c'est pas très francais je sait)
 */
-void RenderObjects()
+inline void RenderObjects()
 {
 	l.RenderObjects();
 }
@@ -321,7 +321,7 @@ void RenderObjects()
 Si l'on a besoin de fonctionnalité(s) avancé(s), certaines combinaison de réglage (résolution, plein écran, REFs...) peuvent être refusés
 Nous n'utilisons pas de fonctionnalités avancés donc on accepte tout
 */
-bool CALLBACK IsD3D11DeviceAcceptable(const CD3D11EnumAdapterInfo *AdapterInfo, UINT Output, const CD3D11EnumDeviceInfo *DeviceInfo, DXGI_FORMAT BackBufferFormat, bool bWindowed, void* pUserContext)
+inline bool CALLBACK IsD3D11DeviceAcceptable(const CD3D11EnumAdapterInfo *AdapterInfo, UINT Output, const CD3D11EnumDeviceInfo *DeviceInfo, DXGI_FORMAT BackBufferFormat, bool bWindowed, void* pUserContext)
 {
 	return true;
 }
@@ -435,7 +435,7 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 /*
 Libération de la mémoire allouée par la swap chain dans OnD3D11ResizedSwapChain
 */
-void CALLBACK OnD3D11ReleasingSwapChain(void* pUserContext)
+inline void CALLBACK OnD3D11ReleasingSwapChain(void* pUserContext)
 {
 	g_DialogResourceManager.OnD3D11ReleasingSwapChain();
 
@@ -480,7 +480,7 @@ Cette fonction met à jour la scène. Son nom peut changer en fonction de l'API D3
 fTime : Temps actuel (InGame)
 fEnlapsedTime : Temps depuis la dernière update
 */
-void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext)
+inline void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext)
 {
 	//Mise à jour des positions des objets
 	Animate(fTime);
@@ -491,7 +491,7 @@ void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext)
 	//Mise à jour de la camera
 	//g_Camera.FrameMove(fElapsedTime);
 	l.OnFrameMove(fElapsedTime);
-	l.GetCamera()->FrameMove(fElapsedTime);
+	
 }
 
 
