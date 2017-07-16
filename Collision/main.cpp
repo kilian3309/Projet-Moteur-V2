@@ -171,8 +171,8 @@ void DrawSphere(const BoundingSphere& sphere, FXMVECTOR color);
 void DrawRay(FXMVECTOR Origin, FXMVECTOR Direction, bool bNormalize, FXMVECTOR color);
 void DrawTriangle(FXMVECTOR PointA, FXMVECTOR PointB, FXMVECTOR PointC, CXMVECTOR color);
 
-//TestCollisionLevel l;
-level1 l;
+TestCollisionLevel l;
+//level1 l;
 
 debugHUD g_debugHUD(&g_DialogResourceManager, &g_SettingsDlg);
 

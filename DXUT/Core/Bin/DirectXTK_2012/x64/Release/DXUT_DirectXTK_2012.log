@@ -1,6 +1,7 @@
-﻿La génération a démarré 14/07/2017 10:52:24.
+﻿La génération a démarré 16/07/2017 10:34:18.
 Environnement au début de la génération :
 ADSK_3DSMAX_x64_2017 = I:\Programms\AutoDesk\3D MAX\3ds Max 2017\
+ADVISOR_XE_2016_DIR = C:\Program Files (x86)\IntelSWTools\Advisor XE 2016\
 ALLUSERSPROFILE = C:\ProgramData
 APPDATA = C:\Users\kikij\AppData\Roaming
 CommonProgramFiles = C:\Program Files (x86)\Common Files
@@ -15,14 +16,22 @@ FPS_BROWSER_USER_PROFILE_STRING = Default
 GTK_BASEPATH = C:\Program Files (x86)\GtkSharp\2.12\
 HOMEDRIVE = C:
 HOMEPATH = \Users\kikij
+ICPP_COMPILER16 = C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\
+IFORT_COMPILER16 = C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\
+include = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\include
+INSPECTOR_XE_2016_DIR = C:\Program Files (x86)\IntelSWTools\Inspector XE 2016\
+INTEL_DEV_REDIST = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\
+INTEL_LICENSE_FILE = C:\Program Files (x86)\Common Files\\Intel\Licenses;C:\Program Files (x86)\Common Files\Intel\Licenses
+I_MPI_ROOT = C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\mpi
 LOCALAPPDATA = C:\Users\kikij\AppData\Local
 LOGONSERVER = \\KPC_DE_OUFFF
+MIC_LD_LIBRARY_PATH = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\intel64_win_mic
 MSBuildLoadMicrosoftTargetsReadOnly = true
 MSMPI_BIN = C:\Program Files\Microsoft MPI\Bin\
 NUMBER_OF_PROCESSORS = 8
 OneDrive = C:\Users\kikij\OneDrive
 OS = Windows_NT
-Path = C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;E:\Programs\VS17PRO\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;I:\Qt\5.8\msvc2015_64\bin;I:\Programms\CY\bin;C:\WINDOWS\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin
+Path = C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\mpi\intel64\bin;C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\bin;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.3.207\windows\mpi\intel64\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler;C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;E:\Programs\VS17PRO\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;I:\Qt\5.8\msvc2015_64\bin;I:\Programms\CY\bin;C:\WINDOWS\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;E:\Programs\llvm\bin;E:\Programs\CMake\bin;C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\dll;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 PkgDefApplicationConfigFile = C:\Users\kikij\AppData\Local\Microsoft\VisualStudio\15.0_35f159ae\devenv.exe.config
 PROCESSOR_ARCHITECTURE = x86
@@ -50,14 +59,24 @@ VisualStudioDir = C:\Users\kikij\OneDrive\Documents\Visual Studio 2017
 VisualStudioEdition = Microsoft Visual Studio Community 2017
 VisualStudioVersion = 15.0
 VS140COMNTOOLS = E:\Programs\VS15\Common7\Tools\
+VS150COMNTOOLS = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64
 VSAPPIDDIR = E:\Programs\VS17\Common7\IDE\
 VSAPPIDNAME = devenv.exe
 VSLANG = 1036
 VSSDK140Install = E:\Programs\VS15\VSSDK\
+VTUNE_AMPLIFIER_XE_2016_DIR = C:\Program Files (x86)\IntelSWTools\VTune Amplifier XE 2016\
+VT_ADD_LIBS = ws2_32.lib advapi32.lib
+VT_DLL_DIR = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\dll
+VT_FMPI_DLL = impi.dll
+VT_LIB_DIR = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\lib
+VT_MPI = impi64
+VT_MPI_DLL = impi.dll
+VT_ROOT = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\
+VT_SLIB_DIR = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\dll
 windir = C:\WINDOWS
 
-10:52:24.482     1>Projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" sur le nœud 2 (Deploy cible(s)).
-10:52:24.482     1>Propriétés initiales :
+10:34:18.143     1>Projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" sur le nœud 3 (Deploy cible(s)).
+10:34:18.143     1>Propriétés initiales :
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -69,6 +88,7 @@ windir = C:\WINDOWS
                    :VCEnd
                    _CheckDev11ToolsInstalled = true
                    _CompileTargetNameForLocalType = _CompileTemporaryAssembly
+                   _CurrentPlatformToolsetShortName = v141
                    _DebugSymbolsProduced = false
                    _DefaultPlatform = win32
                    _DeploymentBuiltUpdateInterval = 0
@@ -83,7 +103,10 @@ windir = C:\WINDOWS
                    _DirectoryBuildTargetsBasePath = 
                    _DirectoryBuildTargetsFile = Directory.Build.targets
                    _DocumentationFileProduced = false
+                   _FindDependencies = false
                    _FullFrameworkReferenceAssemblyPaths = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+                   _GCTODIKeepDuplicates = false
+                   _GCTODIKeepMetadata = CopyToOutputDirectory;TargetPath
                    _GenerateBindingRedirectsIntermediateAppConfig = Bin\DirectXTK_2012\x64\Release\DXUT_DirectXTK_2012.vcxproj.DXUT.lib.config
                    _GenerateRestoreGraphProjectEntryInputProperties = 
                          RestoreUseCustomAfterTargets=;
@@ -92,13 +115,19 @@ windir = C:\WINDOWS
                          ExcludeRestorePackageImports=true;
                        
                    _GetChildProjectCopyToOutputDirectoryItems = true
+                   _HasNativeManifest = false
                    _IgnoreInstalledPlatformToolset_v110 = true
                    _IgnoreInstalledPlatformToolset_v110_wp80 = true
                    _IgnoreInstalledPlatformToolset_v110_xp = true
+                   _IntDirFullpath = E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\
+                   _InvalidConfigurationMessageText = The OutputPath property is not set for project 'DXUT_DirectXTK_2012.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Release'  Platform='x64'.  This error may also appear if some other project is trying to follow a project-to-project reference to this project, this project has been unloaded or is not included in the solution, and the referencing project does not build using the same or an equivalent Configuration or Platform.
+                   _LibFullPath = ;E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\DXUT.lib
+                   _LinkImportLibraryTemp = Bin\DirectXTK_2012\x64\Release\DXUT.lib
                    _NuGetRuntimeIdentifierPlatformTargetSuffix = -x64
                    _NuGetRuntimeIdentifierWithoutAot = win-x64
                    _OriginalConfiguration = Release
                    _OriginalPlatform = x64
+                   _OutDirFullpath = E:\C++\Collisions\DXUT\Core\Bin\DirectXTK_2012\x64\Release\
                    _PlatformDefaultPropsPath = E:\Programs\VS17\Common7\IDE\VC\VCTargets\\Platforms\x64\\Platform.default.props
                    _PlatformFolder = E:\Programs\VS17\Common7\IDE\VC\VCTargets\Platforms\x64\
                    _PlatformToolsetFriendlyNameFor_v100 = Visual Studio 2010 (v100)
@@ -127,6 +156,7 @@ windir = C:\WINDOWS
                    _PlatformToolsetShortNameFor_v140_xp = Visual Studio 2015 - Windows XP
                    _PlatformToolsetShortNameFor_v90 = Visual Studio 2008
                    _ProjectDefaultTargets = Build
+                   _ProjectReferenceTargetFrameworkProperties = 
                    _PropertySheetDisplayName = Whole Program Optimization
                    _RequireMCPass2ForMainAssembly = false
                    _RequireMCPass2ForSatelliteAssemblyOnly = false
@@ -166,8 +196,9 @@ windir = C:\WINDOWS
                    _VCToolsVersionProps = E:\Programs\VS17\VC\Auxiliary\Build\Microsoft.VCToolsVersion.default.props
                    AddAdditionalExplicitAssemblyReferences = true
                    AddAppConfigToBuildOutputs = true
-                   AdditionalExplicitAssemblyReferences = System.Core;
+                   AdditionalExplicitAssemblyReferences = 
                    ADSK_3DSMAX_x64_2017 = I:\Programms\AutoDesk\3D MAX\3ds Max 2017\
+                   ADVISOR_XE_2016_DIR = C:\Program Files (x86)\IntelSWTools\Advisor XE 2016\
                    AfterBuildCompileTargets = 
                          ;
                          AfterBuildCompileEvent;
@@ -354,7 +385,7 @@ windir = C:\WINDOWS
                          _XdcMake;
                          _BscMake;
                        
-                   BuildProjectReferences = true
+                   BuildProjectReferences = false
                    BuildSteps = 
                          ResolveReferences;
                          PrepareForBuild;
@@ -521,6 +552,7 @@ windir = C:\WINDOWS
                    ComSpec = C:\WINDOWS\system32\cmd.exe
                    Configuration = Release
                    ConfigurationName = Release
+                   ConfigurationPlatformExists = true
                    ConfigurationType = StaticLibrary
                    ConsiderPlatformAsProcessorArchitecture = true
                    ContentFilesProjectOutputGroupDependsOn = PrepareForBuild;AssignTargetPaths;PrepareForBuild;AssignTargetPaths;MakeDirsForFxc
@@ -624,7 +656,7 @@ windir = C:\WINDOWS
                    EntityDeployDependsOn = 
                    EntityDeployIntermediateResourcePath = Bin\DirectXTK_2012\x64\Release\edmxResourcesToEmbed\
                    ExcludePath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\include;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\include;;E:\Programs\VS17\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;E:\Programs\VS17\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\lib\x64;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\lib\x64;;E:\Programs\VS17\VC\Auxiliary\VS\lib\x64;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\lib;
-                   ExecutablePath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;E:\Programs\VS17\Common7\tools;E:\Programs\VS17\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;E:\Programs\VS17\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;E:\Programs\VS17PRO\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;I:\Qt\5.8\msvc2015_64\bin;I:\Programms\CY\bin;C:\WINDOWS\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin;
+                   ExecutablePath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;E:\Programs\VS17\Common7\tools;E:\Programs\VS17\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;E:\Programs\VS17\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\mpi\intel64\bin;C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\bin;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.3.207\windows\mpi\intel64\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler;C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;E:\Programs\VS17PRO\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;I:\Qt\5.8\msvc2015_64\bin;I:\Programms\CY\bin;C:\WINDOWS\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;E:\Programs\llvm\bin;E:\Programs\CMake\bin;C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\dll;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin;
                    ExpandSDKAllowedReferenceExtensions = 
                          .winmd;
                          .dll
@@ -678,6 +710,9 @@ windir = C:\WINDOWS
                    HOMEDRIVE = C:
                    HOMEPATH = \Users\kikij
                    HostInBrowser = false
+                   I_MPI_ROOT = C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\mpi
+                   ICPP_COMPILER16 = C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\
+                   IFORT_COMPILER16 = C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\
                    IgnoreImportLibrary = false
                    ImplicitlyExpandDesignTimeFacadesDependsOn = 
                          ;
@@ -704,10 +739,14 @@ windir = C:\WINDOWS
                    ImportUserLocationsByWildcardBeforeMicrosoftNetFrameworkProps = true
                    ImportUserLocationsByWildcardBeforeMicrosoftNetFrameworkTargets = true
                    ImportXamlTargets = true
+                   INCLUDE = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\include;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\include;;E:\Programs\VS17\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;
                    IncludeFrameworkReferencesFromNuGet = true
                    IncludePath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\include;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\include;;E:\Programs\VS17\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;
                    IncludeVersionInInteropName = true
+                   INSPECTOR_XE_2016_DIR = C:\Program Files (x86)\IntelSWTools\Inspector XE 2016\
                    IntDir = Bin\DirectXTK_2012\x64\Release\
+                   INTEL_DEV_REDIST = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\
+                   INTEL_LICENSE_FILE = C:\Program Files (x86)\Common Files\\Intel\Licenses;C:\Program Files (x86)\Common Files\Intel\Licenses
                    IntermediateOutputPath = Bin\DirectXTK_2012\x64\Release\
                    InteropOutputPath = Interop\
                    iOSTargetsPath = E:\Programs\VS17\MSBuild\Microsoft\MDD\iOS\V150\
@@ -718,7 +757,9 @@ windir = C:\WINDOWS
                    Language = C++
                    LastBuildState = Bin\DirectXTK_2012\x64\Release\DXUT.tlog\DXUT.lastbuildstate
                    LastBuildUnsuccessful = Bin\DirectXTK_2012\x64\Release\DXUT.tlog\unsuccessfulbuild
+                   LIB = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\lib\x64;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\lib\x64;;E:\Programs\VS17\VC\Auxiliary\VS\lib\x64;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\lib;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Lib\um\x64
                    LibCompiled = true
+                   LIBPATH = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\lib\x64;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\lib\x64;
                    LibraryPath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\lib\x64;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\lib\x64;;E:\Programs\VS17\VC\Auxiliary\VS\lib\x64;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64;;;E:\Programs\VS17\VC\Auxiliary\VS\UnitTest\lib;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Lib\um\x64
                    LibraryWPath = C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral;
                    LinkIncremental = false
@@ -757,6 +798,7 @@ windir = C:\WINDOWS
                    MergedOutputCodeAnalysisFile = Bin\DirectXTK_2012\x64\Release\vc.nativecodeanalysis.all.xml
                    MetagenInputTarget = Link
                    MetaGenTargets = E:\Programs\VS17\Common7\IDE\VC\VCTargets\\Microsoft.MetaGen.targets
+                   MIC_LD_LIBRARY_PATH = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\intel64_win_mic
                    MicrosoftCommonPropsHasBeenImported = true
                    MidlYieldDuringToolExecution = true
                    MpiDebuggerCleanupDeployment = True
@@ -777,6 +819,7 @@ windir = C:\WINDOWS
                    MSBuildFrameworkToolsPath32 = C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\
                    MSBuildFrameworkToolsPath64 = C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\
                    MSBuildFrameworkToolsRoot = C:\WINDOWS\Microsoft.NET\Framework\
+                   MSBuildLastTaskResult = true
                    MSBuildLoadMicrosoftTargetsReadOnly = true
                    MSBuildNodeCount = 8
                    MSBuildProgramFiles32 = C:\Program Files (x86)
@@ -823,7 +866,7 @@ windir = C:\WINDOWS
                    OutputPath = Bin\DirectXTK_2012\x64\Release\
                    OutputType = staticlibrary
                    OverwriteReadOnlyFiles = false
-                   Path = C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;E:\Programs\VS17PRO\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;I:\Qt\5.8\msvc2015_64\bin;I:\Programms\CY\bin;C:\WINDOWS\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin
+                   Path = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x64;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;E:\Programs\VS17\Common7\tools;E:\Programs\VS17\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;E:\Programs\VS17\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.4.246\windows\mpi\intel64\bin;C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\bin;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016.3.207\windows\mpi\intel64\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler;C:\ProgramData\Oracle\Java\javapath;E:\Programs\OpenSSH\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Xoreax\IncrediBuild;C:\Program Files\Git\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;E:\Programs\VS17PRO\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;I:\Qt\5.8\msvc2015_64\bin;I:\Programms\CY\bin;C:\WINDOWS\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;E:\Programs\llvm\bin;E:\Programs\CMake\bin;C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\dll;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\Microsoft\WindowsApps;C:\Users\kikij\AppData\Local\atom\bin;
                    PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
                    PkgDefApplicationConfigFile = C:\Users\kikij\AppData\Local\Microsoft\VisualStudio\15.0_35f159ae\devenv.exe.config
                    Platform = x64
@@ -945,6 +988,7 @@ windir = C:\WINDOWS
                        ;
                        
                    ReferencePath = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\atlmfc\lib\x64;;E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\lib\x64;
+                   ReferringTargetFrameworkForProjectReferences = .NETFramework,Version=v4.0
                    RemoteDebuggerAttach = False
                    RemoteDebuggerConnection = RemoteWithAuthentication
                    RemoteDebuggerDebuggerType = Auto
@@ -953,6 +997,7 @@ windir = C:\WINDOWS
                    RemoteDebuggerSQLDebugging = False
                    RemoteDebuggerWorkingDirectory = E:\C++\Collisions\DXUT\Core\
                    RemoteGPUDebuggerTargetType = {F4453496-1DB8-47F8-A7D5-31EBDDC2EC96}
+                   RemoveAssemblyFoldersIfNoTargetFramework = true
                    ReportingServicesTargets = E:\Programs\VS17\MSBuild\Microsoft\VisualStudio\v15.0\ReportingServices\Microsoft.ReportingServices.targets
                    RequiredBundles = Microsoft.VisualStudio.Component.VC.Tools.x86.x64;
                    ResGenDependsOn = ResolveAssemblyReferences;SplitResourcesByCulture;BeforeResGen;CoreResGen;AfterResGen
@@ -964,6 +1009,9 @@ windir = C:\WINDOWS
                          ResolveSDKReferences;
                          ExpandSDKReferences;
                        ;ResolveNuGetPackageAssets
+                   ResolveAssemblyReferencesSilent = false
+                   ResolveAssemblyReferencesStateFile = Bin\DirectXTK_2012\x64\Release\DXUT_DirectXTK_2012.vcxprojResolveAssemblyReference.cache
+                   ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch = Warning
                    ResolveNuGetPackageAssetsDependsOn = ResolveProjectReferences
                    ResolveNuGetPackages = true
                    ResolveReferencesDependsOn = _PrepareForReferenceResolution;ComputeCrtSDKReference;
@@ -1014,6 +1062,7 @@ windir = C:\WINDOWS
                    SGenUseKeep = false
                    SGenUseProxyTypes = true
                    ShouldMarkCertainSDKReferencesAsRuntimeOnly = true
+                   ShouldUnsetParentConfigurationAndPlatform = true
                    SkipCopyBuildProduct = true
                    SkipCopyUnchangedFiles = true
                    SolutionDir = E:\C++\Collisions\
@@ -1040,10 +1089,12 @@ windir = C:\WINDOWS
                    TargetExt = .lib
                    TargetFileName = DXUT.lib
                    TargetFrameworkAsMSBuildRuntime = CLR4
+                   TargetFrameworkDirectory = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;;C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral
                    TargetFrameworkIdentifier = .NETFramework
-                   TargetFrameworkMoniker = .NETFramework,Version=v4.0
+                   TargetFrameworkMoniker = 
                    TargetFrameworkMonikerAssemblyAttributesPath = C:\Users\kikij\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp
                    TargetFrameworkMonikerDisplayName = .NET Framework 4
+                   TargetFrameworkSDKDirectory = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
                    TargetFrameworkSDKToolsDirectory = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\
                    TargetFrameworkVersion = v4.0
                    TargetName = DXUT
@@ -1163,6 +1214,7 @@ windir = C:\WINDOWS
                    VisualStudioVersion = 15.0
                    VS_ExecutablePath = E:\Programs\VS17\Common7\tools;E:\Programs\VS17\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;
                    VS140COMNTOOLS = E:\Programs\VS15\Common7\Tools\
+                   VS150COMNTOOLS = E:\Programs\VS17\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64
                    VSAPPIDDIR = E:\Programs\VS17\Common7\IDE\
                    VSAPPIDNAME = devenv.exe
                    VSIDEResolvedNonMSBuildProjectOutputs = <VSIDEResolvedNonMSBuildProjectOutputs />
@@ -1172,6 +1224,15 @@ windir = C:\WINDOWS
                    VSLANG = 1036
                    VSSDK140Install = E:\Programs\VS15\VSSDK\
                    VSVersion = $(VisualStudioVersion)
+                   VT_ADD_LIBS = ws2_32.lib advapi32.lib
+                   VT_DLL_DIR = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\dll
+                   VT_FMPI_DLL = impi.dll
+                   VT_LIB_DIR = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\lib
+                   VT_MPI = impi64
+                   VT_MPI_DLL = impi.dll
+                   VT_ROOT = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\
+                   VT_SLIB_DIR = C:\Program Files (x86)\IntelSWTools\Trace Analyzer and Collector\9.1.2.024\dll
+                   VTUNE_AMPLIFIER_XE_2016_DIR = C:\Program Files (x86)\IntelSWTools\VTune Amplifier XE 2016\
                    WebBrowserDebuggerDebuggerType = Auto
                    WebReference_EnableLegacyEventingModel = false
                    WebReference_EnableProperties = true
@@ -1215,14 +1276,14 @@ windir = C:\WINDOWS
                    XamlTemporaryAssemblyName = DXUT_DirectXTK_2012
                    YieldDuringToolExecution = true
 
-10:52:24.482     1>Génération à l'aide des outils version "15.0".
-10:52:24.482     1>E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj : error MSB4057: La cible "Deploy" n'existe pas dans le projet.
-10:52:24.482     1>Génération du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" terminée (Deploy cible(s)) -- ÉCHEC.
+10:34:18.143     1>Génération à l'aide des outils version "15.0".
+10:34:18.145     1>E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj : error MSB4057: La cible "Deploy" n'existe pas dans le projet.
+10:34:18.145     1>Génération du projet "E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj" terminée (Deploy cible(s)) -- ÉCHEC.
 
 Résumé de performance des projets :
-        1 ms  E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj   1 appels
-                  1 ms  Deploy                                     1 appels
+        3 ms  E:\C++\Collisions\DXUT\Core\DXUT_DirectXTK_2012.vcxproj   1 appels
+                  3 ms  Deploy                                     1 appels
 
 ÉCHEC de la build.
 
-Temps écoulé 00:00:00.00
+Temps écoulé 00:00:00.01
