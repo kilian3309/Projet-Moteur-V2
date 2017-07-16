@@ -408,7 +408,7 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	_drg_BatchEffect->SetView(mView);
 	_drg_BatchEffect->SetProjection(mProj); 
 
-	RenderObjects();
+	l.RenderObjects();
 
 	//Render le HUD (faudra lui trouver un nom de spy)
 	DXUT_BeginPerfEvent(DXUT_PERFEVENTCOLOR, L"HUD / Stats");
