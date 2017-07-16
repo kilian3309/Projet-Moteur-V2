@@ -57,6 +57,7 @@ Ce type est uniquement utilisé pour les arguments de fonction
 #include "hitbox.h"
 #include "hud.h"
 #include "level.h"
+#include <process.h>
 
 #include "LoadingScreen.h"
 #include <string>
@@ -250,8 +251,12 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	}
 
 	//On créé 2 thread indépendants : Le premier s'occupe du chargement et le 2è doit finir la WinMain (sa évite le "ne répond pas", enfait non x) -> à faire : le processus de l'interface doit avoir une priorité
-	//supérieur à celle du work thread pour répondre h24)
+	//supérieur à celle du work thread pour répondre h24 OU utiliser le truc de thread de directx)
 	std::async(std::launch::async, CreateLoadingScreen, hInstance, LoadingMax);
+	//_beginthreadex(nullptr, 0, CreateLoadingScreen, 
+	
+
+
 
 	//WinMain Returned Status
 	auto WRS = std::async(wWinMainEnd);
