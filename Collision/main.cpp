@@ -220,7 +220,7 @@ int wWinMainEnd() {
 	IncrementLoading();
 
 
-	DXUTCreateDevice(D3D_FEATURE_LEVEL_10_0, true, 800, 600);
+	DXUTCreateDevice(D3D_FEATURE_LEVEL_11_1, true, 800, 600);
 	IncrementLoading();
 
 	DXUTMainLoop(); //DXUT loop de render
