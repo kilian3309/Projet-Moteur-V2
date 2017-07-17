@@ -39,6 +39,8 @@ Ce type est uniquement utilisé pour les arguments de fonction
 
 */
 
+#include <Windows.h> //Globale include de windowsapi pour tout les modules
+
 #include "DXUT.h"
 #include "DXUTgui.h"
 #include "DXUTmisc.h"
