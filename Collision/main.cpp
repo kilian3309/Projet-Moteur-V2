@@ -418,7 +418,6 @@ void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* 
 	//Render le HUD (faudra lui trouver un nom de spy)
 	DXUT_BeginPerfEvent(DXUT_PERFEVENTCOLOR, L"HUD / Stats");
 
-	g_debugHUD.OnFrameRender(&fElapsedTime);
 	//g_groupHUD.OnFrameRender(&fElapsedTime);
 	l.OnFrameRender(fElapsedTime);
 

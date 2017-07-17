@@ -292,7 +292,7 @@ void DrawText11DXUT( ID3D11Device* pd3dDevice, ID3D11DeviceContext* pd3d11Device
         }
 
         // Add 6 sprite vertices
-        DXUTSpriteVertex SpriteVertex;
+        DXUTSpriteVertex SpriteVertex = {};
         float fRectRight = fRectLeft + fGlyphSizeX;
         float fRectBottom = fRectTop - fGlyphSizeY;
         float fTexLeft = ( strText[i] - 32 ) * fCharTexSizeX;
@@ -1651,7 +1651,7 @@ HRESULT CDXUTDialog::DrawSprite( CDXUTElement* pElement, const RECT* prcDest, fl
     float fTexBottom = rcTexture.bottom / fTexHeight;
 
     // Add 6 sprite vertices
-    DXUTSpriteVertex SpriteVertex;
+    DXUTSpriteVertex SpriteVertex = {};
 
     // tri1
     SpriteVertex.vPos = XMFLOAT3( fRectLeft, fRectTop, fDepth );
@@ -6644,9 +6644,9 @@ void DXUTBlendColor::SetCurrent( DWORD color )
 
 //--------------------------------------------------------------------------------------
 _Use_decl_annotations_
-void CDXUTElement::SetTexture( UINT iTexture, RECT* prcTexture, DWORD defaultTextureColor )
+void CDXUTElement::SetTexture( UINT texture, RECT* prcTexture, DWORD defaultTextureColor )
 {
-    this->iTexture = iTexture;
+    iTexture = texture;
 
     if( prcTexture )
         rcTexture = *prcTexture;
@@ -6659,10 +6659,10 @@ void CDXUTElement::SetTexture( UINT iTexture, RECT* prcTexture, DWORD defaultTex
 
 //--------------------------------------------------------------------------------------
 _Use_decl_annotations_
-void CDXUTElement::SetFont( UINT iFont, DWORD defaultFontColor, DWORD dwTextFormat )
+void CDXUTElement::SetFont( UINT font, DWORD defaultFontColor, DWORD textFormat )
 {
-    this->iFont = iFont;
-    this->dwTextFormat = dwTextFormat;
+    iFont = font;
+    dwTextFormat = textFormat;
 
     FontColor.Init( defaultFontColor );
 }

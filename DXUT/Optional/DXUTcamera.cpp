@@ -452,7 +452,7 @@ void CBaseCamera::GetInput( bool bGetKeyboardInput, bool bGetMouseInput, bool bG
 
             // Mark time if the controller is in a non-zero state
             if( m_GamePad[iUserIndex].wButtons ||
-                m_GamePad[iUserIndex].sThumbLX || m_GamePad[iUserIndex].sThumbLX ||
+                m_GamePad[iUserIndex].sThumbLX || m_GamePad[iUserIndex].sThumbLY ||
                 m_GamePad[iUserIndex].sThumbRX || m_GamePad[iUserIndex].sThumbRY ||
                 m_GamePad[iUserIndex].bLeftTrigger || m_GamePad[iUserIndex].bRightTrigger )
             {
@@ -706,8 +706,8 @@ void CFirstPersonCamera::FrameMove( _In_ float fElapsedTime )
     GetInput( m_bEnablePositionMovement, ( m_nActiveButtonMask & m_nCurrentButtonMask ) || m_bRotateWithoutButtonDown, true );
 
     //// Get the mouse movement (if any) if the mouse button are down
-    if( (m_nActiveButtonMask & m_nCurrentButtonMask) || m_bRotateWithoutButtonDown )
-        UpdateMouseDelta( /*fElapsedTime*/ );
+    //if( (m_nActiveButtonMask & m_nCurrentButtonMask) || m_bRotateWithoutButtonDown )
+    //    UpdateMouseDelta( fElapsedTime );
 
     // Get amount of velocity based on the keyboard input and drag (if any)
     UpdateVelocity( fElapsedTime );

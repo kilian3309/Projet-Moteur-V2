@@ -296,7 +296,7 @@ static double                   lastSwirl;
 
 static HKL                      g_hklCurrent = 0;
 static UINT                     g_uCodePage = 0;
-static LPTSTR g_aszIndicator[] =
+static LPCTSTR g_aszIndicator[] =
 {
     TEXT( "A" ),
         L"\x7B80",
@@ -304,7 +304,7 @@ static LPTSTR g_aszIndicator[] =
         L"\xac00",
         L"\x3042",
 };
-static LPTSTR                   g_pszIndicatior = g_aszIndicator[0];
+static LPCTSTR                  g_pszIndicatior = g_aszIndicator[0];
 
 static void GetReadingString( _In_ HWND hWnd );
 static DWORD GetImeId( _In_ UINT uIndex = 0 );
@@ -352,8 +352,8 @@ protected:
                            public ITfCompartmentEventSink
     {
     public:
-                        CUIElementSink();
-                        ~CUIElementSink();
+        CUIElementSink();
+        virtual ~CUIElementSink();
 
         // IUnknown
         STDMETHODIMP    QueryInterface( _In_ REFIID riid, _COM_Outptr_ void** ppvObj );
@@ -1698,12 +1698,12 @@ bool ImeUi_Initialize(_In_  HWND hwnd, _In_ bool bDisable )
 
     if( g_hImmDll )
     {
-        _ImmLockIMC = reinterpret_cast<LPINPUTCONTEXT2 ( WINAPI* )( HIMC hIMC )>( GetProcAddress( g_hImmDll, "ImmLockIMC" ) );
-        _ImmUnlockIMC = reinterpret_cast<BOOL ( WINAPI* )( HIMC hIMC )>( GetProcAddress( g_hImmDll, "ImmUnlockIMC" ) );
-        _ImmLockIMCC = reinterpret_cast<LPVOID ( WINAPI* )( HIMCC hIMCC )>( GetProcAddress( g_hImmDll, "ImmLockIMCC" ) );
-        _ImmUnlockIMCC = reinterpret_cast<BOOL ( WINAPI* )( HIMCC hIMCC )>( GetProcAddress( g_hImmDll, "ImmUnlockIMCC" ) );
-        BOOL ( WINAPI* _ImmDisableTextFrameService )( DWORD ) = reinterpret_cast<BOOL ( WINAPI* )( DWORD )>( GetProcAddress( g_hImmDll,
-                                                                                                             "ImmDisableTextFrameService" ) );
+        _ImmLockIMC = reinterpret_cast<LPINPUTCONTEXT2 ( WINAPI* )( HIMC hIMC )>( reinterpret_cast<void*>( GetProcAddress( g_hImmDll, "ImmLockIMC" ) ) );
+        _ImmUnlockIMC = reinterpret_cast<BOOL ( WINAPI* )( HIMC hIMC )>( reinterpret_cast<void*>( GetProcAddress( g_hImmDll, "ImmUnlockIMC" ) ) );
+        _ImmLockIMCC = reinterpret_cast<LPVOID ( WINAPI* )( HIMCC hIMCC )>( reinterpret_cast<void*>( GetProcAddress( g_hImmDll, "ImmLockIMCC" ) ) );
+        _ImmUnlockIMCC = reinterpret_cast<BOOL ( WINAPI* )( HIMCC hIMCC )>( reinterpret_cast<void*>( GetProcAddress( g_hImmDll, "ImmUnlockIMCC" ) ) );
+        BOOL ( WINAPI* _ImmDisableTextFrameService )( DWORD ) = reinterpret_cast<BOOL ( WINAPI* )( DWORD )>( reinterpret_cast<void*>( GetProcAddress( g_hImmDll,
+                                                                                                             "ImmDisableTextFrameService" ) ) );
         if( _ImmDisableTextFrameService )
         {
             _ImmDisableTextFrameService( ( DWORD )-1 );
@@ -2218,7 +2218,7 @@ void ImeUi_FinalizeString( _In_ bool bSend )
     if( g_bUILessMode )
     {
         // For some reason ImmNotifyIME doesn't work on DaYi and Array CHT IMEs. Cancel composition string by setting zero-length string.
-        ImmSetCompositionString( himc, SCS_SETSTR, TEXT( "" ), sizeof( TCHAR ), TEXT( "" ), sizeof( TCHAR ) );
+        ImmSetCompositionString( himc, SCS_SETSTR, const_cast<wchar_t*>(L""), sizeof(wchar_t), const_cast<char*>(""), sizeof(wchar_t) );
     }
     // the following line is necessary as Korean IME doesn't close cand list when comp string is cancelled.
     _ImmNotifyIME( himc, NI_CLOSECANDIDATE, 0, 0 );	
@@ -2507,8 +2507,8 @@ static void SetImeApi()
     HMODULE hIme = LoadLibraryExA( szImeFile, nullptr, 0x00000800 /* LOAD_LIBRARY_SEARCH_SYSTEM32 */ );
     if( !hIme )
         return;
-    _GetReadingString = reinterpret_cast<UINT ( WINAPI* )( HIMC, UINT, LPWSTR, PINT, BOOL*, PUINT )>( GetProcAddress( hIme, "GetReadingString" ) );
-    _ShowReadingWindow = reinterpret_cast<BOOL ( WINAPI* )( HIMC himc, BOOL )>( GetProcAddress( hIme, "ShowReadingWindow" ) );
+    _GetReadingString = reinterpret_cast<UINT ( WINAPI* )( HIMC, UINT, LPWSTR, PINT, BOOL*, PUINT )>( reinterpret_cast<void*>( GetProcAddress( hIme, "GetReadingString" ) ) );
+    _ShowReadingWindow = reinterpret_cast<BOOL ( WINAPI* )( HIMC himc, BOOL )>( reinterpret_cast<void*>( GetProcAddress( hIme, "ShowReadingWindow" ) ) );
     if( _ShowReadingWindow )
     {
         HIMC himc = _ImmGetContext( g_hwndCurr );
@@ -3191,7 +3191,7 @@ WORD ImeUi_GetLanguage()
     return GETLANG();
 };
 
-PTSTR ImeUi_GetIndicatior()
+PCTSTR ImeUi_GetIndicatior()
 {
     return g_pszIndicatior;
 };
