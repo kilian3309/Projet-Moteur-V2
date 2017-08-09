@@ -16,7 +16,6 @@
     <None Include="..\DXUT\Optional\directx.ico">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
